@@ -1,0 +1,70 @@
+all:
+  # Change these if you'd like to move/modify CSS & JS files
+  tmcTwitterBootstrapPlugin:
+    bootstrap_path:              /tmcTwitterBootstrapPlugin/css/bootstrap.min.css
+    responsive_bootstrap_path:   /tmcTwitterBootstrapPlugin/css/bootstrap-responsive.min.css
+    admin_styles_path:           /tmcTwitterBootstrapPlugin/css/styles.css
+    jquery_path:                 /tmcTwitterBootstrapPlugin/js/jquery.min.js
+    bootstrap_js_path:           /tmcTwitterBootstrapPlugin/js/bootstrap.min.js
+    admin_js_path:               /tmcTwitterBootstrapPlugin/js/global.js
+
+#    # The route/URI to use for the nav bar's "brand" link
+#    profile_route: @homepage?username=
+#    # The link next for the nav bar's "brand" link
+#    dashboard_name: Administration
+    header:
+      menu:
+        Phân hệ Tin tức:
+          credentials: [admin]
+          dropdown:
+            Quản lý tin đợi duyệt:
+              route: ad_article
+            Quản lý tin đợi đăng:
+              route: ad_article_adArticlesAproved
+            Quản lý tin đã đăng:
+              route: ad_article_adArticlesPublish
+        Phân hệ khác:
+          credentials: [admin]
+          dropdown:
+            Quản lý chuyên mục:
+              route: ad_category
+            Trang liên hệ:
+              route: ad_contact
+            Quản lý video:
+              credentials: [[admin]]
+              route: ad_video
+            Quản lý album:
+              credentials: [[admin]]
+              route: ad_album
+            Quản lý chuyên mục văn bản:
+              credentials: [[admin]]
+              route: ad_document_category
+            Quản lý văn bản:
+              credentials: [[admin]]
+              route: ad_document
+            Quản lý nội dung:
+              route: ad_html
+            Quản lý thông tin phản hồi:
+              route: ad_comment
+            Danh sách hội viên:
+              route: ad_personal
+            Vị trí quảng cao:
+              route: ad_advertise_location
+            Quản lý Banner - quảng cáo:
+              route: ad_advertise
+        Quản trị hệ thống:
+          credentials: [admin]
+          dropdown:
+            Danh sách người dùng:
+              route: sf_guard_user
+            Danh sách quyền hạn:
+              route: sf_guard_permission
+
+  sf_captchagd:
+     image_width:                180 # image width in pixels
+     image_height:               27 # image height in pixels
+     chars:                      "123456789abcdefghijklmnopqrstuvwxyz" # possible chars in captcha
+     length:                     2 # length of captcha
+     font_size:                  14 # font size
+     force_new_captcha:          true # if true - captcha regenerated EVERY request, even if user input true value before
+     fonts: ["akbar/vavobi.ttf"]

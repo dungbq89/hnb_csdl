@@ -1,0 +1,15 @@
+advertise_template:
+  topone: {value: topone, alias: "Quảng cáo top"}
+  right: {value: right, alias: "Mẫu hiển thị cột phải"}
+  bottom: {value: bottom, alias: "Mẫu hiển thị cuối trang"}
+  header: {value: header, alias: "Mẫu hiển thị đầu trang"}
+view_page:
+  homepage: {value: homepage, alias: "Trang chủ"}
+  document: {value: document, alias: "Trang văn bản pháp quy"}
+  contact: {value: contact, alias: "Trang liên hệ"}
+  personnal: {value: personnal, alias: "Trang danh bạ hội viên"}
+  article_detail: {value: article_detail, alias: "Trang chi tiết tin"}
+  introduction: {value: introduction, alias: "Trang giới thiệu"}
+  category_news: {value: category_news, alias: "Trang tin chuyên mục"}
+promotion_attributes:
+  new: {value: 1, alias: "Tin mới"}

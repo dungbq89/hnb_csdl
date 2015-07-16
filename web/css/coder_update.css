@@ -1,0 +1,16 @@
+.box-mequ a{
+    display: inline-block !important;
+    margin-right: 20px;
+}
+.video-play{
+    height: 220px;
+}
+.title-video-active{
+    color: #0788d9;
+}
+.more-video{
+    margin-top: 20px;
+}
+.more-video h3{
+    line-height: 26px;
+}

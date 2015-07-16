@@ -1,0 +1,66 @@
+
+/*Top level list items*/
+.nav ul li{
+	position: relative;
+    z-index: 1000;
+}
+
+/*1st sub level menu*/
+.nav ul li ul{
+	position: absolute;
+	left: 0;
+	display: block;
+	visibility: hidden;
+	top: 37px !important;
+    background-color: #fff;
+}
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+.nav ul li ul li{
+    display: list-item;
+    margin: 0px;
+    display: block;
+}
+
+/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+.nav ul li ul{
+	color: #FFF;
+	text-decoration: none;
+    padding-bottom: 12px;
+
+}
+
+/* Sub level menu links style */
+.nav ul li ul li a{
+	margin: 0px;
+	padding:5px 20px 5px 2px;
+	text-decoration: none;
+    font-size: 12px;
+    line-height: 25px;
+    color: #232323;
+    border-right: none;
+    display: block;
+    background: transparent url("../img/bg-line-bottom.png") repeat-x scroll left bottom;
+    width: 90%;
+}
+
+.nav ul li a:hover{
+	text-decoration: none;
+	}
+
+/* ######### CSS classes applied to down and right arrow images  ######### */
+
+.downarrowclass{
+position: absolute;
+top: 22px;
+right: 7px;
+}
+
+.rightarrowclass{
+position: absolute;
+top: 6px;
+right: 5px;
+}
+.box-slide-link-share{
+    z-index: 1000;
+}
