@@ -14,15 +14,11 @@ all:
 #    dashboard_name: Administration
     header:
       menu:
-        Phân hệ Tin tức:
+        Hội viên:
           credentials: [admin]
           dropdown:
-            Quản lý tin đợi duyệt:
-              route: ad_article
-            Quản lý tin đợi đăng:
-              route: ad_article_adArticlesAproved
-            Quản lý tin đã đăng:
-              route: ad_article_adArticlesPublish
+            Quản lý thẻ hội viên:
+              route: csdl_thehoivien
         Phân hệ khác:
           credentials: [admin]
           dropdown:
