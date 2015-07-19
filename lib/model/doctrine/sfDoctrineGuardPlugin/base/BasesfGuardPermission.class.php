@@ -13,24 +13,9 @@
  * @property Doctrine_Collection $Users
  * @property Doctrine_Collection $sfGuardUserPermission
  * 
- * @method string              getName()                   Returns the current record's "name" value
- * @method string              getDescription()            Returns the current record's "description" value
- * @method boolean             getTypes()                  Returns the current record's "types" value
- * @method Doctrine_Collection getGroups()                 Returns the current record's "Groups" collection
- * @method Doctrine_Collection getSfGuardGroupPermission() Returns the current record's "sfGuardGroupPermission" collection
- * @method Doctrine_Collection getUsers()                  Returns the current record's "Users" collection
- * @method Doctrine_Collection getSfGuardUserPermission()  Returns the current record's "sfGuardUserPermission" collection
- * @method sfGuardPermission   setName()                   Sets the current record's "name" value
- * @method sfGuardPermission   setDescription()            Sets the current record's "description" value
- * @method sfGuardPermission   setTypes()                  Sets the current record's "types" value
- * @method sfGuardPermission   setGroups()                 Sets the current record's "Groups" collection
- * @method sfGuardPermission   setSfGuardGroupPermission() Sets the current record's "sfGuardGroupPermission" collection
- * @method sfGuardPermission   setUsers()                  Sets the current record's "Users" collection
- * @method sfGuardPermission   setSfGuardUserPermission()  Sets the current record's "sfGuardUserPermission" collection
- * 
- * @package    Vt_Portals
- * @subpackage model
- * @author     ngoctv1
+ * @package    ##PACKAGE##
+ * @subpackage ##SUBPACKAGE##
+ * @author     ##NAME## <##EMAIL##>
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BasesfGuardPermission extends sfDoctrineRecord

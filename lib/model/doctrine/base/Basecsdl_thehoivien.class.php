@@ -16,26 +16,9 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_thehoivien', 'doctrine');
  * @property timestamp $ngayky
  * @property boolean $trangthai
  * 
- * @method integer         getHoivientId()  Returns the current record's "hoivient_id" value
- * @method string          getMathe()       Returns the current record's "mathe" value
- * @method string          getAnhdaidien()  Returns the current record's "anhdaidien" value
- * @method timestamp       getNgaycap()     Returns the current record's "ngaycap" value
- * @method timestamp       getNgayhethan()  Returns the current record's "ngayhethan" value
- * @method string          getNguoiky()     Returns the current record's "nguoiky" value
- * @method timestamp       getNgayky()      Returns the current record's "ngayky" value
- * @method boolean         getTrangthai()   Returns the current record's "trangthai" value
- * @method csdl_thehoivien setHoivientId()  Sets the current record's "hoivient_id" value
- * @method csdl_thehoivien setMathe()       Sets the current record's "mathe" value
- * @method csdl_thehoivien setAnhdaidien()  Sets the current record's "anhdaidien" value
- * @method csdl_thehoivien setNgaycap()     Sets the current record's "ngaycap" value
- * @method csdl_thehoivien setNgayhethan()  Sets the current record's "ngayhethan" value
- * @method csdl_thehoivien setNguoiky()     Sets the current record's "nguoiky" value
- * @method csdl_thehoivien setNgayky()      Sets the current record's "ngayky" value
- * @method csdl_thehoivien setTrangthai()   Sets the current record's "trangthai" value
- * 
- * @package    Vt_Portals
- * @subpackage model
- * @author     ngoctv1
+ * @package    ##PACKAGE##
+ * @subpackage ##SUBPACKAGE##
+ * @author     ##NAME## <##EMAIL##>
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class Basecsdl_thehoivien extends sfDoctrineRecord

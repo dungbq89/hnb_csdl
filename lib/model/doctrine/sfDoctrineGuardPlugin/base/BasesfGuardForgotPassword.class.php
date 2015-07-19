@@ -10,18 +10,9 @@
  * @property timestamp $expires_at
  * @property sfGuardUser $User
  * 
- * @method integer               getUserId()     Returns the current record's "user_id" value
- * @method string                getUniqueKey()  Returns the current record's "unique_key" value
- * @method timestamp             getExpiresAt()  Returns the current record's "expires_at" value
- * @method sfGuardUser           getUser()       Returns the current record's "User" value
- * @method sfGuardForgotPassword setUserId()     Sets the current record's "user_id" value
- * @method sfGuardForgotPassword setUniqueKey()  Sets the current record's "unique_key" value
- * @method sfGuardForgotPassword setExpiresAt()  Sets the current record's "expires_at" value
- * @method sfGuardForgotPassword setUser()       Sets the current record's "User" value
- * 
- * @package    Vt_Portals
- * @subpackage model
- * @author     ngoctv1
+ * @package    ##PACKAGE##
+ * @subpackage ##SUBPACKAGE##
+ * @author     ##NAME## <##EMAIL##>
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BasesfGuardForgotPassword extends sfDoctrineRecord
