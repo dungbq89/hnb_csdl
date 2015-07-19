@@ -23,10 +23,11 @@ all:
   album_images: album
   video_images: video
   document: document
+  member_images: member
 
-  upload_media_file: E:\Data_D\hoi-nha-bao\website\web\uploads
-  url_media_file: http://localhost:8086/uploads
-  url_media_default_file: http://localhost:8086/images/default-image.jpg
+  upload_media_file: F:\code\csdl\CSDL\hnb_csdl\web\uploads
+  url_media_file: http://localhost:8888/uploads
+  url_media_default_file: http://localhost:8888/images/default-image.jpg
   #upload_media_file: /uploads
 
   url_media_file: /uploads
