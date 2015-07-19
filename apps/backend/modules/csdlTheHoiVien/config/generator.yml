@@ -1,0 +1,39 @@
+generator:
+  class: tmcTwitterBootstrapDoctrineGenerator
+  param:
+    model_class:           csdl_thehoivien
+    theme:                 tmcTwitterBootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          csdl_thehoivien
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        hoivient_id: {label: Mã hội viên}
+        mathe: {label: Mã thẻ}
+        anhdaidien: {label: Ảnh đại diện}
+        ngaycap: {label: Ngày cấp thẻ}
+        ngayhethan: {label: Ngày hết hạn thẻ}
+        nguoiky: {label: Người ký}
+        ngayky: {label: Ngày ký}
+        trangthai: {label: Trạng thái}
+      list:
+        title: Danh sách thẻ hội viên
+        display: [anhdaidien, hoivient_id, mathe, ngaycap, trangthai]
+        object_actions:
+          _edit: ~
+          _delete: ~
+      filter:
+        display: [hoivient_id, mathe]
+      form:
+        display: [hoivient_id, mathe, anhdaidien, ngaycap, ngayhethan, nguoiky, ngayky, trangthai]
+        class: csdlTheHoiVienAdminForm
+      edit:
+        title: Chỉnh sửa thẻ hội viên
+      new:
+        title: Thêm mới thẻ hội viên
