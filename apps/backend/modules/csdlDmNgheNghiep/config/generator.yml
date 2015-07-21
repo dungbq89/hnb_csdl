@@ -1,0 +1,36 @@
+generator:
+  class: tmcTwitterBootstrapDoctrineGenerator
+  param:
+    model_class:           csdl_dmnghenghiep
+    theme:                 tmcTwitterBootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          csdl_dmnghenghiep
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        tendanhmuc: {label: Tên danh mục}
+        gioithieu: {label: Giới thiệu}
+        anhdaidien: {label: Ảnh đại diện}
+        thutu: {label: Thứ tự}
+        trangthai: {label: Trạng thái}
+      list:
+        title: Danh sách danh mục
+        display: [tendanhmuc, gioithieu, thutu, trangthai]
+        object_actions:
+          _edit: ~
+          _delete: ~
+      filter:
+        display: [tendanhmuc]
+      form:
+        display: [tendanhmuc, anhdaidien, gioithieu, thutu, trangthai]
+        class: csdlDanhmucAdminForm
+      edit:
+        title: Chỉnh sửa danh mục
+      new:
+        title: Thêm mới danh mục

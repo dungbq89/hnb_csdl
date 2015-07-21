@@ -107,7 +107,7 @@ csdl_dmnghenghiep:
     gioithieu:  { type: string(500), comment: "Gioi thieu" }
     anhdaidien: { type: string(255), comment: "hinh anh" }
     thutu: { type: integer(5), comment: "Thu tu hien thi"}
-    trangthai: { type: integer(5), comment: "trang thai"}
+    trangthai:  { type: boolean, notnull: true, default: false, comment: "Trang thai" }
 #Danh mục loại giải thưởng
 csdl_loaigiaithuong:
   tableName: csdl_loaigiaithuong

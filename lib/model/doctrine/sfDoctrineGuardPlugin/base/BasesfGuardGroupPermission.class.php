@@ -10,9 +10,18 @@
  * @property sfGuardGroup $Group
  * @property sfGuardPermission $Permission
  * 
- * @package    ##PACKAGE##
- * @subpackage ##SUBPACKAGE##
- * @author     ##NAME## <##EMAIL##>
+ * @method integer                getGroupId()       Returns the current record's "group_id" value
+ * @method integer                getPermissionId()  Returns the current record's "permission_id" value
+ * @method sfGuardGroup           getGroup()         Returns the current record's "Group" value
+ * @method sfGuardPermission      getPermission()    Returns the current record's "Permission" value
+ * @method sfGuardGroupPermission setGroupId()       Sets the current record's "group_id" value
+ * @method sfGuardGroupPermission setPermissionId()  Sets the current record's "permission_id" value
+ * @method sfGuardGroupPermission setGroup()         Sets the current record's "Group" value
+ * @method sfGuardGroupPermission setPermission()    Sets the current record's "Permission" value
+ * 
+ * @package    Vt_Portals
+ * @subpackage model
+ * @author     ngoctv1
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BasesfGuardGroupPermission extends sfDoctrineRecord

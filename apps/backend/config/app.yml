@@ -27,6 +27,8 @@ all:
               route: csdl_chude
             Quản lý dân tộc:
               route: csdl_dantoc
+            Quản lý danh mục nghề nghiệp:
+              route: csdl_dmnghenghiep
 
         Phân hệ khác:
           credentials: [admin]

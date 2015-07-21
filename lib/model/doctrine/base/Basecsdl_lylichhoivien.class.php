@@ -14,9 +14,22 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_lylichhoivien', 'doctrine')
  * @property string $maquan
  * @property string $matinh
  * 
- * @package    ##PACKAGE##
- * @subpackage ##SUBPACKAGE##
- * @author     ##NAME## <##EMAIL##>
+ * @method integer            getHoivienId()  Returns the current record's "hoivien_id" value
+ * @method timestamp          getNgaysinh()   Returns the current record's "ngaysinh" value
+ * @method string             getGioitinh()   Returns the current record's "gioitinh" value
+ * @method string             getDiachi()     Returns the current record's "diachi" value
+ * @method string             getMaquan()     Returns the current record's "maquan" value
+ * @method string             getMatinh()     Returns the current record's "matinh" value
+ * @method csdl_lylichhoivien setHoivienId()  Sets the current record's "hoivien_id" value
+ * @method csdl_lylichhoivien setNgaysinh()   Sets the current record's "ngaysinh" value
+ * @method csdl_lylichhoivien setGioitinh()   Sets the current record's "gioitinh" value
+ * @method csdl_lylichhoivien setDiachi()     Sets the current record's "diachi" value
+ * @method csdl_lylichhoivien setMaquan()     Sets the current record's "maquan" value
+ * @method csdl_lylichhoivien setMatinh()     Sets the current record's "matinh" value
+ * 
+ * @package    Vt_Portals
+ * @subpackage model
+ * @author     ngoctv1
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class Basecsdl_lylichhoivien extends sfDoctrineRecord

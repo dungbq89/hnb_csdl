@@ -12,9 +12,22 @@
  * @property Doctrine_Collection $sfGuardGroupPermission
  * @property Doctrine_Collection $sfGuardUserGroup
  * 
- * @package    ##PACKAGE##
- * @subpackage ##SUBPACKAGE##
- * @author     ##NAME## <##EMAIL##>
+ * @method string              getName()                   Returns the current record's "name" value
+ * @method string              getDescription()            Returns the current record's "description" value
+ * @method Doctrine_Collection getUsers()                  Returns the current record's "Users" collection
+ * @method Doctrine_Collection getPermissions()            Returns the current record's "Permissions" collection
+ * @method Doctrine_Collection getSfGuardGroupPermission() Returns the current record's "sfGuardGroupPermission" collection
+ * @method Doctrine_Collection getSfGuardUserGroup()       Returns the current record's "sfGuardUserGroup" collection
+ * @method sfGuardGroup        setName()                   Sets the current record's "name" value
+ * @method sfGuardGroup        setDescription()            Sets the current record's "description" value
+ * @method sfGuardGroup        setUsers()                  Sets the current record's "Users" collection
+ * @method sfGuardGroup        setPermissions()            Sets the current record's "Permissions" collection
+ * @method sfGuardGroup        setSfGuardGroupPermission() Sets the current record's "sfGuardGroupPermission" collection
+ * @method sfGuardGroup        setSfGuardUserGroup()       Sets the current record's "sfGuardUserGroup" collection
+ * 
+ * @package    Vt_Portals
+ * @subpackage model
+ * @author     ngoctv1
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BasesfGuardGroup extends sfDoctrineRecord

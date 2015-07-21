@@ -10,9 +10,18 @@
  * @property string $ip_address
  * @property sfGuardUser $User
  * 
- * @package    ##PACKAGE##
- * @subpackage ##SUBPACKAGE##
- * @author     ##NAME## <##EMAIL##>
+ * @method integer            getUserId()       Returns the current record's "user_id" value
+ * @method string             getRememberKey()  Returns the current record's "remember_key" value
+ * @method string             getIpAddress()    Returns the current record's "ip_address" value
+ * @method sfGuardUser        getUser()         Returns the current record's "User" value
+ * @method sfGuardRememberKey setUserId()       Sets the current record's "user_id" value
+ * @method sfGuardRememberKey setRememberKey()  Sets the current record's "remember_key" value
+ * @method sfGuardRememberKey setIpAddress()    Sets the current record's "ip_address" value
+ * @method sfGuardRememberKey setUser()         Sets the current record's "User" value
+ * 
+ * @package    Vt_Portals
+ * @subpackage model
+ * @author     ngoctv1
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BasesfGuardRememberKey extends sfDoctrineRecord

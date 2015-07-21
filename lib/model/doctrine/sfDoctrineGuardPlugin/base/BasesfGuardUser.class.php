@@ -26,9 +26,50 @@
  * @property sfGuardRememberKey $RememberKeys
  * @property sfGuardForgotPassword $ForgotPassword
  * 
- * @package    ##PACKAGE##
- * @subpackage ##SUBPACKAGE##
- * @author     ##NAME## <##EMAIL##>
+ * @method string                getFirstName()             Returns the current record's "first_name" value
+ * @method string                getLastName()              Returns the current record's "last_name" value
+ * @method string                getPhone()                 Returns the current record's "phone" value
+ * @method string                getEmailAddress()          Returns the current record's "email_address" value
+ * @method string                getUsername()              Returns the current record's "username" value
+ * @method string                getAlgorithm()             Returns the current record's "algorithm" value
+ * @method string                getSalt()                  Returns the current record's "salt" value
+ * @method string                getPassword()              Returns the current record's "password" value
+ * @method boolean               getIsActive()              Returns the current record's "is_active" value
+ * @method boolean               getIsSuperAdmin()          Returns the current record's "is_super_admin" value
+ * @method timestamp             getLastLogin()             Returns the current record's "last_login" value
+ * @method timestamp             getPassUpdateAt()          Returns the current record's "pass_update_at" value
+ * @method boolean               getIsLockSignin()          Returns the current record's "is_lock_signin" value
+ * @method integer               getLockedTime()            Returns the current record's "locked_time" value
+ * @method Doctrine_Collection   getGroups()                Returns the current record's "Groups" collection
+ * @method Doctrine_Collection   getPermissions()           Returns the current record's "Permissions" collection
+ * @method Doctrine_Collection   getSfGuardUserPermission() Returns the current record's "sfGuardUserPermission" collection
+ * @method Doctrine_Collection   getSfGuardUserGroup()      Returns the current record's "sfGuardUserGroup" collection
+ * @method sfGuardRememberKey    getRememberKeys()          Returns the current record's "RememberKeys" value
+ * @method sfGuardForgotPassword getForgotPassword()        Returns the current record's "ForgotPassword" value
+ * @method sfGuardUser           setFirstName()             Sets the current record's "first_name" value
+ * @method sfGuardUser           setLastName()              Sets the current record's "last_name" value
+ * @method sfGuardUser           setPhone()                 Sets the current record's "phone" value
+ * @method sfGuardUser           setEmailAddress()          Sets the current record's "email_address" value
+ * @method sfGuardUser           setUsername()              Sets the current record's "username" value
+ * @method sfGuardUser           setAlgorithm()             Sets the current record's "algorithm" value
+ * @method sfGuardUser           setSalt()                  Sets the current record's "salt" value
+ * @method sfGuardUser           setPassword()              Sets the current record's "password" value
+ * @method sfGuardUser           setIsActive()              Sets the current record's "is_active" value
+ * @method sfGuardUser           setIsSuperAdmin()          Sets the current record's "is_super_admin" value
+ * @method sfGuardUser           setLastLogin()             Sets the current record's "last_login" value
+ * @method sfGuardUser           setPassUpdateAt()          Sets the current record's "pass_update_at" value
+ * @method sfGuardUser           setIsLockSignin()          Sets the current record's "is_lock_signin" value
+ * @method sfGuardUser           setLockedTime()            Sets the current record's "locked_time" value
+ * @method sfGuardUser           setGroups()                Sets the current record's "Groups" collection
+ * @method sfGuardUser           setPermissions()           Sets the current record's "Permissions" collection
+ * @method sfGuardUser           setSfGuardUserPermission() Sets the current record's "sfGuardUserPermission" collection
+ * @method sfGuardUser           setSfGuardUserGroup()      Sets the current record's "sfGuardUserGroup" collection
+ * @method sfGuardUser           setRememberKeys()          Sets the current record's "RememberKeys" value
+ * @method sfGuardUser           setForgotPassword()        Sets the current record's "ForgotPassword" value
+ * 
+ * @package    Vt_Portals
+ * @subpackage model
+ * @author     ngoctv1
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BasesfGuardUser extends sfDoctrineRecord

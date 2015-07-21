@@ -1,3 +1,12 @@
+csdl_dmnghenghiep:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                csdl_dmnghenghiep
+    module:               csdlDmNgheNghiep
+    prefix_path:          /csdlDmNgheNghiep
+    column:               id
+    with_wildcard_routes: true
+
 csdl_dantoc:
   class: sfDoctrineRouteCollection
   options:
