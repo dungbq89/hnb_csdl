@@ -1,0 +1,35 @@
+generator:
+  class: tmcTwitterBootstrapDoctrineGenerator
+  param:
+    model_class:           csdl_dantoc
+    theme:                 tmcTwitterBootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          csdl_dantoc
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        madantoc: {label: Mã dân tộc}
+        tendantoc: {label: Tên dân tộc}
+        gioithieu: {label: Giới thiệu}
+        anhdaidien: {label: Ảnh đại diện}
+      list:
+        title: Danh sách dân tộc
+        display: [anhdaidien, madantoc, tendantoc, gioithieu]
+        object_actions:
+          _edit: ~
+          _delete: ~
+      filter:
+        display: [tendantoc]
+      form:
+        display: [tendantoc, madantoc, anhdaidien, gioithieu]
+        class: csdlDantocAdminForm
+      edit:
+        title: Chỉnh sửa dân tộc
+      new:
+        title: Thêm mới dân tộc

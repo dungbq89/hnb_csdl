@@ -19,6 +19,15 @@ all:
           dropdown:
             Quản lý thẻ hội viên:
               route: csdl_thehoivien
+
+        Quản lý chuyên mục:
+          credentials: [admin]
+          dropdown:
+            Quản lý chủ đề:
+              route: csdl_chude
+            Quản lý dân tộc:
+              route: csdl_dantoc
+
         Phân hệ khác:
           credentials: [admin]
           dropdown:

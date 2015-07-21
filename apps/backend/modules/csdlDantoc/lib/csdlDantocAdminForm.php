@@ -7,13 +7,18 @@
  * Time: 12:02 PM
  * To change this template use File | Settings | File Templates.
  */
-class csdlChudeAdminForm extends Basecsdl_chudeForm {
+class csdlDantocAdminForm extends Basecsdl_dantocForm {
 
     public function configure() {
         $i18n = sfContext::getInstance()->getI18N();
         unset($this['created_at'], $this['updated_at'], $this['created_at'], $this['updated_at']);
-        $this->widgetSchema['tenchude'] = new sfWidgetFormInputText(array());
-        $this->validatorSchema['tenchude'] = new sfValidatorString(array('required' => true, 'trim' => true, 'max_length' => 255));
+        $this->widgetSchema['tendantoc'] = new sfWidgetFormInputText(array());
+        $this->validatorSchema['tendantoc'] = new sfValidatorString(array('required' => true, 'trim' => true, 'max_length' => 255));
+
+
+        $this->widgetSchema['madantoc'] = new sfWidgetFormInputText(array());
+        $this->validatorSchema['madantoc'] = new sfValidatorString(array('required' => true, 'trim' => true, 'max_length' => 255));
+
 
         $this->widgetSchema['gioithieu'] = new sfWidgetFormTextarea(array());
         $this->validatorSchema['gioithieu'] = new sfValidatorString(array('required' => false, 'trim' => true, 'max_length' => 500));
@@ -26,8 +31,6 @@ class csdlChudeAdminForm extends Basecsdl_chudeForm {
             'template' => '<div>%file%<br />%input%</div>',
         ));
 
-        $this->widgetSchema['thutu'] = new sfWidgetFormInputText(array('default' => 0), array('size' => 5, 'maxlength' => 5));
-        $this->validatorSchema['thutu'] = new sfValidatorInteger(array('required' => false, "min"=>0, 'max'=>99999, 'trim' => true),array('min'=>$i18n->__('Thứ tự phải là số nguyên dương'),'max'=>$i18n->__('Tối đa 5 ký tự'),'invalid'=> $i18n->__('Thứ tự phải là số nguyên dương')));
         $this->validatorSchema['anhdaidien'] = new sfValidatorFileViettel(
             array(
                 'max_size' => sfConfig::get('app_image_maxsize', 999999),
@@ -42,7 +45,7 @@ class csdlChudeAdminForm extends Basecsdl_chudeForm {
 
 
 
-        $this->widgetSchema->setNameFormat('csdl_chude[%s]');
+        $this->widgetSchema->setNameFormat('csdl_dantoc[%s]');
 
         $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
     }
