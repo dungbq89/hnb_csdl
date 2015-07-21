@@ -1,0 +1,37 @@
+generator:
+  class: tmcTwitterBootstrapDoctrineGenerator
+  param:
+    model_class:           csdl_chude
+    theme:                 tmcTwitterBootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          csdl_chude
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        tenchude: {label: Tên chủ đề}
+        gioithieu: {label: Giới thiệu}
+        anhdaidien: {label: Ảnh đại diện}
+        thutu: {label: Thứ tự}
+        trangthai: {label: Trạng thái}
+      list:
+        title: Danh sách chủ đề
+        display: [anhdaidien, tenchude, gioithieu, thutu, trangthai]
+        object_actions:
+          _edit: ~
+          _delete: ~
+      filter:
+        display: [tenchude]
+      form:
+        display: [tenchude, anhdaidien, gioithieu, thutu, trangthai]
+        class: csdlChudeAdminForm
+      edit:
+        title: Chỉnh sửa chủ đề
+      new:
+        title: Thêm mới chủ đề
+

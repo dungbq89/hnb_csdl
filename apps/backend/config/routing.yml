@@ -1,3 +1,12 @@
+csdl_chude:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                csdl_chude
+    module:               csdlChude
+    prefix_path:          /csdlChude
+    column:               id
+    with_wildcard_routes: true
+
 csdl_thehoivien:
   class: sfDoctrineRouteCollection
   options:
