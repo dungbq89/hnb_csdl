@@ -56,7 +56,7 @@ abstract class Basecsdl_dmnghenghiep extends sfDoctrineRecord
              ));
         $this->hasColumn('trangthai', 'boolean', null, array(
              'type' => 'boolean',
-             'notnull' => true,
+             'notnull' => false,
              'default' => false,
              'comment' => 'Trang thai',
              ));

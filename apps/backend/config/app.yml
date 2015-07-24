@@ -29,6 +29,8 @@ all:
               route: csdl_dantoc
             Quản lý danh mục nghề nghiệp:
               route: csdl_dmnghenghiep
+            Quản lý loại giải thưởng:
+              route: csdl_loaigiaithuong
 
         Phân hệ khác:
           credentials: [admin]
