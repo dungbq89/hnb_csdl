@@ -6,11 +6,35 @@ csdl_lylichhoivien:
     Timestampable: ~
   columns:
     hoivien_id: { type: integer(5), comment: "ma hoi vien"}
+    ten: { type: string(255), comment: "Tên hội viên" }
+    hodem: { type: string(255), comment: "Họ + tên hội viên" }
     ngaysinh: { type: timestamp(25), comment: "ngay sinh cua hoi vien" }
     gioitinh: { type: string(25), comment: "Gioi tinh" }
     diachi: { type: string(255), comment: "dịa chỉ" }
     maquan: { type: string(25), comment: "Ma quan/huyen" }
     matinh: { type: string(255), comment: "Ma tinh/thanh pho" }
+    ngayvaodoan: { type: timestamp(25), comment: "ngay vao doan" }
+    noiketnapdoan: { type: string(255), comment: "nơi kết nạp đoàn" }
+    ngayvaodang: { type: timestamp(25), comment: "ngay vao dang" }
+    noiketnapdang: { type: string(255), comment: "nơi kết nạp đảng" }
+    tieusu: { type: string(1000), comment: "nơi kết nạp đảng" }
+    nghenghiep_id: { type: integer(5), comment: "Danh muc nghe nghiep"}
+    dantoc_id: { type: integer(5), comment: "Danh muc dan toc"}
+    quoctich: { type: string(255), comment: "quoc tich" }
+#qua trinh cong tac
+csdl_quatrinhcongtac:
+  tableName: csdl_quatrinh_congtac
+  actAs:
+    Timestampable: ~
+    VtBlameable: ~
+  columns:
+    hoivien_id: { type: integer(5), comment: "ma hoi vien"}
+    donvi_id:  { type: integer(5), comment: "don vị công tác"}
+    thoigian: { type: integer(5), comment: "thời gian công tác (tính theo tháng)"}
+    batdau: { type: timestamp(25), comment: "thoi gian bat dau" }
+    ketthuc: { type: timestamp(25), comment: "thoi gian ket thuc" }
+    chucvu: { type: string(255), comment: "Chức vụ" }
+    mota: { type: string(500), comment: "Mô tả công việc" }
 #Quản lý thẻ hội viên
 csdl_thehoivien:
   tableName: csdl_the_hoivien
@@ -32,12 +56,14 @@ csdl_tacpham:
     VtBlameable: ~
     Timestampable: ~
   columns:
+    hoivient_id: { type: integer(5), comment: "ma hoi vien"}
     tentacpham: { type: string(255), comment: "Ten tac pham" }
     gioithieu: { type: string(1000), comment: "gioi thieu" }
     anhdaidien:  { type: string(255), comment: "hinh anh" }
     filedownload: { type: string(255), comment: "file download: zip, pdf, doc, docx, xls, xlsx" }
     ngayxuatban: { type: timestamp(25), comment: "ngay xuat ban" }
-    tacgia: { type: string(255), comment: "Tac gia" }
+    tacgia_id: { type: type: integer(5), comment: "Ma Tac gia" }
+    chude_id: { type: integer(5), comment: "ma chu de"}
 #Quản lý chuyên mục/ chủ đề
 csdl_chude:
   tableName: csdl_chude
@@ -56,11 +82,25 @@ csdl_nhatky:
   columns:
     hoivien_id: { type: integer(5), comment: "ma hoi vien"}
     tieude: { type: string(255), comment: "Tieu de" }
-    trichyeu: { type: string(1000), comment: "trich yeu" }
-    noidung: { type: clob, comment: "Nội dung bài viết" }
-    anhdaidien:  { type: string(255), comment: "hinh anh" }
-    trangthai: { type: boolean, notnull: true, default: false, comment: "Trang thai" }
+    machucnang: { type: string(255), comment: "Mã chức năng" }
+    module: { type: string(255), comment: "Phân hệ chức năng" }
     ngaytao: { type: timestamp(25), comment: "ngay tao" }
+    ip: { type: string(25), comment: "địa chỉ ip tác động" }
+#Danh mục loại giải thưởng
+csdl_loaigiaithuong:
+  tableName: csdl_loaigiaithuong
+  actAs:
+    VtBlameable: ~
+    Timestampable: ~
+  columns:
+    madanhmuc:  { type: string(25), comment: "Ma danh muc" }
+    tendanhmuc: { type: string(255), comment: "ten danh muc" }
+    linhvuc: { type: string(255), comment: "Linh vuc giai thuong" }
+    donvitochuc: { type: string(255), comment: "Don vi to chuc" }
+    gioithieu:  { type: string(500), comment: "Gioi thieu" }
+    anhdaidien: { type: string(255), comment: "hinh anh" }
+    thutu: { type: integer(5), comment: "Thu tu hien thi"}
+    trangthai: { type: integer(5), comment: "trang thai"}
 #Quản lý giải thưởng
 csdl_giaithuong:
   tableName: csdl_giaithuong
@@ -68,14 +108,14 @@ csdl_giaithuong:
     VtBlameable: ~
     Timestampable: ~
   columns:
-    tengiaithuong: { type: string(255), comment: "Ten giai thuong" }
-    donvitochuc: { type: string(255), comment: "Don vi to chuc" }
+    tengiaithuong: { type: string(255), comment: "Ten giai thuong: nhat, nhi, ba" }
+    madanhmuc:  { type: string(25), comment: "Ma danh muc giai thuong" }
     namtochuc: { type: integer(4), comment: "Nam to chuc"}
     giatri: { type: integer(8), comment: "gia tri giai thuong"}
-    linhvuc: { type: string(255), comment: "Linh vuc giai thuong" }
+
 #Danh mục tỉnh/ thành phố quận/ huyện
 csdl_area:
-  tableName: csdl_area:
+  tableName: csdl_area
   columns:
     PROVINCE: { type: string(25), comment: "Ma tinh" }
     DISTRICT: { type: string(25), comment: "Ma huyen" }
@@ -107,20 +147,8 @@ csdl_dmnghenghiep:
     gioithieu:  { type: string(500), comment: "Gioi thieu" }
     anhdaidien: { type: string(255), comment: "hinh anh" }
     thutu: { type: integer(5), comment: "Thu tu hien thi"}
-    trangthai:  { type: boolean, notnull: false, default: false, comment: "Trang thai" }
-#Danh mục loại giải thưởng
-csdl_loaigiaithuong:
-  tableName: csdl_loaigiaithuong
-  actAs:
-    VtBlameable: ~
-    Timestampable: ~
-  columns:
-    madanhmuc:  { type: string(25), comment: "Ma danh muc" }
-    tendanhmuc: { type: string(255), comment: "ten danh muc" }
-    gioithieu:  { type: string(500), comment: "Gioi thieu" }
-    anhdaidien: { type: string(255), comment: "hinh anh" }
-    thutu: { type: integer(5), comment: "Thu tu hien thi"}
-    trangthai:  { type: boolean, notnull: false, default: false, comment: "Trang thai" }
+    trangthai: { type: integer(5), comment: "trang thai"}
+
 #Danh mục loại tài liệu
 csdl_loaitailieu:
   tableName: csdl_loaitailieu
@@ -205,7 +233,7 @@ csdl_lichcongtac:
     diadiem: { type: string(255), comment: "tieu de" }
 #Quản lý văn bản pháp quy
 csdl_vanbanphapquy:
-  tableName: csdl_vanban_phapquy:
+  tableName: csdl_vanban_phapquy
   actAs:
     VtBlameable: ~
     Timestampable: ~
@@ -224,6 +252,33 @@ csdl_vanbanphapquy:
     loaivanban_id: {type: integer(5), comment: "Loai van ban phap quy"}
   relations:
     loai_vbpq: { class: csdl_loaivanban, local: loaivanban_id, type: one, foreignAlias: vanban_phapquy }
+csdl_danhba:
+  tableName: csdl_danhba
+  actAs:
+    VtBlameable: ~
+    Timestampable: ~
+  columns:
+    hoten: { type: string(255), comment: "Họ và tên" }
+    ngaysinh: { type: timestamp(25), comment: "ngay sinh" }
+    gioitinh: { type: string(25), comment: "Gioi tinh" }
+    diachi: { type: string(255), comment: "dịa chỉ" }
+    dienthoai: { type: string(255), comment: "Dien thoai" }
+    email: { type: string(255), comment: "Email" }
+    donvi: { type: string(255), comment: "don vi cong tac" }
+#thong tin tac gia
+csdl_tacgia:
+  tableName: csdl_tacgia
+  actAs:
+    VtBlameable: ~
+    Timestampable: ~
+  columns:
+    hoten: { type: string(255), comment: "Họ và tên" }
+    ngaysinh: { type: timestamp(25), comment: "ngay sinh" }
+    gioitinh: { type: string(25), comment: "Gioi tinh" }
+    diachi: { type: string(255), comment: "dịa chỉ" }
+    dienthoai: { type: string(255), comment: "Dien thoai" }
+    email: { type: string(255), comment: "Email" }
+    donvi: { type: string(255), comment: "don vi cong tac" }
 AdUserSigninLock:
   columns:
     user_name: {type: string(255)}

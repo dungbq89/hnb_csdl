@@ -13,7 +13,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_tacpham', 'doctrine');
  * @property string $anhdaidien
  * @property string $filedownload
  * @property timestamp $ngayxuatban
- * @property string $tacgia
+ * @property integer $tacgia_id
  * @property integer $chude_id
  * 
  * @method integer      getHoivientId()   Returns the current record's "hoivient_id" value
@@ -22,7 +22,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_tacpham', 'doctrine');
  * @method string       getAnhdaidien()   Returns the current record's "anhdaidien" value
  * @method string       getFiledownload() Returns the current record's "filedownload" value
  * @method timestamp    getNgayxuatban()  Returns the current record's "ngayxuatban" value
- * @method string       getTacgia()       Returns the current record's "tacgia" value
+ * @method integer      getTacgiaId()     Returns the current record's "tacgia_id" value
  * @method integer      getChudeId()      Returns the current record's "chude_id" value
  * @method csdl_tacpham setHoivientId()   Sets the current record's "hoivient_id" value
  * @method csdl_tacpham setTentacpham()   Sets the current record's "tentacpham" value
@@ -30,7 +30,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_tacpham', 'doctrine');
  * @method csdl_tacpham setAnhdaidien()   Sets the current record's "anhdaidien" value
  * @method csdl_tacpham setFiledownload() Sets the current record's "filedownload" value
  * @method csdl_tacpham setNgayxuatban()  Sets the current record's "ngayxuatban" value
- * @method csdl_tacpham setTacgia()       Sets the current record's "tacgia" value
+ * @method csdl_tacpham setTacgiaId()     Sets the current record's "tacgia_id" value
  * @method csdl_tacpham setChudeId()      Sets the current record's "chude_id" value
  * 
  * @package    Vt_Portals
@@ -73,10 +73,10 @@ abstract class Basecsdl_tacpham extends sfDoctrineRecord
              'comment' => 'ngay xuat ban',
              'length' => 25,
              ));
-        $this->hasColumn('tacgia', 'string', 255, array(
-             'type' => 'string',
-             'comment' => 'Tac gia',
-             'length' => 255,
+        $this->hasColumn('tacgia_id', 'integer', 5, array(
+             'type' => 'integer',
+             'comment' => 'Ma Tac gia',
+             'length' => 5,
              ));
         $this->hasColumn('chude_id', 'integer', 5, array(
              'type' => 'integer',
