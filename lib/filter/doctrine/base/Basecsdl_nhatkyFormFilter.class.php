@@ -15,21 +15,19 @@ abstract class Basecsdl_nhatkyFormFilter extends BaseFormFilterDoctrine
     $this->setWidgets(array(
       'hoivien_id' => new sfWidgetFormFilterInput(),
       'tieude'     => new sfWidgetFormFilterInput(),
-      'trichyeu'   => new sfWidgetFormFilterInput(),
-      'noidung'    => new sfWidgetFormFilterInput(),
-      'anhdaidien' => new sfWidgetFormFilterInput(),
-      'trangthai'  => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
+      'machucnang' => new sfWidgetFormFilterInput(),
+      'module'     => new sfWidgetFormFilterInput(),
       'ngaytao'    => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
+      'ip'         => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
       'hoivien_id' => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'tieude'     => new sfValidatorPass(array('required' => false)),
-      'trichyeu'   => new sfValidatorPass(array('required' => false)),
-      'noidung'    => new sfValidatorPass(array('required' => false)),
-      'anhdaidien' => new sfValidatorPass(array('required' => false)),
-      'trangthai'  => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
+      'machucnang' => new sfValidatorPass(array('required' => false)),
+      'module'     => new sfValidatorPass(array('required' => false)),
       'ngaytao'    => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
+      'ip'         => new sfValidatorPass(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('csdl_nhatky_filters[%s]');
@@ -52,11 +50,10 @@ abstract class Basecsdl_nhatkyFormFilter extends BaseFormFilterDoctrine
       'id'         => 'Number',
       'hoivien_id' => 'Number',
       'tieude'     => 'Text',
-      'trichyeu'   => 'Text',
-      'noidung'    => 'Text',
-      'anhdaidien' => 'Text',
-      'trangthai'  => 'Boolean',
+      'machucnang' => 'Text',
+      'module'     => 'Text',
       'ngaytao'    => 'Date',
+      'ip'         => 'Text',
     );
   }
 }

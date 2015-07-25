@@ -16,12 +16,14 @@ abstract class Basecsdl_tacphamForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'           => new sfWidgetFormInputHidden(),
+      'hoivient_id'  => new sfWidgetFormInputText(),
       'tentacpham'   => new sfWidgetFormInputText(),
       'gioithieu'    => new sfWidgetFormTextarea(),
       'anhdaidien'   => new sfWidgetFormInputText(),
       'filedownload' => new sfWidgetFormInputText(),
       'ngayxuatban'  => new sfWidgetFormDateTime(),
       'tacgia'       => new sfWidgetFormInputText(),
+      'chude_id'     => new sfWidgetFormInputText(),
       'created_by'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('CreatedBy'), 'add_empty' => true)),
       'updated_by'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('UpdatedBy'), 'add_empty' => true)),
       'created_at'   => new sfWidgetFormDateTime(),
@@ -30,12 +32,14 @@ abstract class Basecsdl_tacphamForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'           => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'hoivient_id'  => new sfValidatorInteger(array('required' => false)),
       'tentacpham'   => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'gioithieu'    => new sfValidatorString(array('max_length' => 1000, 'required' => false)),
       'anhdaidien'   => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'filedownload' => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'ngayxuatban'  => new sfValidatorDateTime(array('required' => false)),
       'tacgia'       => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'chude_id'     => new sfValidatorInteger(array('required' => false)),
       'created_by'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('CreatedBy'), 'required' => false)),
       'updated_by'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('UpdatedBy'), 'required' => false)),
       'created_at'   => new sfValidatorDateTime(),

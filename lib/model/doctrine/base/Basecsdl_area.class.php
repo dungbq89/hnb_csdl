@@ -42,7 +42,7 @@ abstract class Basecsdl_area extends sfDoctrineRecord
 {
     public function setTableDefinition()
     {
-        $this->setTableName('csdl_area:');
+        $this->setTableName('csdl_area');
         $this->hasColumn('PROVINCE', 'string', 25, array(
              'type' => 'string',
              'comment' => 'Ma tinh',

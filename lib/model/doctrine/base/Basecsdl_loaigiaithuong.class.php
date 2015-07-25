@@ -9,23 +9,29 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_loaigiaithuong', 'doctrine'
  * 
  * @property string $madanhmuc
  * @property string $tendanhmuc
+ * @property string $linhvuc
+ * @property string $donvitochuc
  * @property string $gioithieu
  * @property string $anhdaidien
  * @property integer $thutu
- * @property boolean $trangthai
+ * @property integer $trangthai
  * 
- * @method string              getMadanhmuc()  Returns the current record's "madanhmuc" value
- * @method string              getTendanhmuc() Returns the current record's "tendanhmuc" value
- * @method string              getGioithieu()  Returns the current record's "gioithieu" value
- * @method string              getAnhdaidien() Returns the current record's "anhdaidien" value
- * @method integer             getThutu()      Returns the current record's "thutu" value
- * @method boolean             getTrangthai()  Returns the current record's "trangthai" value
- * @method csdl_loaigiaithuong setMadanhmuc()  Sets the current record's "madanhmuc" value
- * @method csdl_loaigiaithuong setTendanhmuc() Sets the current record's "tendanhmuc" value
- * @method csdl_loaigiaithuong setGioithieu()  Sets the current record's "gioithieu" value
- * @method csdl_loaigiaithuong setAnhdaidien() Sets the current record's "anhdaidien" value
- * @method csdl_loaigiaithuong setThutu()      Sets the current record's "thutu" value
- * @method csdl_loaigiaithuong setTrangthai()  Sets the current record's "trangthai" value
+ * @method string              getMadanhmuc()   Returns the current record's "madanhmuc" value
+ * @method string              getTendanhmuc()  Returns the current record's "tendanhmuc" value
+ * @method string              getLinhvuc()     Returns the current record's "linhvuc" value
+ * @method string              getDonvitochuc() Returns the current record's "donvitochuc" value
+ * @method string              getGioithieu()   Returns the current record's "gioithieu" value
+ * @method string              getAnhdaidien()  Returns the current record's "anhdaidien" value
+ * @method integer             getThutu()       Returns the current record's "thutu" value
+ * @method integer             getTrangthai()   Returns the current record's "trangthai" value
+ * @method csdl_loaigiaithuong setMadanhmuc()   Sets the current record's "madanhmuc" value
+ * @method csdl_loaigiaithuong setTendanhmuc()  Sets the current record's "tendanhmuc" value
+ * @method csdl_loaigiaithuong setLinhvuc()     Sets the current record's "linhvuc" value
+ * @method csdl_loaigiaithuong setDonvitochuc() Sets the current record's "donvitochuc" value
+ * @method csdl_loaigiaithuong setGioithieu()   Sets the current record's "gioithieu" value
+ * @method csdl_loaigiaithuong setAnhdaidien()  Sets the current record's "anhdaidien" value
+ * @method csdl_loaigiaithuong setThutu()       Sets the current record's "thutu" value
+ * @method csdl_loaigiaithuong setTrangthai()   Sets the current record's "trangthai" value
  * 
  * @package    Vt_Portals
  * @subpackage model
@@ -47,6 +53,16 @@ abstract class Basecsdl_loaigiaithuong extends sfDoctrineRecord
              'comment' => 'ten danh muc',
              'length' => 255,
              ));
+        $this->hasColumn('linhvuc', 'string', 255, array(
+             'type' => 'string',
+             'comment' => 'Linh vuc giai thuong',
+             'length' => 255,
+             ));
+        $this->hasColumn('donvitochuc', 'string', 255, array(
+             'type' => 'string',
+             'comment' => 'Don vi to chuc',
+             'length' => 255,
+             ));
         $this->hasColumn('gioithieu', 'string', 500, array(
              'type' => 'string',
              'comment' => 'Gioi thieu',
@@ -62,11 +78,10 @@ abstract class Basecsdl_loaigiaithuong extends sfDoctrineRecord
              'comment' => 'Thu tu hien thi',
              'length' => 5,
              ));
-        $this->hasColumn('trangthai', 'boolean', null, array(
-             'type' => 'boolean',
-             'notnull' => false,
-             'default' => false,
-             'comment' => 'Trang thai',
+        $this->hasColumn('trangthai', 'integer', 5, array(
+             'type' => 'integer',
+             'comment' => 'trang thai',
+             'length' => 5,
              ));
     }
 

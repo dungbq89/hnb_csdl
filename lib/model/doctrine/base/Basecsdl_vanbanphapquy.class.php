@@ -57,7 +57,7 @@ abstract class Basecsdl_vanbanphapquy extends sfDoctrineRecord
 {
     public function setTableDefinition()
     {
-        $this->setTableName('csdl_vanban_phapquy:');
+        $this->setTableName('csdl_vanban_phapquy');
         $this->hasColumn('matailieu', 'string', 25, array(
              'type' => 'string',
              'comment' => 'Ma tai lieu',

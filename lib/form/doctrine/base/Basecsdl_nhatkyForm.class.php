@@ -18,22 +18,20 @@ abstract class Basecsdl_nhatkyForm extends BaseFormDoctrine
       'id'         => new sfWidgetFormInputHidden(),
       'hoivien_id' => new sfWidgetFormInputText(),
       'tieude'     => new sfWidgetFormInputText(),
-      'trichyeu'   => new sfWidgetFormTextarea(),
-      'noidung'    => new sfWidgetFormTextarea(),
-      'anhdaidien' => new sfWidgetFormInputText(),
-      'trangthai'  => new sfWidgetFormInputCheckbox(),
+      'machucnang' => new sfWidgetFormInputText(),
+      'module'     => new sfWidgetFormInputText(),
       'ngaytao'    => new sfWidgetFormDateTime(),
+      'ip'         => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
       'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'hoivien_id' => new sfValidatorInteger(array('required' => false)),
       'tieude'     => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-      'trichyeu'   => new sfValidatorString(array('max_length' => 1000, 'required' => false)),
-      'noidung'    => new sfValidatorString(array('required' => false)),
-      'anhdaidien' => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-      'trangthai'  => new sfValidatorBoolean(array('required' => false)),
+      'machucnang' => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'module'     => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'ngaytao'    => new sfValidatorDateTime(array('required' => false)),
+      'ip'         => new sfValidatorString(array('max_length' => 25, 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('csdl_nhatky[%s]');

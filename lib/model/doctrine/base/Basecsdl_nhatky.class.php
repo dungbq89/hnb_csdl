@@ -9,26 +9,23 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_nhatky', 'doctrine');
  * 
  * @property integer $hoivien_id
  * @property string $tieude
- * @property string $trichyeu
- * @property clob $noidung
- * @property string $anhdaidien
- * @property boolean $trangthai
+ * @property string $machucnang
+ * @property string $module
  * @property timestamp $ngaytao
+ * @property string $ip
  * 
  * @method integer     getHoivienId()  Returns the current record's "hoivien_id" value
  * @method string      getTieude()     Returns the current record's "tieude" value
- * @method string      getTrichyeu()   Returns the current record's "trichyeu" value
- * @method clob        getNoidung()    Returns the current record's "noidung" value
- * @method string      getAnhdaidien() Returns the current record's "anhdaidien" value
- * @method boolean     getTrangthai()  Returns the current record's "trangthai" value
+ * @method string      getMachucnang() Returns the current record's "machucnang" value
+ * @method string      getModule()     Returns the current record's "module" value
  * @method timestamp   getNgaytao()    Returns the current record's "ngaytao" value
+ * @method string      getIp()         Returns the current record's "ip" value
  * @method csdl_nhatky setHoivienId()  Sets the current record's "hoivien_id" value
  * @method csdl_nhatky setTieude()     Sets the current record's "tieude" value
- * @method csdl_nhatky setTrichyeu()   Sets the current record's "trichyeu" value
- * @method csdl_nhatky setNoidung()    Sets the current record's "noidung" value
- * @method csdl_nhatky setAnhdaidien() Sets the current record's "anhdaidien" value
- * @method csdl_nhatky setTrangthai()  Sets the current record's "trangthai" value
+ * @method csdl_nhatky setMachucnang() Sets the current record's "machucnang" value
+ * @method csdl_nhatky setModule()     Sets the current record's "module" value
  * @method csdl_nhatky setNgaytao()    Sets the current record's "ngaytao" value
+ * @method csdl_nhatky setIp()         Sets the current record's "ip" value
  * 
  * @package    Vt_Portals
  * @subpackage model
@@ -50,29 +47,24 @@ abstract class Basecsdl_nhatky extends sfDoctrineRecord
              'comment' => 'Tieu de',
              'length' => 255,
              ));
-        $this->hasColumn('trichyeu', 'string', 1000, array(
+        $this->hasColumn('machucnang', 'string', 255, array(
              'type' => 'string',
-             'comment' => 'trich yeu',
-             'length' => 1000,
-             ));
-        $this->hasColumn('noidung', 'clob', null, array(
-             'type' => 'clob',
-             'comment' => 'Nội dung bài viết',
-             ));
-        $this->hasColumn('anhdaidien', 'string', 255, array(
-             'type' => 'string',
-             'comment' => 'hinh anh',
+             'comment' => 'Mã chức năng',
              'length' => 255,
              ));
-        $this->hasColumn('trangthai', 'boolean', null, array(
-             'type' => 'boolean',
-             'notnull' => true,
-             'default' => false,
-             'comment' => 'Trang thai',
+        $this->hasColumn('module', 'string', 255, array(
+             'type' => 'string',
+             'comment' => 'Phân hệ chức năng',
+             'length' => 255,
              ));
         $this->hasColumn('ngaytao', 'timestamp', 25, array(
              'type' => 'timestamp',
              'comment' => 'ngay tao',
+             'length' => 25,
+             ));
+        $this->hasColumn('ip', 'string', 25, array(
+             'type' => 'string',
+             'comment' => 'địa chỉ ip tác động',
              'length' => 25,
              ));
     }
