@@ -1,3 +1,12 @@
+csdl_loaitailieu:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                csdl_loaitailieu
+    module:               csdlLoaiTaiLieu
+    prefix_path:          /csdlLoaiTaiLieu
+    column:               id
+    with_wildcard_routes: true
+
 csdl_loaigiaithuong:
   class: sfDoctrineRouteCollection
   options:

@@ -1,0 +1,37 @@
+generator:
+  class: tmcTwitterBootstrapDoctrineGenerator
+  param:
+    model_class:           csdl_loaitailieu
+    theme:                 tmcTwitterBootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          csdl_loaitailieu
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        madanhmuc: {label: Mã danh mục}
+        tendanhmuc: {label: Tên danh mục}
+        gioithieu: {label: Giới thiệu}
+        anhdaidien: {label: Ảnh đại diện}
+        thutu: {label: Thứ tự}
+        trangthai: {label: Trạng thái}
+      list:
+        title: Danh sách danh mục loại tài liệu
+        display: [tendanhmuc, madanhmuc, gioithieu, thutu, trangthai]
+        object_actions:
+          _edit: ~
+          _delete: ~
+      filter:
+        display: [tendanhmuc]
+      form:
+        display: [tendanhmuc, madanhmuc, anhdaidien, gioithieu, thutu, trangthai]
+        class: csdlLoaiTaiLieuAdminForm
+      edit:
+        title: Chỉnh sửa danh mục loại tài liệu
+      new:
+        title: Thêm mới danh mục loại tài liệu

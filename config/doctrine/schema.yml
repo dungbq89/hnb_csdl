@@ -100,7 +100,7 @@ csdl_loaigiaithuong:
     gioithieu:  { type: string(500), comment: "Gioi thieu" }
     anhdaidien: { type: string(255), comment: "hinh anh" }
     thutu: { type: integer(5), comment: "Thu tu hien thi"}
-    trangthai: { type: integer(5), comment: "trang thai"}
+    trangthai:  { type: boolean, notnull: true, default: false, comment: "Trang thai" }
 #Quản lý giải thưởng
 csdl_giaithuong:
   tableName: csdl_giaithuong
@@ -147,7 +147,7 @@ csdl_dmnghenghiep:
     gioithieu:  { type: string(500), comment: "Gioi thieu" }
     anhdaidien: { type: string(255), comment: "hinh anh" }
     thutu: { type: integer(5), comment: "Thu tu hien thi"}
-    trangthai: { type: integer(5), comment: "trang thai"}
+    trangthai:  { type: boolean, notnull: true, default: false, comment: "Trang thai" }
 
 #Danh mục loại tài liệu
 csdl_loaitailieu:
@@ -161,7 +161,7 @@ csdl_loaitailieu:
     gioithieu:  { type: string(500), comment: "Gioi thieu" }
     anhdaidien: { type: string(255), comment: "hinh anh" }
     thutu: { type: integer(5), comment: "Thu tu hien thi"}
-    trangthai: { type: integer(5), comment: "trang thai"}
+    trangthai:  { type: boolean, notnull: true, default: false, comment: "Trang thai" }
 #Danh mục loại văn bản pháp quy
 csdl_loaivanban:
   tableName: csdl_loaivanban
@@ -174,7 +174,7 @@ csdl_loaivanban:
     gioithieu:  { type: string(500), comment: "Gioi thieu" }
     anhdaidien: { type: string(255), comment: "hinh anh" }
     thutu: { type: integer(5), comment: "Thu tu hien thi"}
-    trangthai: { type: integer(5), comment: "trang thai"}
+    trangthai:  { type: boolean, notnull: true, default: false, comment: "Trang thai" }
 #Danh mục cơ quan ban hành
 csdl_coquanbanhanh:
   tableName: csdl_coquan_banhanh
@@ -188,7 +188,7 @@ csdl_coquanbanhanh:
     nguoidaidien: { type: string(255), comment: "nguoi dai dien" }
     anhdaidien: { type: string(255), comment: "hinh anh" }
     thutu: { type: integer(5), comment: "Thu tu hien thi"}
-    trangthai: { type: integer(5), comment: "trang thai"}
+    trangthai:  { type: boolean, notnull: true, default: false, comment: "Trang thai" }
 #Danh mục cơ quan báo chí
 csdl_coquanbaochi:
   tableName: csdl_coquan_baochi
@@ -202,7 +202,7 @@ csdl_coquanbaochi:
     nguoidaidien: { type: string(255), comment: "nguoi dai dien" }
     anhdaidien: { type: string(255), comment: "hinh anh" }
     thutu: { type: integer(5), comment: "Thu tu hien thi"}
-    trangthai: { type: integer(5), comment: "trang thai"}
+    trangthai:  { type: boolean, notnull: true, default: false, comment: "Trang thai" }
 #Quản lý tài liệu nghiệp vụ
 csdl_tailieunghiepvu:
   tableName: csdl_tailieu_nghiepvu
@@ -217,7 +217,7 @@ csdl_tailieunghiepvu:
     trichdan: { type: string(1000), comment: "Trich dan" }
     anhdaidien: { type: string(255), comment: "hinh anh" }
     filedownload: { type: string(255), comment: "file download" }
-    trangthai: { type: integer(5), comment: "trang thai"}
+    trangthai:  { type: boolean, notnull: true, default: false, comment: "Trang thai" }
 #Quản lý lịch công tác
 csdl_lichcongtac:
   tableName: csdl_lichcongtac
@@ -248,7 +248,7 @@ csdl_vanbanphapquy:
     trichdan: { type: string(1000), comment: "Trich dan" }
     anhdaidien: { type: string(255), comment: "hinh anh" }
     filedownload: { type: string(255), comment: "file download" }
-    trangthai: { type: integer(5), comment: "trang thai"}
+    trangthai:  { type: boolean, notnull: true, default: false, comment: "Trang thai" }
     loaivanban_id: {type: integer(5), comment: "Loai van ban phap quy"}
   relations:
     loai_vbpq: { class: csdl_loaivanban, local: loaivanban_id, type: one, foreignAlias: vanban_phapquy }
