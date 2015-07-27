@@ -7,7 +7,7 @@
  * Time: 12:02 PM
  * To change this template use File | Settings | File Templates.
  */
-class csdlLoaiTaiLieuAdminForm extends Basecsdl_loaitailieuForm {
+class csdlLoaiVanBanAdminForm extends Basecsdl_loaivanbanForm {
 
     public function configure() {
         $i18n = sfContext::getInstance()->getI18N();
@@ -45,7 +45,7 @@ class csdlLoaiTaiLieuAdminForm extends Basecsdl_loaitailieuForm {
 
 
 
-        $this->widgetSchema->setNameFormat('csdl_loaitailieu[%s]');
+        $this->widgetSchema->setNameFormat('csdl_loaivanban[%s]');
 
         $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
     }

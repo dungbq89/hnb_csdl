@@ -33,6 +33,8 @@ all:
               route: csdl_loaigiaithuong
             Quản lý loại tài liệu:
               route: csdl_loaitailieu
+            Quản lý loại văn bản:
+              route: csdl_loaivanban
 
         Phân hệ khác:
           credentials: [admin]
