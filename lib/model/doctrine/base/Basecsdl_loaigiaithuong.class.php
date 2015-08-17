@@ -14,7 +14,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_loaigiaithuong', 'doctrine'
  * @property string $gioithieu
  * @property string $anhdaidien
  * @property integer $thutu
- * @property integer $trangthai
+ * @property boolean $trangthai
  * 
  * @method string              getMadanhmuc()   Returns the current record's "madanhmuc" value
  * @method string              getTendanhmuc()  Returns the current record's "tendanhmuc" value
@@ -23,7 +23,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_loaigiaithuong', 'doctrine'
  * @method string              getGioithieu()   Returns the current record's "gioithieu" value
  * @method string              getAnhdaidien()  Returns the current record's "anhdaidien" value
  * @method integer             getThutu()       Returns the current record's "thutu" value
- * @method integer             getTrangthai()   Returns the current record's "trangthai" value
+ * @method boolean             getTrangthai()   Returns the current record's "trangthai" value
  * @method csdl_loaigiaithuong setMadanhmuc()   Sets the current record's "madanhmuc" value
  * @method csdl_loaigiaithuong setTendanhmuc()  Sets the current record's "tendanhmuc" value
  * @method csdl_loaigiaithuong setLinhvuc()     Sets the current record's "linhvuc" value
@@ -78,10 +78,11 @@ abstract class Basecsdl_loaigiaithuong extends sfDoctrineRecord
              'comment' => 'Thu tu hien thi',
              'length' => 5,
              ));
-        $this->hasColumn('trangthai', 'integer', 5, array(
-             'type' => 'integer',
-             'comment' => 'trang thai',
-             'length' => 5,
+        $this->hasColumn('trangthai', 'boolean', null, array(
+             'type' => 'boolean',
+             'notnull' => true,
+             'default' => false,
+             'comment' => 'Trang thai',
              ));
     }
 

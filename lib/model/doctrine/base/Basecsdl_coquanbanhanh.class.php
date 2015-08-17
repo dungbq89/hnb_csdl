@@ -13,7 +13,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_coquanbanhanh', 'doctrine')
  * @property string $nguoidaidien
  * @property string $anhdaidien
  * @property integer $thutu
- * @property integer $trangthai
+ * @property boolean $trangthai
  * 
  * @method string             getMadonvi()      Returns the current record's "madonvi" value
  * @method string             getTendonvi()     Returns the current record's "tendonvi" value
@@ -21,7 +21,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_coquanbanhanh', 'doctrine')
  * @method string             getNguoidaidien() Returns the current record's "nguoidaidien" value
  * @method string             getAnhdaidien()   Returns the current record's "anhdaidien" value
  * @method integer            getThutu()        Returns the current record's "thutu" value
- * @method integer            getTrangthai()    Returns the current record's "trangthai" value
+ * @method boolean            getTrangthai()    Returns the current record's "trangthai" value
  * @method csdl_coquanbanhanh setMadonvi()      Sets the current record's "madonvi" value
  * @method csdl_coquanbanhanh setTendonvi()     Sets the current record's "tendonvi" value
  * @method csdl_coquanbanhanh setGioithieu()    Sets the current record's "gioithieu" value
@@ -70,10 +70,11 @@ abstract class Basecsdl_coquanbanhanh extends sfDoctrineRecord
              'comment' => 'Thu tu hien thi',
              'length' => 5,
              ));
-        $this->hasColumn('trangthai', 'integer', 5, array(
-             'type' => 'integer',
-             'comment' => 'trang thai',
-             'length' => 5,
+        $this->hasColumn('trangthai', 'boolean', null, array(
+             'type' => 'boolean',
+             'notnull' => true,
+             'default' => false,
+             'comment' => 'Trang thai',
              ));
     }
 

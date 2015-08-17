@@ -14,7 +14,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_tailieunghiepvu', 'doctrine
  * @property string $trichdan
  * @property string $anhdaidien
  * @property string $filedownload
- * @property integer $trangthai
+ * @property boolean $trangthai
  * 
  * @method string               getMatailieu()    Returns the current record's "matailieu" value
  * @method string               getKyhieu()       Returns the current record's "kyhieu" value
@@ -23,7 +23,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_tailieunghiepvu', 'doctrine
  * @method string               getTrichdan()     Returns the current record's "trichdan" value
  * @method string               getAnhdaidien()   Returns the current record's "anhdaidien" value
  * @method string               getFiledownload() Returns the current record's "filedownload" value
- * @method integer              getTrangthai()    Returns the current record's "trangthai" value
+ * @method boolean              getTrangthai()    Returns the current record's "trangthai" value
  * @method csdl_tailieunghiepvu setMatailieu()    Sets the current record's "matailieu" value
  * @method csdl_tailieunghiepvu setKyhieu()       Sets the current record's "kyhieu" value
  * @method csdl_tailieunghiepvu setSotailieu()    Sets the current record's "sotailieu" value
@@ -78,10 +78,11 @@ abstract class Basecsdl_tailieunghiepvu extends sfDoctrineRecord
              'comment' => 'file download',
              'length' => 255,
              ));
-        $this->hasColumn('trangthai', 'integer', 5, array(
-             'type' => 'integer',
-             'comment' => 'trang thai',
-             'length' => 5,
+        $this->hasColumn('trangthai', 'boolean', null, array(
+             'type' => 'boolean',
+             'notnull' => true,
+             'default' => false,
+             'comment' => 'Trang thai',
              ));
     }
 

@@ -1,0 +1,37 @@
+generator:
+  class: tmcTwitterBootstrapDoctrineGenerator
+  param:
+    model_class:           csdl_loaivanban
+    theme:                 tmcTwitterBootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          csdl_loaivanban
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        madanhmuc: {label: Mã danh mục}
+        tendanhmuc: {label: Tên danh mục}
+        gioithieu: {label: Giới thiệu}
+        anhdaidien: {label: Ảnh đại diện}
+        thutu: {label: Thứ tự}
+        trangthai: {label: Trạng thái}
+      list:
+        title: Danh sách danh mục loại văn bản
+        display: [tendanhmuc, madanhmuc, gioithieu, thutu, trangthai]
+        object_actions:
+          _edit: ~
+          _delete: ~
+      filter:
+        display: [tendanhmuc]
+      form:
+        display: [tendanhmuc, madanhmuc, anhdaidien, gioithieu, thutu, trangthai]
+        class: csdlLoaiVanBanAdminForm
+      edit:
+        title: Chỉnh sửa danh mục loại văn bản
+      new:
+        title: Thêm mới danh mục loại văn bản
