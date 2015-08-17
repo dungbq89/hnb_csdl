@@ -21,6 +21,7 @@ csdl_lylichhoivien:
     nghenghiep_id: { type: integer(5), comment: "Danh muc nghe nghiep"}
     dantoc_id: { type: integer(5), comment: "Danh muc dan toc"}
     quoctich: { type: string(255), comment: "quoc tich" }
+    donvi_id:  { type: integer(5), comment: "don vị công tác"}
 #qua trinh cong tac
 csdl_quatrinhcongtac:
   tableName: csdl_quatrinh_congtac
