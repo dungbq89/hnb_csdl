@@ -1072,6 +1072,41 @@ class VtHelper
         $d = DateTime::createFromFormat($format, $date);
         return $d && $d->format($format) == $date;
     }
+
+    public static function writeLog($hoiVienId, $tieuDe, $maChucNang, $module, $ngayTao){
+        $nhatky = new csdl_nhatky();
+        try{
+            $nhatky->setHoivienId($hoiVienId);
+            $nhatky->setTieude($tieuDe);
+            $nhatky->setMachucnang($maChucNang);
+            $nhatky->setModule($module);
+            $nhatky->setNgaytao($ngayTao);
+            $ip = self::getIpClient();
+            $nhatky->setIp($ip);
+            $nhatky->save();
+        }
+        catch (Exception $e) {
+
+        }
+    }
+    public static function getIpClient() {
+        $ipaddress = '';
+        if (getenv('HTTP_CLIENT_IP'))
+            $ipaddress = getenv('HTTP_CLIENT_IP');
+        else if (getenv('HTTP_X_FORWARDED_FOR'))
+            $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
+        else if (getenv('HTTP_X_FORWARDED'))
+            $ipaddress = getenv('HTTP_X_FORWARDED');
+        else if (getenv('HTTP_FORWARDED_FOR'))
+            $ipaddress = getenv('HTTP_FORWARDED_FOR');
+        else if (getenv('HTTP_FORWARDED'))
+            $ipaddress = getenv('HTTP_FORWARDED');
+        else if (getenv('REMOTE_ADDR'))
+            $ipaddress = getenv('REMOTE_ADDR');
+        else
+            $ipaddress = 'UNKNOWN';
+        return $ipaddress;
+    }
     
 }
 
