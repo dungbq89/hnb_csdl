@@ -1,3 +1,12 @@
+csdl_coquanbanhanh:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                csdl_coquanbanhanh
+    module:               csdlCoQuanBanHanh
+    prefix_path:          /csdlCoQuanBanHanh
+    column:               id
+    with_wildcard_routes: true
+
 csdl_loaivanban:
   class: sfDoctrineRouteCollection
   options:

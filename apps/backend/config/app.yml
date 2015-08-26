@@ -35,6 +35,8 @@ all:
               route: csdl_loaitailieu
             Quản lý loại văn bản:
               route: csdl_loaivanban
+            Quản lý cơ quan ban hành:
+              route: csdl_coquanbanhanh
 
         Phân hệ khác:
           credentials: [admin]

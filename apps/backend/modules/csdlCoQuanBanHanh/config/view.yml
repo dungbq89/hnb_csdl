@@ -1,0 +1,9 @@
+indexSuccess:
+  metas:
+    title: Quản lý cơ quan ban hành
+newSuccess:
+  metas:
+    title: Thêm mới cơ quan ban hành
+editSuccess:
+  metas:
+    title: Chỉnh sửa cơ quan ban hành
