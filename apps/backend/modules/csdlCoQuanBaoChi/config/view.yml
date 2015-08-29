@@ -1,0 +1,9 @@
+indexSuccess:
+  metas:
+    title: Quản lý cơ quan báo chí
+newSuccess:
+  metas:
+    title: Thêm mới cơ quan báo chí
+editSuccess:
+  metas:
+    title: Chỉnh sửa cơ quan báo chí

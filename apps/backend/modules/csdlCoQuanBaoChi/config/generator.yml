@@ -1,0 +1,38 @@
+generator:
+  class: tmcTwitterBootstrapDoctrineGenerator
+  param:
+    model_class:           csdl_coquanbaochi
+    theme:                 tmcTwitterBootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          csdl_coquanbaochi
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        madonvi: {label: Mã đơn vị}
+        tendonvi: {label: Tên đơn vị}
+        gioithieu: {label: Giới thiệu}
+        anhdaidien: {label: Ảnh đại diện}
+        nguoidaidien: {label: Người đại diện}
+        thutu: {label: Thứ tự}
+        trangthai: {label: Trạng thái}
+      list:
+        title: Danh sách cơ quan báo chí
+        display: [tendonvi, gioithieu, nguoidaidien, thutu, trangthai]
+        object_actions:
+          _edit: ~
+          _delete: ~
+      filter:
+        display: [tendonvi]
+      form:
+        display: [tendonvi, madonvi, nguoidaidien, anhdaidien, gioithieu, thutu, trangthai]
+        class: csdlCoQuanBaoChiAdminForm
+      edit:
+        title: Chỉnh sửa cơ quan báo chí
+      new:
+        title: Chỉnh sửa cơ quan báo chí

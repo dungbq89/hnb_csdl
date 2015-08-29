@@ -37,6 +37,8 @@ all:
               route: csdl_loaivanban
             Quản lý cơ quan ban hành:
               route: csdl_coquanbanhanh
+            Quản lý cơ quan báo chí:
+              route: csdl_coquanbaochi
 
         Phân hệ khác:
           credentials: [admin]

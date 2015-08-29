@@ -1,3 +1,12 @@
+csdl_coquanbaochi:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                csdl_coquanbaochi
+    module:               csdlCoQuanBaoChi
+    prefix_path:          /csdlCoQuanBaoChi
+    column:               id
+    with_wildcard_routes: true
+
 csdl_coquanbanhanh:
   class: sfDoctrineRouteCollection
   options:
