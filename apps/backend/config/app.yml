@@ -14,41 +14,62 @@ all:
 #    dashboard_name: Administration
     header:
       menu:
-        Hội viên:
+        Trang chủ:
+          route: homepage
+        Lịch công tác:
+          route: csdl_lichcongtac
+        Quản lý Hội viên:
           credentials: [admin]
           dropdown:
+            Danh sách hội viên:
+              route: csdl_lylichhoivien
             Quản lý thẻ hội viên:
               route: csdl_thehoivien
-
-        Quản lý chuyên mục:
-          credentials: [admin]
-          dropdown:
-            Quản lý chủ đề:
-              route: csdl_chude
             Quản lý dân tộc:
               route: csdl_dantoc
             Quản lý danh mục nghề nghiệp:
               route: csdl_dmnghenghiep
-            Quản lý loại giải thưởng:
-              route: csdl_loaigiaithuong
-            Quản lý loại tài liệu:
-              route: csdl_loaitailieu
-            Quản lý loại văn bản:
-              route: csdl_loaivanban
-            Quản lý cơ quan ban hành:
-              route: csdl_coquanbanhanh
-            Quản lý cơ quan báo chí:
-              route: csdl_coquanbaochi
-
-
-        Phân hệ khác:
+        Quản lý tác phẩm:
           credentials: [admin]
           dropdown:
-            Quản lý tài liệu nghiệp vụ:
+            Quản lý Chủ đề:
+              route: csdl_chude
+            Quản lý Tác phẩm:
+              route: csdl_tacpham
+            Quản lý Tác giả:
+              route: csdl_tacgia
+        Quản lý Văn bản:
+          credentials: [admin]
+          dropdown:
+            Quản lý loại văn bản:
+              route: csdl_loaivanban
+            Danh sách cơ quan ban hành:
+              route: csdl_coquanbanhanh
+            Danh sách văn bản:
+              route: csdl_vanbanphapquy
+        Quản lý tài liệu:
+          credentials: [admin]
+          dropdown:
+            Quản lý loại tài liệu:
+              route: csdl_loaitailieu
+            Danh sách tài liệu nghiệp vụ:
               route: csdl_tailieunghiepvu
+        Quản lý giải thưởng:
+          credentials: [admin]
+          dropdown:
+            Quản lý loại giải thưởng:
+              route: csdl_loaigiaithuong
+            Danh sách giải thưởng:
+              route: csdl_giaithuong
+        Danh bạ:
+          credentials: [admin]
+          route: csdl_danhba
+
         Quản trị hệ thống:
           credentials: [admin]
           dropdown:
+            Nhật ký tác động:
+              route: csdl_nhatky
             Danh sách người dùng:
               route: sf_guard_user
             Danh sách quyền hạn:

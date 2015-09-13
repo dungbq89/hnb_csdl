@@ -590,6 +590,7 @@
   .row-fluid:after {
     display: table;
     content: "";
+      margin-top: 70px;
   }
   .row-fluid:after {
     clear: both;
