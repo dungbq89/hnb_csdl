@@ -1,4 +1,18 @@
+
 <div class="navbar navbar-fixed-top">
+    <div style="height: 70px; background-color: #ffffff">
+        <span>Logo and slogan</span>
+        <p class="navbar-text pull-right">
+            <?php echo __('Logged in as', null, 'tmcTwitterBootstrapPlugin') ?>
+            <a href="<?php echo url_for('@sf_guard_change_password') ?>"><?php echo $sf_user->getGuardUser() ?></a> |
+            <a href="<?php echo url_for('@sf_guard_signout') ?>"><?php echo __('Logout', null, 'tmcTwitterBootstrapPlugin') ?></a>
+
+        </p>
+        <div class="clear"></div>
+        <div class="navbar-text pull-right">
+            <input type="text" name="keyword" style="width: 180px;" />
+        </div>
+    </div>
     <div class="navbar-inner">
         <div class="container-fluid">
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -18,12 +32,7 @@
                         <?php if (isset($menu['module_name']) && $menu['module_name'] == $sf_context->getModuleName()): ?>
                             <?php $is_current_module = true; ?>
                         <?php endif; ?>
-                        <?php //ngoctv kiem tra portal hien tai co phai la khach hang doanh nghiep hay khong
-                            $khdn=isset($menu['khdn']) ? $menu['khdn'] : null;
-                            if($khdn!=null && $khdn==sfContext::getInstance()->getUser()->getAttribute('portal')){
-                                continue;
-                            }
-                        ?>
+
                         <?php $credentials = isset($menu['credentials']) ? $menu['credentials'] : null; ?>
                         <?php if ($credentials): ?>
                             <?php if (!$sf_user->hasCredential($credentials)): ?>
@@ -32,12 +41,7 @@
                         <?php endif; ?>
 
                         <?php if (!array_key_exists('dropdown', $menu)): ?>
-                            <?php //ngoctv kiem tra portal hien tai co phai la khach hang doanh nghiep hay khong
-                                $khdn=isset($menu['khdn']) ? $menu['khdn'] : null;
-                                if($khdn!=null && $khdn==sfContext::getInstance()->getUser()->getAttribute('portal')){
-                                    continue;
-                                }
-                            ?>
+
                             <?php $name = $k; ?>
                             <?php $route = $menu['route']; ?>
                             <?php if (!array_key_exists($route, $routes)): ?>
@@ -53,12 +57,7 @@
 
                                   <?php if($submenus !=null):?>
                                     <?php foreach ($submenus as $k => $menu): ?>
-                                        <?php //ngoctv kiem tra portal hien tai co phai la khach hang doanh nghiep hay khong
-                                            $khdn=isset($menu['khdn']) ? $menu['khdn'] : null;
-                                            if($khdn!=null && $khdn==sfContext::getInstance()->getUser()->getAttribute('portal')){
-                                                continue;
-                                            }
-                                        ?>
+
                                         <?php $name = $k; ?>
                                         <?php $route = $menu['route']; ?>
                                         <?php $divider = isset($menu['divider']) ? $menu['divider'] : null; ?>
@@ -85,7 +84,7 @@
                     <?php endforeach; ?>
                   <?php endif; ?>
                 </ul>
-                <p class="navbar-text pull-right"><?php echo __('Logged in as', null, 'tmcTwitterBootstrapPlugin') ?> <a href="<?php echo url_for('@sf_guard_change_password') ?>"><?php echo $sf_user->getGuardUser() ?></a> | <a href="<?php echo url_for('@sf_guard_signout') ?>"><?php echo __('Logout', null, 'tmcTwitterBootstrapPlugin') ?></a></p>
+
             </div>
             <?php endif ?>
         </div>
