@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="tmcTwitterBootstrapPlugin/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" media="screen"
+          href="tmcTwitterBootstrapPlugin/css/bootstrap-responsive.min.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="tmcTwitterBootstrapPlugin/css/styles.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/register.css"/>
+
+
+</head>
+<body>
+
+<!-- stylesheets -->
+
+<!-- javascripts -->
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+
+            <a class="brand" href="/admin.php/">HỆ THỐNG QUẢN LÝ THÔNG TIN HỘI VIÊN</a>
+        </div>
+    </div>
+</div>
+<div id="login" class="container">
+    <div class="hero-unit">
+        <div class="login-header">
+            <div class="pull-left login-left">
+                <a href="/admin.php/"><img alt_title="" src="images/logo-regiser.png" width="200"/></a>
+            </div>
+            <div class="pull-left login-right">
+                <h2 class="title-csdl">CƠ SỞ DỮ LIỆU HỘI VIÊN</span></h2>
+
+                <h2 class="title-hatinh">Hội nhà báo tỉnh Hà Tĩnh</span></h2>
+            </div>
+        </div>
+
+
+        <div class="clearfix"></div>
+        <div class="form-login">
+            <form class="form-horizontal" action="/admin.php/guard/login" method="post">
+                <input type="hidden" name="signin[_csrf_token]" value="2d8c35ec15847fd0079a046a414cee5e"
+                       id="signin__csrf_token"/>
+
+                <div class="control-group">
+                    <label for="signin_username">Tên Đăng Nhập *</label>
+                    <input type="text" name="signin[username]" value="" class="input-xlarge" id="signin_username"/>
+                </div>
+                <div class="control-group">
+                    <label for="signin_password">Mật Khẩu *</label>
+                    <input type="password" name="signin[password]" class="input-xlarge" id="signin_password"/></div>
+                <div class="control-group">
+                    <label for="signin_captcha">Mã Xác Nhận *</label>
+                    <input type="text" name="signin[captcha]" style="width:120px" class="input-xlarge"
+                           id="signin_captcha"/><a href='' onClick='return false' title='Reload image'>
+                    <img src='/admin.php/captcha?sid=b96350a29344cca40015f0e429c285be'
+                         onClick='this.src="/admin.php/captcha?sid=b96350a29344cca40015f0e429c285be?r=" + Math.random() + "&amp;reload=1"'
+                         border='0' class='captcha'/>
+                </a></div>
+
+                <input type="hidden" value="0" name="change_password"/>
+                <!--    <input class="btn" type="submit" value="--><!--" />-->
+                <input class="btn" type="submit" value="Đăng Nhập"/>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+	
