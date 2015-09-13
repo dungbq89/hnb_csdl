@@ -1,6 +1,6 @@
 
 <div class="navbar navbar-fixed-top">
-    <div style="height: 70px; background-color: #ffffff">
+    <div style="height: 80px; background-color: #ffffff">
         <span>Logo and slogan</span>
         <p class="navbar-text pull-right">
             <?php echo __('Logged in as', null, 'tmcTwitterBootstrapPlugin') ?>
