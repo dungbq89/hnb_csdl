@@ -35,7 +35,7 @@ fieldset .sf_admin_form_row > label:first-child {
     color: red;
 }
 .alert {
-    margin: 10px 0;
+    margin: 70px 0 10px;
 }
 caption {
     text-align: left;
@@ -68,4 +68,10 @@ label.checkbox.inline input[type=radio] {
 }
 .strong {
     font-weight: bold;
+}
+.pull-right input{
+    float: right;
+}
+.clear {
+    clear: both;
 }

@@ -1,9 +1,99 @@
+csdl_vanbanphapquy:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                csdl_vanbanphapquy
+    module:               csdlVanbanphapquy
+    prefix_path:          /van-ban-phap-quy
+    column:               id
+    with_wildcard_routes: true
+
+csdl_danhba:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                csdl_danhba
+    module:               csdlDanhba
+    prefix_path:          /danh-ba
+    column:               id
+    with_wildcard_routes: true
+
+csdl_tacgia:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                csdl_tacgia
+    module:               csdlTacgia
+    prefix_path:          /tac-gia
+    column:               id
+    with_wildcard_routes: true
+
+csdl_lichcongtac:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                csdl_lichcongtac
+    module:               csdlLichcongtac
+    prefix_path:          /lich-cong-tac
+    column:               id
+    with_wildcard_routes: true
+
+csdl_tailieunghiepvu:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                csdl_tailieunghiepvu
+    module:               csdlTailieunghiepvu
+    prefix_path:          /tai-lieu-nghiep-vu
+    column:               id
+    with_wildcard_routes: true
+
+csdl_giaithuong:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                csdl_giaithuong
+    module:               csdlGiaithuong
+    prefix_path:          /giai-thuong
+    column:               id
+    with_wildcard_routes: true
+
+csdl_nhatky:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                csdl_nhatky
+    module:               csdlNhatky
+    prefix_path:          /nhat-ky
+    column:               id
+    with_wildcard_routes: true
+
+csdl_tacpham:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                csdl_tacpham
+    module:               csdlTacpham
+    prefix_path:          /tac-pham
+    column:               id
+    with_wildcard_routes: true
+
+csdl_quatrinhcongtac:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                csdl_quatrinhcongtac
+    module:               csdlQuatrinhcongtac
+    prefix_path:          /qua-trinh-cong-tac
+    column:               id
+    with_wildcard_routes: true
+
+csdl_lylichhoivien:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                csdl_lylichhoivien
+    module:               csdlHoivien
+    prefix_path:          /hoi-vien
+    column:               id
+    with_wildcard_routes: true
+
 csdl_coquanbaochi:
   class: sfDoctrineRouteCollection
   options:
     model:                csdl_coquanbaochi
     module:               csdlCoQuanBaoChi
-    prefix_path:          /csdlCoQuanBaoChi
+    prefix_path:          /co-quan-bao-chi
     column:               id
     with_wildcard_routes: true
 
@@ -12,7 +102,7 @@ csdl_coquanbanhanh:
   options:
     model:                csdl_coquanbanhanh
     module:               csdlCoQuanBanHanh
-    prefix_path:          /csdlCoQuanBanHanh
+    prefix_path:          /co-quan-ban-hanh
     column:               id
     with_wildcard_routes: true
 
@@ -21,7 +111,7 @@ csdl_loaivanban:
   options:
     model:                csdl_loaivanban
     module:               csdlLoaiVanBan
-    prefix_path:          /csdlLoaiVanBan
+    prefix_path:          /loai-van-ban
     column:               id
     with_wildcard_routes: true
 
@@ -30,7 +120,7 @@ csdl_loaitailieu:
   options:
     model:                csdl_loaitailieu
     module:               csdlLoaiTaiLieu
-    prefix_path:          /csdlLoaiTaiLieu
+    prefix_path:          /loai-tai-lieu
     column:               id
     with_wildcard_routes: true
 
@@ -39,7 +129,7 @@ csdl_loaigiaithuong:
   options:
     model:                csdl_loaigiaithuong
     module:               csdlLoaigiaithuong
-    prefix_path:          /csdlLoaigiaithuong
+    prefix_path:          /loai-giai-thuong
     column:               id
     with_wildcard_routes: true
 
@@ -48,7 +138,7 @@ csdl_dmnghenghiep:
   options:
     model:                csdl_dmnghenghiep
     module:               csdlDmNgheNghiep
-    prefix_path:          /csdlDmNgheNghiep
+    prefix_path:          /danh-muc-nghe-nghiep
     column:               id
     with_wildcard_routes: true
 
@@ -57,7 +147,7 @@ csdl_dantoc:
   options:
     model:                csdl_dantoc
     module:               csdlDantoc
-    prefix_path:          /csdlDantoc
+    prefix_path:          /dan-toc
     column:               id
     with_wildcard_routes: true
 
@@ -66,7 +156,7 @@ csdl_chude:
   options:
     model:                csdl_chude
     module:               csdlChude
-    prefix_path:          /csdlChude
+    prefix_path:          /chu-de
     column:               id
     with_wildcard_routes: true
 
@@ -75,12 +165,12 @@ csdl_thehoivien:
   options:
     model:                csdl_thehoivien
     module:               csdlTheHoiVien
-    prefix_path:          /csdlTheHoiVien
+    prefix_path:          /the-hoi-vien
     column:               id
     with_wildcard_routes: true
 
 sf_guard_change_password:
-  url:   /guard/change_password
+  url:   /doi-mat-khau
   param: { module: sfGuardAuth, action: changePassword }
 
 sf_guard_group:
@@ -97,7 +187,7 @@ sf_guard_user:
   options:
     model:                sfGuardUser
     module:               sfGuardUser
-    prefix_path:          /sfGuardUser
+    prefix_path:          /danh-sach-nguoi-dung
     column:               id
     with_wildcard_routes: true
  
@@ -106,7 +196,7 @@ sf_guard_permission:
   options:
     model:                sfGuardPermission
     module:               sfGuardPermission
-    prefix_path:          /sfGuardPermission
+    prefix_path:          /danh-sach-quyen
     column:               id
     with_wildcard_routes: true
 
@@ -116,7 +206,7 @@ vtp_search_ajax_loadarticle:
 
 # default rules
 homepage:
-  url:   /
+  url:   /trang-chu
   param: { module: homePage, action: index }
 # generic rules
 # please, remove them by adding more specific rules
