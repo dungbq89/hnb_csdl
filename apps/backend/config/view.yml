@@ -12,7 +12,7 @@ default:
     #language:     en
     #robots:       index, follow
 
-  stylesheets:    [main.css, ui.all.css, ui.core.css, ui.datepicker.css, validationEngine.jquery.css, /css_csdl/style.css, /css_csdl/reset.css, /css_csdl/style-table.css, /css_csdl/coder_update.css]
+  stylesheets:    [main.css, ui.all.css, ui.core.css, ui.datepicker.css, validationEngine.jquery.css, /css_csdl/style.css, /css_csdl/coder_update.css]
   javascripts:    [ui.core.min.js, ui.datepicker.min.js,global.js, jquery.validationEngine-vn.js, jquery.validationEngine.js, ckeditor/ckeditor.js, ckfinder/ckfinder.js, vtBackend.js]
 
   has_layout:     true

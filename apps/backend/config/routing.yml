@@ -206,7 +206,7 @@ vtp_search_ajax_loadarticle:
 
 # default rules
 homepage:
-  url:   /trang-chu
+  url:   /
   param: { module: homePage, action: index }
 # generic rules
 # please, remove them by adding more specific rules
