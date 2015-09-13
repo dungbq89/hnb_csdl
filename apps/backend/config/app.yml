@@ -40,35 +40,12 @@ all:
             Quản lý cơ quan báo chí:
               route: csdl_coquanbaochi
 
+
         Phân hệ khác:
           credentials: [admin]
           dropdown:
-            Quản lý chuyên mục:
-              route: ad_category
-            Trang liên hệ:
-              route: ad_contact
-            Quản lý video:
-              credentials: [[admin]]
-              route: ad_video
-            Quản lý album:
-              credentials: [[admin]]
-              route: ad_album
-            Quản lý chuyên mục văn bản:
-              credentials: [[admin]]
-              route: ad_document_category
-            Quản lý văn bản:
-              credentials: [[admin]]
-              route: ad_document
-            Quản lý nội dung:
-              route: ad_html
-            Quản lý thông tin phản hồi:
-              route: ad_comment
-            Danh sách hội viên:
-              route: ad_personal
-            Vị trí quảng cao:
-              route: ad_advertise_location
-            Quản lý Banner - quảng cáo:
-              route: ad_advertise
+            Quản lý tài liệu nghiệp vụ:
+              route: csdl_tailieunghiepvu
         Quản trị hệ thống:
           credentials: [admin]
           dropdown:

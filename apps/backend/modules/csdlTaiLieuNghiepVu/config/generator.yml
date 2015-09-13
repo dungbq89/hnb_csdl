@@ -1,0 +1,39 @@
+generator:
+  class: tmcTwitterBootstrapDoctrineGenerator
+  param:
+    model_class:           csdl_tailieunghiepvu
+    theme:                 tmcTwitterBootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          csdl_tailieunghiepvu
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        matailieu: {label: Mã tài liệu}
+        kyhieu: {label: Ký hiệu}
+        sotailieu: {label: Số tài liệu}
+        tentailieu: {label: Tên tài liệu}
+        trichdan: {label: Trích dẫn}
+        anhdaidien: {label: Ảnh đại diện}
+        filedownload: {label: File download}
+        trangthai: {label: Trạng thái}
+      list:
+        title: Danh sách tài liệu nghiệp vụ
+        display: [sotailieu, tentailieu, trichdan, trangthai]
+        object_actions:
+          _edit: ~
+          _delete: ~
+      filter:
+        display: [tentailieu]
+      form:
+        display: [tentailieu, matailieu, kyhieu, sotailieu, anhdaidien, filedownload, trichdan, trangthai]
+        class: csdlTaiLieuNghiepVuAdminForm
+      edit:
+        title: Chỉnh sửa tài liệu nghiệp vụ
+      new:
+        title: Thêm mới tài liệu nghiệp vụ

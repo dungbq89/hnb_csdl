@@ -1,3 +1,12 @@
+csdl_tailieunghiepvu:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                csdl_tailieunghiepvu
+    module:               csdlTaiLieuNghiepVu
+    prefix_path:          /csdlTaiLieuNghiepVu
+    column:               id
+    with_wildcard_routes: true
+
 csdl_coquanbaochi:
   class: sfDoctrineRouteCollection
   options:
