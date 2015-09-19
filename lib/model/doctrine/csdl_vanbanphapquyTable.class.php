@@ -16,4 +16,11 @@ class csdl_vanbanphapquyTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('csdl_vanbanphapquy');
     }
+
+    public static function getVanBan($limit)
+    {
+        return csdl_vanbanphapquyTable::getInstance()->createQuery()
+            ->orderBy('updated_at desc')
+            ->limit($limit);
+    }
 }

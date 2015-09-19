@@ -97,73 +97,9 @@ include_component('tmcTwitterBootstrap', 'header');
 
             </div>
             <div class="col-right">
-                <div class="box-mod">
-                    <h3 class="title"><span>Hội viên mới </span></h3>
-                    <div class="item news-item">
-                        <a href="#" title="" class="news-img"><img src="img/img-news.png" alt=""></a>
-                        <a href="" title="" class="news-title">Hà Nội, nắng nóng lên tới đỉnh điểm ở trạm Láng</a>
-                        <p class="news-date">08:20 12/05/2015</p>
-                        <div class="clear"></div>
-                    </div>
-
-                    <div class="item news-item">
-                        <a href="#" title="" class="news-img"><img src="img/img-news2.png" alt=""></a>
-                        <a href="" title="" class="news-title">Hà Nội, nắng nóng lên tới đỉnh điểm ở trạm Láng<img class="icon-new" src="img/new.gif"/> </a>
-                        <p class="news-date">08:20 12/05/2015</p>
-                        <div class="clear"></div>
-                    </div>
-
-
-                    <div class="item news-item">
-                        <a href="#" title="" class="news-img"><img src="img/img-news4.png" alt=""></a>
-                        <a href="" title="" class="news-title">Hà Nội, nắng nóng lên tới đỉnh điểm ở trạm Láng</a>
-                        <p class="news-date">08:20 12/05/2015</p>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-
-                <div class="box-mod category">
-                    <h3 class="title"><span>Văn bản - quy phạm</span></h3>
-                    <ul>
-                        <li>
-                            <a href="" title="">Văn bản biểu mẫu hoạt động của tổ chức hội</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Văn bản quy chế hành chính trong tổ chức</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Văn bản điều hành công tác chính trị</a>
-                        </li>
-                    </ul>
-                </div>
-
-
-
-
-                <div class="box-mod">
-                    <h3 class="title"><span>Tài liệu nghiệp vụ</span></h3>
-                    <div class="item news-item">
-                        <a href="#" title="" class="news-img"><img src="img/img-news3.png" alt=""></a>
-                        <a href="" title="" class="news-title">Hà Nội, nắng nóng lên tới đỉnh điểm ở trạm Láng<img class="icon-new" src="img/new.gif"/> </a>
-                        <p class="news-date">08:20 12/05/2015</p>
-                        <div class="clear"></div>
-                    </div>
-
-                    <div class="item news-item">
-                        <a href="#" title="" class="news-img"><img src="img/img-news2.png" alt=""></a>
-                        <a href="" title="" class="news-title">Hà Nội, nắng nóng lên tới đỉnh điểm ở trạm Láng</a>
-                        <p class="news-date">08:20 12/05/2015</p>
-                        <div class="clear"></div>
-                    </div>
-
-
-                    <div class="item news-item">
-                        <a href="#" title="" class="news-img"><img src="img/img-news4.png" alt=""></a>
-                        <a href="" title="" class="news-title">Hà Nội, nắng nóng lên tới đỉnh điểm ở trạm Láng</a>
-                        <p class="news-date">08:20 12/05/2015</p>
-                        <div class="clear"></div>
-                    </div>
-                </div>
+                <?php include_component('common','newUser'); ?>
+                <?php include_component('common','vanBan'); ?>
+                <?php include_component('common','taiLieu'); ?>
             </div>
         </div>
     </div>
