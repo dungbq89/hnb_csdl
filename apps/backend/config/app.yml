@@ -76,10 +76,10 @@ all:
               route: sf_guard_permission
 
   sf_captchagd:
-     image_width:                180 # image width in pixels
-     image_height:               27 # image height in pixels
+     image_width:                100 # image width in pixels
+     image_height:               22 # image height in pixels
      chars:                      "123456789abcdefghijklmnopqrstuvwxyz" # possible chars in captcha
-     length:                     2 # length of captcha
+     length:                     1 # length of captcha
      font_size:                  14 # font size
      force_new_captcha:          true # if true - captcha regenerated EVERY request, even if user input true value before
      fonts: ["akbar/vavobi.ttf"]

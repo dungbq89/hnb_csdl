@@ -1,0 +1,2 @@
+all:
+  stylesheets: [/css_login/style-login2.css]

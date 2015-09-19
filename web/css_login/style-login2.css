@@ -1,0 +1,219 @@
+*{
+	margin:0px;
+	padding:0px;
+}body {
+	background-color: #FFF;
+	background-image: url(images/bg.jpg);
+	background-repeat: repeat-x;
+	background-position: center top;
+}
+.content-login {
+	background-image: url(images/bg-login.jpg);
+	background-repeat: no-repeat;
+	height: 504px;
+	width: 710px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.content-login .ul-login {
+	position: relative;
+	left: 220px;
+	top: 150px;
+	width: 420px;
+}
+.ul-login form ul {
+	list-style-type: none;
+}
+.ul-login form ul li {
+	margin-top: 10px;
+}
+
+
+.ul-login form ul li span {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #0297dd;
+
+	margin-right: 20px;
+	width: 85px;
+	float: left;
+}
+.ul-login form ul li .number-login {
+	background:0;
+	background-image: url(images/text-box.jpg);
+	background-repeat: no-repeat;
+	background-position: left center;
+	height: 20px;
+	width: 226px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+    padding-left: 5px;
+}
+.ul-login form ul li .number-login1 {
+	background:0;
+	background-image: url(images/text-small.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 20px;
+	width: 136px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	float: left;
+}
+.ul-login form ul li .capcha {
+	background-image: url(images/capcha.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 23px;
+	width: 83px;
+	float: left;
+	line-height: 23px;
+	margin-left: 10px;
+}
+.ul-login form ul li .capcha h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #0000cc;
+	text-align: center;
+	text-transform: uppercase;
+}
+.ul-login form ul li .login-vn {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #333;
+	background-image: url(images/buttonlogin.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	float: left;
+	height: 22px;
+	width: 78px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	margin-left: 90px;
+	margin-top: 5px;
+
+
+}
+
+.ul-login form ul li .login-vn1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #333;
+	background-image: url(images/buttonlogin.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	float: left;
+	height: 22px;
+	width: 78px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	margin-left: 5px;
+	margin-top: 5px;
+
+
+}
+.content-login .ul-login h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #333333;
+	clear: both;
+	margin-top: 10px;
+	float: left;
+	text-align: justify;
+}
+.content-login .ul-login h5 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	clear: both;
+	font-weight: normal;
+	color: #333;
+}
+
+.content-login .footer-login {
+	position: relative;
+	top: 370px;
+}
+.content-login .footer-login .login-ver {
+	height: 36px;
+	width: 66px;
+	position: relative;
+	left: 20px;
+	top: -80px;
+}
+.content-login .footer-login .login-ver a img {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+.content-login .footer-login .conlogin {
+	position: relative;
+	top: -20px;
+}
+.content-login .footer-login .conlogin .bq {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #666666;
+	text-align: justify;
+	position: relative;
+	top: -100px;
+	left: 260px;
+}
+.content-login .footer-login .conlogin .bq1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #666666;
+	text-align: justify;
+	position: relative;
+	left: 230px;
+	top: -98px;
+}
+.content-login .footer-login .conlogin .bq2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #666;
+	visibility: inherit;
+	float: left;
+	width: 400px;
+	top: -95px;
+	position: relative;
+	left: 170px;
+}
+.content-login .ul-login h5 a {
+	color: #038CB9;
+	text-decoration: none;
+	font-weight: normal;
+}
+.content-login .ul-login h5 a:hover {
+	color: #038CB9;
+	text-decoration: underline;
+}
+
+.content-login .ul-login h3 a {
+	color: #038CB9;
+	text-decoration: none;
+	font-weight: normal;
+}
+.content-login .ul-login h3 a:hover {
+	color: #038CB9;
+	text-decoration: underline;
+}
+img.captcha{
+    margin-top: -15px;
+}
