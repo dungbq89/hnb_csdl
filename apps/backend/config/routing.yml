@@ -1,3 +1,12 @@
+csdl_lylichhoivien:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                csdl_lylichhoivien
+    module:               csdlLyLichHoiVien
+    prefix_path:          /hoi-vien
+    column:               id
+    with_wildcard_routes: true
+
 csdl_vanbanphapquy:
   class: sfDoctrineRouteCollection
   options:
@@ -79,14 +88,6 @@ csdl_quatrinhcongtac:
     column:               id
     with_wildcard_routes: true
 
-csdl_lylichhoivien:
-  class: sfDoctrineRouteCollection
-  options:
-    model:                csdl_lylichhoivien
-    module:               csdlHoivien
-    prefix_path:          /hoi-vien
-    column:               id
-    with_wildcard_routes: true
 
 csdl_coquanbaochi:
   class: sfDoctrineRouteCollection

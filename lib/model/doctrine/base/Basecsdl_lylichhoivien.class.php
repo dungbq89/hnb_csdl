@@ -23,6 +23,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_lylichhoivien', 'doctrine')
  * @property integer $nghenghiep_id
  * @property integer $dantoc_id
  * @property string $quoctich
+ * @property integer $donvi_id
  * 
  * @method integer            getHoivienId()     Returns the current record's "hoivien_id" value
  * @method string             getTen()           Returns the current record's "ten" value
@@ -40,6 +41,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_lylichhoivien', 'doctrine')
  * @method integer            getNghenghiepId()  Returns the current record's "nghenghiep_id" value
  * @method integer            getDantocId()      Returns the current record's "dantoc_id" value
  * @method string             getQuoctich()      Returns the current record's "quoctich" value
+ * @method integer            getDonviId()       Returns the current record's "donvi_id" value
  * @method csdl_lylichhoivien setHoivienId()     Sets the current record's "hoivien_id" value
  * @method csdl_lylichhoivien setTen()           Sets the current record's "ten" value
  * @method csdl_lylichhoivien setHodem()         Sets the current record's "hodem" value
@@ -56,6 +58,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_lylichhoivien', 'doctrine')
  * @method csdl_lylichhoivien setNghenghiepId()  Sets the current record's "nghenghiep_id" value
  * @method csdl_lylichhoivien setDantocId()      Sets the current record's "dantoc_id" value
  * @method csdl_lylichhoivien setQuoctich()      Sets the current record's "quoctich" value
+ * @method csdl_lylichhoivien setDonviId()       Sets the current record's "donvi_id" value
  * 
  * @package    Vt_Portals
  * @subpackage model
@@ -146,6 +149,11 @@ abstract class Basecsdl_lylichhoivien extends sfDoctrineRecord
              'type' => 'string',
              'comment' => 'quoc tich',
              'length' => 255,
+             ));
+        $this->hasColumn('donvi_id', 'integer', 5, array(
+             'type' => 'integer',
+             'comment' => 'don vị công tác',
+             'length' => 5,
              ));
     }
 
