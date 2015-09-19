@@ -1217,3 +1217,15 @@ a {
     margin: 8px 0;
     text-align: right;
 }
+
+.login-bg{
+    background-color: #2084b5;
+}
+.login-form{
+    width: 500px;
+    height: 600px;
+}
+.image-header{
+    padding-top: 200px;
+    text-align: center;
+}

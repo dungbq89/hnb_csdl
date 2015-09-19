@@ -36,9 +36,9 @@ class adSignInChangePasswordForm extends BasesfGuardFormSignin {
         $this->validatorSchema['captcha'] = new sfValidatorCaptchaGD(
                 array(
             'required' => $i18n->__('Mã xác nhận không được để trống.')));
-        $this->widgetSchema['password']->setLabel($i18n->__("Mật khẩu cũ"));
-        $this->widgetSchema['username']->setLabel($i18n->__("Tên đăng nhập"));
-        $this->widgetSchema['captcha']->setLabel($i18n->__("Mã xác nhận"));
+//        $this->widgetSchema['password']->setLabel($i18n->__("Mật khẩu cũ"));
+//        $this->widgetSchema['username']->setLabel($i18n->__("Tên đăng nhập"));
+//        $this->widgetSchema['captcha']->setLabel($i18n->__("Mã xác nhận"));
         $this->useFields(array('username', 'password', 'new_password', 'confirm_pass', 'captcha'));
     }
 
