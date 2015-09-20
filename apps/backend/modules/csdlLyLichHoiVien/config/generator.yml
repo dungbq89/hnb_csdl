@@ -21,10 +21,26 @@ generator:
         diachi: {label: Địa chỉ}
         maquan: {label: Quận/huyện}
         matinh: {label: Tỉnh/thành phố}
+        ngayvaodoan: {label: Ngày vào đoàn}
+        noiketnapdoan: {label: Nơi kết nạp đoàn}
+        ngayvaodang: {label: Ngày vào đảng}
+        noiketnapdang: {label: Nơi kết nạp đảng}
+        tieusu: {label: Tiểu sử}
         nghenghiep_id: {label: Nghề nghiệp}
+        dantoc_id: {label: Dân tộc}
+        quoctich: {label: Quốc tịch}
         donvi_id: {label: Đơn vị}
-      list:    ~
-      filter:  ~
-      form:    ~
+
+      list:
+        title: Danh sách danh hội viên
+        display: [hodem, ten, ngaysinh, gioitinh, diachi, maquan, matinh]
+        object_actions:
+          _edit: ~
+          _delete: ~
+      filter:
+        display: [hodem, ten]
+      form:
+        display: [ten, hodem, ngaysinh, gioitinh, diachi, maquan, matinh, ngayvaodoan, noiketnapdoan, ngayvaodang, noiketnapdang, tieusu, nghenghiep_id, dantoc_id, quoctich, donvi_id]
+        class: csdlLyLichHoiVienAdminForm
       edit:    ~
       new:     ~

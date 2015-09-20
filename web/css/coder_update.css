@@ -14,3 +14,32 @@
 .more-video h3{
     line-height: 26px;
 }
+.vanban td{
+    border-bottom: 1px solid #ddd !important;
+}
+.tb-hoivien td{
+    border: 1px solid #ddd !important;
+}
+
+.container-hoivien {
+    float: left;
+    margin-top: 10px;
+    padding-right: 10px;
+    width: 100%;
+}
+
+.container-hoivien h3.title-main {
+    background-color: #e1f8ff;
+    border-bottom: 1px solid #dbdbdb;
+    height: 30px;
+    overflow: hidden;
+}
+
+
+.container-hoivien h3.title-main span.label {
+    background: #0788d9 url("../img/bg-title-right2.png") no-repeat scroll right top;
+    display: block;
+    float: left;
+    height: 22px;
+    padding: 7px 58px 2px 10px;
+}

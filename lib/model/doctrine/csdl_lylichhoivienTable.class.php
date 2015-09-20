@@ -16,4 +16,18 @@ class csdl_lylichhoivienTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('csdl_lylichhoivien');
     }
+
+    public static function getNewUser($limit)
+    {
+        return csdl_lylichhoivienTable::getInstance()->createQuery()
+            ->orderBy('updated_at desc')
+            ->limit($limit);
+    }
+
+    public static function getUserDetail($hoiVienId)
+    {
+        return csdl_lylichhoivienTable::getInstance()->createQuery()
+            ->where('hoivien_id =?',$hoiVienId);
+    }
+
 }

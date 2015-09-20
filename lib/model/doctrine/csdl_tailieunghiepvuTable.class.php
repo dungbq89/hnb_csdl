@@ -16,4 +16,20 @@ class csdl_tailieunghiepvuTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('csdl_tailieunghiepvu');
     }
+
+    public static function getTaiLieu($limit)
+    {
+        return csdl_tailieunghiepvuTable::getInstance()->createQuery()
+            ->where('trangthai =?',VtCommonEnum::NUMBER_ONE)
+            ->andWhere('trangthai =?',VtCommonEnum::NUMBER_ONE)
+            ->orderBy('updated_at desc')
+            ->limit($limit);
+    }
+
+    public static function getTaiLieuDetail($id)
+    {
+        return csdl_tailieunghiepvuTable::getInstance()->createQuery()
+            ->where('id =?',$id)
+            ->andWhere('trangthai =?',VtCommonEnum::NUMBER_ONE);
+    }
 }

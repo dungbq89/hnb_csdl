@@ -1,3 +1,24 @@
+page_thongtinhoivien:
+  url: /thong-tin-hoi-vien
+  param: {module: pageThongTinHoiVien, action: detail}
+
+page_document_detail:
+  url: /chi-tiet-van-ban/:id
+  param: {module: pageVanBan, action: detail, id: ''}
+
+page_tailieu_detail:
+  url: /chi-tiet-tai-lieu/:id
+  param: {module: pageTaiLieu, action: detail, id: ''}
+
+csdl_lylichhoivien:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                csdl_lylichhoivien
+    module:               csdlLyLichHoiVien
+    prefix_path:          /hoi-vien
+    column:               id
+    with_wildcard_routes: true
+
 csdl_vanbanphapquy:
   class: sfDoctrineRouteCollection
   options:
@@ -79,14 +100,6 @@ csdl_quatrinhcongtac:
     column:               id
     with_wildcard_routes: true
 
-csdl_lylichhoivien:
-  class: sfDoctrineRouteCollection
-  options:
-    model:                csdl_lylichhoivien
-    module:               csdlHoivien
-    prefix_path:          /hoi-vien
-    column:               id
-    with_wildcard_routes: true
 
 csdl_coquanbaochi:
   class: sfDoctrineRouteCollection

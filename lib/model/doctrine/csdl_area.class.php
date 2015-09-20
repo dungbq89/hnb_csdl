@@ -12,5 +12,8 @@
  */
 class csdl_area extends Basecsdl_area
 {
+    public function getDistrict($code){
+
+    }
 
 }
