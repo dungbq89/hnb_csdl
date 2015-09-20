@@ -1093,6 +1093,9 @@ a {
 
 .header {
     padding-bottom: 5px;
+    text-align: center;
+    /*color: #3398cc;*/
+    font-weight: bold;
 }
 
 .news-more {
@@ -1227,5 +1230,11 @@ a {
 }
 .image-header{
     padding-top: 200px;
+    text-align: center;
+}
+.calendar{
+    margin: 5px;
+}
+span.text-normal{
     text-align: center;
 }

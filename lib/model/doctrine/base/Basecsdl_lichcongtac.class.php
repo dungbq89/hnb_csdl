@@ -13,6 +13,9 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_lichcongtac', 'doctrine');
  * @property timestamp $start_time
  * @property timestamp $end_time
  * @property string $diadiem
+ * @property string $thanhphan
+ * @property string $chuanbi
+ * @property string $chutri
  * 
  * @method integer          getHoivienId()  Returns the current record's "hoivien_id" value
  * @method string           getTieude()     Returns the current record's "tieude" value
@@ -20,12 +23,18 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_lichcongtac', 'doctrine');
  * @method timestamp        getStartTime()  Returns the current record's "start_time" value
  * @method timestamp        getEndTime()    Returns the current record's "end_time" value
  * @method string           getDiadiem()    Returns the current record's "diadiem" value
+ * @method string           getThanhphan()  Returns the current record's "thanhphan" value
+ * @method string           getChuanbi()    Returns the current record's "chuanbi" value
+ * @method string           getChutri()     Returns the current record's "chutri" value
  * @method csdl_lichcongtac setHoivienId()  Sets the current record's "hoivien_id" value
  * @method csdl_lichcongtac setTieude()     Sets the current record's "tieude" value
  * @method csdl_lichcongtac setNoidung()    Sets the current record's "noidung" value
  * @method csdl_lichcongtac setStartTime()  Sets the current record's "start_time" value
  * @method csdl_lichcongtac setEndTime()    Sets the current record's "end_time" value
  * @method csdl_lichcongtac setDiadiem()    Sets the current record's "diadiem" value
+ * @method csdl_lichcongtac setThanhphan()  Sets the current record's "thanhphan" value
+ * @method csdl_lichcongtac setChuanbi()    Sets the current record's "chuanbi" value
+ * @method csdl_lichcongtac setChutri()     Sets the current record's "chutri" value
  * 
  * @package    Vt_Portals
  * @subpackage model
@@ -64,8 +73,23 @@ abstract class Basecsdl_lichcongtac extends sfDoctrineRecord
              ));
         $this->hasColumn('diadiem', 'string', 255, array(
              'type' => 'string',
-             'comment' => 'tieu de',
+             'comment' => 'Dia diem',
              'length' => 255,
+             ));
+        $this->hasColumn('thanhphan', 'string', 500, array(
+             'type' => 'string',
+             'comment' => 'thanh phan tham du',
+             'length' => 500,
+             ));
+        $this->hasColumn('chuanbi', 'string', 500, array(
+             'type' => 'string',
+             'comment' => 'Ca nhan/don vi chuan bi',
+             'length' => 500,
+             ));
+        $this->hasColumn('chutri', 'string', 500, array(
+             'type' => 'string',
+             'comment' => 'Ca nhan/don vi chu tri',
+             'length' => 500,
              ));
     }
 

@@ -19,7 +19,9 @@ class CalendarForm extends Basecsdl_lichcongtacForm
             'start_time' => new sfWidgetFormDateTime(),
             'end_time'   => new sfWidgetFormDateTime(),
             'diadiem'    => new sfWidgetFormInputText(),
-
+            'thanhphan'  => new sfWidgetFormTextarea(),
+            'chuanbi'    => new sfWidgetFormTextarea(),
+            'chutri'     => new sfWidgetFormTextarea(),
         ));
 
         $this->setValidators(array(
@@ -30,7 +32,9 @@ class CalendarForm extends Basecsdl_lichcongtacForm
             'start_time' => new sfValidatorDateTime(array('required' => false)),
             'end_time'   => new sfValidatorDateTime(array('required' => false)),
             'diadiem'    => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-
+            'thanhphan'  => new sfValidatorString(array('max_length' => 500, 'required' => false)),
+            'chuanbi'    => new sfValidatorString(array('max_length' => 500, 'required' => false)),
+            'chutri'     => new sfValidatorString(array('max_length' => 500, 'required' => false)),
         ));
 
         $this->widgetSchema->setNameFormat('csdl_lichcongtac[%s]');

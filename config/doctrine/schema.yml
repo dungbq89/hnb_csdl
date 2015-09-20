@@ -231,7 +231,10 @@ csdl_lichcongtac:
     noidung: { type: string(500), comment: "Noi dung" }
     start_time: { type: timestamp(25), comment: "Thời gian bắt đầu" }
     end_time: { type: timestamp(25), comment: "Thời gian kết thúc" }
-    diadiem: { type: string(255), comment: "tieu de" }
+    diadiem: { type: string(255), comment: "Dia diem" }
+    thanhphan: { type: string(500), comment: "thanh phan tham du" }
+    chuanbi: { type: string(500), comment: "Ca nhan/don vi chuan bi" }
+    chutri: { type: string(500), comment: "Ca nhan/don vi chu tri" }
 #Quản lý văn bản pháp quy
 csdl_vanbanphapquy:
   tableName: csdl_vanban_phapquy

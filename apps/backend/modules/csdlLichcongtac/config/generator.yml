@@ -35,7 +35,7 @@ generator:
           start_time: {label: Thời gian bắt đầu}
       form:
         class: CalendarForm
-        display: [tieude, noidung, start_time, end_time, diadiem]
+        display: [tieude, noidung, start_time, end_time, diadiem, thanhphan, chuanbi, chutri]
         fields:
           hoivien_id: {label: Hội viên}
           tieude: {label: Sự kiện}
@@ -43,6 +43,9 @@ generator:
           start_time: {label: Thời gian bắt đầu}
           end_time: {label: Thời gian kết thúc}
           diadiem: {label: Địa điểm}
+          thanhphan: {label: Thành phần}
+          chuanbi: {label: Chuẩn bị}
+          chutri: {label: Chủ trì}
       edit:
         title: Chỉnh sửa lịch công tác
       new:
