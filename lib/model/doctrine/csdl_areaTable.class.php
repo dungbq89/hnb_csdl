@@ -16,4 +16,10 @@ class csdl_areaTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('csdl_area');
     }
+    //lay thong tin quan/huyen theo ma
+    public static function getDistrict($code)
+    {
+        return csdl_areaTable::getInstance()->createQuery()
+            ->where('province =?',$code);
+    }
 }
