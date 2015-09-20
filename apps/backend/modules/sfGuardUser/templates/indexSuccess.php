@@ -15,7 +15,7 @@
             <div class="span12">
             <h1 style="display: inline"><?php echo __('Danh sách người dùng', array(), 'messages') ?></h1>
             </div>
-            <div class="row-fluid">
+            <div class="">
                 <div class="span9">
                                   <?php include_partial('sfGuardUser/filters', array('form' => $filters, 'configuration' => $configuration)) ?>
                                 </div>
@@ -23,8 +23,8 @@
                     
                 </div>
             </div>
-            
 
+            <div class="clear"></div>
             <?php include_partial('sfGuardUser/flashes') ?>
             
             <div id="sf_admin_header">

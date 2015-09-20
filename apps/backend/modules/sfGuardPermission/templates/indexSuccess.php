@@ -15,13 +15,13 @@
             <div class="span12">
             <h1 style="display: inline"><?php echo __('Danh sách quyền hạn', array(), 'messages') ?></h1>
             </div>
-            <div class="row-fluid">
+            <div class="">
               
                 <div class="span3" style="width:100%">
                     
                 </div>
             </div>
-            
+            <div class="clear"></div>
 
             <?php include_partial('sfGuardPermission/flashes') ?>
             
@@ -35,8 +35,7 @@
                 <?php include_partial('sfGuardPermission/list', array('pager' => $pager, 'sort' => $sort, 'helper' => $helper)) ?>
 
                 <div>
-                    <?php include_partial('sfGuardPermission/list_batch_actions', array('helper' => $helper)) ?>
-                    <div class="well pull-left margin-right"><?php include_partial('sfGuardPermission/list_actions', array('helper' => $helper)) ?></div>
+
                 </div>
                                     </form>
                 

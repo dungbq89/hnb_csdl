@@ -15,15 +15,15 @@
             <div class="span12">
             <h1 style="display: inline"><?php echo __('Danh sách thẻ hội viên', array(), 'messages') ?></h1>
             </div>
-            <div class="row-fluid">
+            <div class="">
                 <div class="span9">
                                   <?php include_partial('csdlTheHoiVien/filters', array('form' => $filters, 'configuration' => $configuration)) ?>
                                 </div>
                 <div class="span3">
-                    <div class="pull-right"><?php include_partial('csdlTheHoiVien/list_actions', array('helper' => $helper)) ?></div>
+                    <div class="pull-right"></div>
                 </div>
             </div>
-            
+            <div class="clear"></div>
 
             <?php include_partial('csdlTheHoiVien/flashes') ?>
             

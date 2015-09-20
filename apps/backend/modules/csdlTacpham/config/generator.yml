@@ -14,7 +14,8 @@ generator:
     config:
       actions: ~
       fields:  ~
-      list:    ~
+      list:
+        title: Danh sách tác phẩm
       filter:  ~
       form:    ~
       edit:    ~

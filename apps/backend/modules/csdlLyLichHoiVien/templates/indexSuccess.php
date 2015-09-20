@@ -15,13 +15,13 @@
                 <div class="span12">
                     <h1 style="display: inline"><?php echo __('Danh sách danh hội viên', array(), 'messages') ?></h1>
                 </div>
-                <div class="row-fluid">
+                <div class="">
                     <div class="span9">
                         <?php include_partial('csdlLyLichHoiVien/filters', array('form' => $filters, 'configuration' => $configuration)) ?>
                     </div>
 
                 </div>
-
+                <div class="clear"></div>
 
                 <?php include_partial('csdlLyLichHoiVien/flashes') ?>
 

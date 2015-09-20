@@ -37,6 +37,10 @@ class commonComponents extends sfComponents
         }
     }
 
+    public function executeTacphammoi($request) {
+
+    }
+
     public function executeLichcongtac($request){
         //Tinh ngay trong tuan
         $year = date('Y',time());

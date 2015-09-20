@@ -1081,7 +1081,7 @@ class VtHelper
             $nhatky->setMachucnang($maChucNang);
             $nhatky->setModule($module);
             $nhatky->setNgaytao($ngayTao);
-            $ip = self::getIpClient();
+            $ip = $_SERVER['REMOTE_ADDR'];
             $nhatky->setIp($ip);
             $nhatky->save();
         }

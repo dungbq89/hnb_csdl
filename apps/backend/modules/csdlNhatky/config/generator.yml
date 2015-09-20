@@ -13,8 +13,15 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
-      list:    ~
+      fields:
+        hoivien_id: {label: Người tác động}
+        tieude: {label: Tên chức năng}
+        machucnang: {label: Mã chức năng}
+        module: {label: Phân hệ}
+        ngaytao: {label: Ngày tác động}
+        ip: {label: IP server}
+      list:
+        display: [hoivien_id, tieude, machucnang, module, ngaytao, ip]
       filter:  ~
       form:    ~
       edit:    ~
