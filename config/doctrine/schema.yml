@@ -292,3 +292,16 @@ SessionsAdmin:
     sess_data: {type: clob, notnull: true}
     sess_time: {type: integer(11), notnull: true}
     sess_userid: {type: integer(20), default: null}
+sfCalendar:
+  tableName: sf_calendar
+  actAs:
+   Timestampable: ~
+  columns:
+    subject: { type: string(500), comment: "Tiêu đề" }
+    location: { type: string(255), comment: "Địa điểm" }
+    description: { type: string(1000), comment: "Trich dan" }
+    start_time: { type: timestamp(25), comment: "Thoi gian bat dau" }
+    end_time: { type: timestamp(25), comment: "Thoi gian ket thuc" }
+    is_all_day_event: { type: boolean, notnull: true, default: false, comment: "Trang thai" }
+    color: { type: string(10), comment: "Mau sac" }
+    recurring_rule: { type: string(255), comment: "" }

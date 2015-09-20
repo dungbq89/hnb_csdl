@@ -24,7 +24,6 @@ class sfWidgetFormDateTimePicker extends sfWidgetFormDateTime{
     }
     
     protected function renderDateTimePicker($name, $value, $attributes, $errors) {
-       
         $widget = new sfWidgetFormInput();
         ($value === "") ? $value = "" : $value = date('d-m-Y H:i:s', strtotime($value));
         return $widget->render($name, $value, array_merge($attributes, array("class"=>"datetimepicker", "readonly"=>"readonly", "style"=>"width:150px;")), $errors);
@@ -32,7 +31,7 @@ class sfWidgetFormDateTimePicker extends sfWidgetFormDateTime{
 
     public function getJavaScripts() {
         $javascripts = array(
-            'lib.ui-datepicker',
+            'jquery.ui.datepicker.js',
             'lib.ui-i18n',
             'admin',
             'lib.ui-core',

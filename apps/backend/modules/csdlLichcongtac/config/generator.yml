@@ -13,9 +13,37 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
-      list:    ~
-      filter:  ~
-      form:    ~
-      edit:    ~
-      new:     ~
+      fields:
+        hoivien_id: {label: Hội viên}
+        tieude: {label: Sự kiện}
+        noidung: {label: Nội dung}
+        start_time: {label: Thời gian bắt đầu}
+        end_time: {label: Thời gian kết thúc}
+        diadiem: {label: Địa điểm}
+      list:
+        title: Danh sách lịch công tác
+        display: [tieude, noidung, start_time, end_time, diadiem]
+        object_actions:
+          _edit: ~
+          _delete: ~
+      filter:
+        class: CalendarFilter
+        display: [hoivien_id, tieude, start_time]
+        fields:
+          hoivien_id: {label: Hội viên}
+          tieude: {label: Sự kiện}
+          start_time: {label: Thời gian bắt đầu}
+      form:
+        class: CalendarForm
+        display: [tieude, noidung, start_time, end_time, diadiem]
+        fields:
+          hoivien_id: {label: Hội viên}
+          tieude: {label: Sự kiện}
+          noidung: {label: Nội dung}
+          start_time: {label: Thời gian bắt đầu}
+          end_time: {label: Thời gian kết thúc}
+          diadiem: {label: Địa điểm}
+      edit:
+        title: Chỉnh sửa lịch công tác
+      new:
+        title: Tạo mới lịch công tác

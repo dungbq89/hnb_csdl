@@ -15,7 +15,6 @@ class ProjectConfiguration extends sfProjectConfiguration {
                                     'tmcTwitterBootstrapPlugin',
                                     'sfCaptchaGDPlugin',
                                     'sfPhpExcelPlugin'
-//                                    'vtAdvertisePlugin'
                                     ));
 //    $this->setWebDir(sfConfig::get('sf_root_dir').'/web');
 //    $this->registerZend();

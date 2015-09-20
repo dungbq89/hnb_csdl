@@ -76,7 +76,7 @@ all:
               route: sf_guard_permission
 
   sf_captchagd:
-     image_width:                100 # image width in pixels
+     image_width:                95 # image width in pixels
      image_height:               22 # image height in pixels
      chars:                      "123456789abcdefghijklmnopqrstuvwxyz" # possible chars in captcha
      length:                     1 # length of captcha

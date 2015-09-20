@@ -215,5 +215,6 @@
 	text-decoration: underline;
 }
 img.captcha{
-    margin-top: -15px;
+    margin-top: -7px;
+    vertical-align: middle;
 }

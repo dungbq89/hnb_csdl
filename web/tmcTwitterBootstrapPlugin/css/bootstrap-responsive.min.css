@@ -586,11 +586,13 @@
     width: 100%;
     *zoom: 1;
   }
+    .row-fluid::before{
+        margin-top: 130px;
+    }
   .row-fluid:before,
   .row-fluid:after {
     display: table;
     content: "";
-      margin-top: 70px;
   }
   .row-fluid:after {
     clear: both;

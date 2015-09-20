@@ -205,35 +205,22 @@
             <?php echo $form->renderHiddenFields() ?>
             <ul>
                 <li><span>Tên đăng nhập</span>
-
-
+                    <?php echo $form['username']->render(array('class' => 'number-login')) ?>
                     <?php if ($form['username']->hasError()): ?>
                         <span class="help-block"><?php echo $form['username']->renderError() ?></span>
-                        <br />
-                        <br />
                     <?php endif ?>
-
-                    <?php echo $form['username']->render(array('class' => 'number-login')) ?>
-
                 </li>
                 <li><span>Mật khẩu</span>
-
+                    <?php echo $form['password']->render(array('class' => 'number-login')) ?>
                     <?php if ($form['password']->hasError()): ?>
                         <span class="help-block"><?php echo $form['password']->renderError() ?></span>
-                        <br />
                     <?php endif ?>
-
-                    <?php echo $form['password']->render(array('class' => 'number-login')) ?>
-
                 </li>
                 <li><span>Mã xác thực</span>
-
+                    <?php echo $form['captcha']->render(array('class' => 'number-login')) ?>
                     <?php if ($form['captcha']->hasError()): ?>
                         <span class="help-block"><?php echo $form['captcha']->renderError() ?></span>
-                        <br />
                     <?php endif ?>
-
-                    <?php echo $form['captcha']->render(array('class' => 'number-login')) ?>
                 </li>
                 <!--<li><span>Mã bảo vệ</span><input type="text" name="text" class="number-login1" /><div class="capcha"><h2>a4rt56</h2></div></li>-->
                 <li>

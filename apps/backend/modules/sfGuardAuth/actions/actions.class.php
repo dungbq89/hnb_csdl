@@ -89,16 +89,30 @@ class sfGuardAuthActions extends BasesfGuardAuthActions
           if ($form->isValid()) {
             $user->setIpAddress($this->getRequest()->getHttpHeader('addr', 'remote'));
             $user->setUserAgent($this->getRequest()->getHttpHeader('User-Agent'));
-            if (!$sf_user->getPassUpdateAt() || (time() - strtotime($sf_user->getPassUpdateAt()) > sfConfig::get('app_passuser_lifetime', 7776000))) {
-              //            $this->redirect('@sf_guard_user_vtManageUserInfo_edit?id='.$sf_user->getId());
-              //            return;
-              $this->form = new adSignInChangePasswordForm();
-              $this->form->setUserName($username);
-              $this->change_password = 1;
-              $this->getUser()->setFlash('notice', $i18n->__('Mật khẩu của bạn đã quá 90 ngày không được thay đổi hoặc đã bị reset. Vui lòng thay đổi mật khẩu'));
-              return;
-            } else
-            {
+//            if (!$sf_user->getPassUpdateAt() || (time() - strtotime($sf_user->getPassUpdateAt()) > sfConfig::get('app_passuser_lifetime', 7776000))) {
+//              //            $this->redirect('@sf_guard_user_vtManageUserInfo_edit?id='.$sf_user->getId());
+//              //            return;
+//              $this->form = new adSignInChangePasswordForm();
+//              $this->form->setUserName($username);
+//              $this->change_password = 1;
+//              $this->getUser()->setFlash('notice', $i18n->__('Mật khẩu của bạn đã quá 90 ngày không được thay đổi hoặc đã bị reset. Vui lòng thay đổi mật khẩu'));
+//              return;
+//            } else
+//            {
+//                $this->getUser()->signin($form->getValue('user'), $form->getValue('remember'));
+//                adUserSigninLockTable::getInstance()->resetUserSigninLock($username);
+//                // always redirect to a URL set in app.yml
+//                // or to the referer
+//                // or to the homepage
+//                //ngoctv lay ra permisstion cua user không phải admin
+//                if(!sfContext::getInstance()->getUser()->isSuperAdmin()){
+//                    $user->setUserPermission(sfGuardPermissionTable::getUserPermissionCat(sfContext::getInstance()->getUser()->getGuardUser()->getId()));
+//
+//                }
+//
+//                return $this->redirect('@homepage');
+//            }
+
               $this->getUser()->signin($form->getValue('user'), $form->getValue('remember'));
               adUserSigninLockTable::getInstance()->resetUserSigninLock($username);
               // always redirect to a URL set in app.yml
@@ -109,9 +123,8 @@ class sfGuardAuthActions extends BasesfGuardAuthActions
                   $user->setUserPermission(sfGuardPermissionTable::getUserPermissionCat(sfContext::getInstance()->getUser()->getGuardUser()->getId()));
 
               }
-              
+
               return $this->redirect('@homepage');
-            }
             //            return $this->redirect('@homepage');
           }
           else
