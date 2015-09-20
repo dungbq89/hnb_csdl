@@ -1,3 +1,11 @@
+page_document_detail:
+  url: /chi-tiet-van-ban/:id
+  param: {module: pageVanBan, action: detail, id: ''}
+
+page_tailieu_detail:
+  url: /chi-tiet-tai-lieu/:id
+  param: {module: pageTaiLieu, action: detail, id: ''}
+
 csdl_lylichhoivien:
   class: sfDoctrineRouteCollection
   options:

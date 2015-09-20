@@ -23,4 +23,11 @@ class csdl_vanbanphapquyTable extends Doctrine_Table
             ->orderBy('updated_at desc')
             ->limit($limit);
     }
+
+    public static function getVanBanDetail($id)
+    {
+        return csdl_vanbanphapquyTable::getInstance()->createQuery()
+            ->where('id =?',$id)
+            ->andWhere('trangthai =?',VtCommonEnum::NUMBER_ONE);
+    }
 }

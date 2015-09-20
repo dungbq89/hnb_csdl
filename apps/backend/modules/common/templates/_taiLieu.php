@@ -4,8 +4,8 @@
         foreach($listTaiLieu as $taiLieu){
             ?>
             <div class="item news-item">
-                <a href="#" title=""><img src="/images/file.png" alt="" width="30px"></a>
-                <a href="#" title="" class="news-title" style="margin-left: 10px;"><?php echo htmlspecialchars($taiLieu['tentailieu']); ?></a>
+                <a href="<?php echo url_for2('page_tailieu_detail',array('id'=>$taiLieu['id'])) ?>" title=""><img src="/images/file.png" alt="" width="30px"></a>
+                <a href="<?php echo url_for2('page_tailieu_detail',array('id'=>$taiLieu['id'])) ?>" title="" class="news-title" style="margin-left: 10px;"><?php echo htmlspecialchars($taiLieu['tentailieu']); ?></a>
                 <div class="clear"></div>
             </div>
         <?php

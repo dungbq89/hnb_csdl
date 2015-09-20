@@ -14,3 +14,6 @@
 .more-video h3{
     line-height: 26px;
 }
+.vanban td{
+    border-bottom: 1px solid #ddd !important;
+}
