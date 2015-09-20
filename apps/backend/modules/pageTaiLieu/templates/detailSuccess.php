@@ -8,7 +8,7 @@ include_component('tmcTwitterBootstrap', 'header');
             <div class="col-main">
 
                 <div class="box">
-                    <h3 class="title-main"><span class="label"><?php echo __('Chi tiết văn bản pháp quy'); ?></span></h3>
+                    <h3 class="title-main"><span class="label"><?php echo __('Chi tiết tài liệu nghiệp vụ'); ?></span></h3>
                     <table class="table bordered vanban">
                         <?php
                         $newLink = "#";
