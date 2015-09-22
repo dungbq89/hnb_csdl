@@ -16,4 +16,10 @@ class csdl_quatrinhcongtacTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('csdl_quatrinhcongtac');
     }
+
+    public static function getQuaTrinhCongTac($hoiVienId)
+    {
+        return csdl_quatrinhcongtacTable::getInstance()->createQuery()
+            ->where('hoivien_id =?',$hoiVienId);
+    }
 }
