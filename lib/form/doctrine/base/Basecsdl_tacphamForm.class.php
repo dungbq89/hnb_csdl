@@ -16,7 +16,7 @@ abstract class Basecsdl_tacphamForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'           => new sfWidgetFormInputHidden(),
-      'hoivient_id'  => new sfWidgetFormInputText(),
+      'hoivien_id'   => new sfWidgetFormInputText(),
       'tentacpham'   => new sfWidgetFormInputText(),
       'gioithieu'    => new sfWidgetFormTextarea(),
       'anhdaidien'   => new sfWidgetFormInputText(),
@@ -32,7 +32,7 @@ abstract class Basecsdl_tacphamForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'           => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'hoivient_id'  => new sfValidatorInteger(array('required' => false)),
+      'hoivien_id'   => new sfValidatorInteger(array('required' => false)),
       'tentacpham'   => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'gioithieu'    => new sfValidatorString(array('max_length' => 1000, 'required' => false)),
       'anhdaidien'   => new sfValidatorString(array('max_length' => 255, 'required' => false)),

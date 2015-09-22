@@ -21,7 +21,7 @@ all:
   product_images: products
   import_max_size: 1048576
   album_images: album
-  video_images: video
+  document_images: document_images
   document: document
   member_images: member
 

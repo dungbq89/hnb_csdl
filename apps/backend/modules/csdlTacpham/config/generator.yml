@@ -13,10 +13,23 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
+      fields:
+        anhdaidien: {label: Ảnh đại diện}
+        tentacpham: {label: Tên tác phẩm}
+        gioithieu: {label: Giới thiệu}
+        tacgia_id: {label: Tác giả}
+        chude_id: {label: Chủ đề}
+        ngayxuatban: {label: Ngày xuất bản}
+        filedownload: {label: Tệp đính kèm}
       list:
         title: Danh sách tác phẩm
-      filter:  ~
-      form:    ~
-      edit:    ~
-      new:     ~
+        display: [anhdaidien, tentacpham, tacgia_id, chude_id, ngayxuatban]
+      filter:
+        display: [tentacpham, tacgia_id, chude_id]
+      form:
+        class: TacphamForms
+        display: [tentacpham, gioithieu, tacgia_id, chude_id, anhdaidien,filedownload,ngayxuatban]
+      edit:
+        title: Chỉnh sửa tác phẩm
+      new:
+        title: Tạo mới tác phẩm

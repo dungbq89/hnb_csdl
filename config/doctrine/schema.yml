@@ -57,7 +57,7 @@ csdl_tacpham:
     VtBlameable: ~
     Timestampable: ~
   columns:
-    hoivient_id: { type: integer(5), comment: "ma hoi vien"}
+    hoivien_id: { type: integer(5), comment: "ma hoi vien"}
     tentacpham: { type: string(255), comment: "Ten tac pham" }
     gioithieu: { type: string(1000), comment: "gioi thieu" }
     anhdaidien:  { type: string(255), comment: "hinh anh" }

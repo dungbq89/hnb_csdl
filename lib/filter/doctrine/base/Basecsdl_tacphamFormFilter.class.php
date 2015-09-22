@@ -13,7 +13,7 @@ abstract class Basecsdl_tacphamFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'hoivient_id'  => new sfWidgetFormFilterInput(),
+      'hoivien_id'   => new sfWidgetFormFilterInput(),
       'tentacpham'   => new sfWidgetFormFilterInput(),
       'gioithieu'    => new sfWidgetFormFilterInput(),
       'anhdaidien'   => new sfWidgetFormFilterInput(),
@@ -28,7 +28,7 @@ abstract class Basecsdl_tacphamFormFilter extends BaseFormFilterDoctrine
     ));
 
     $this->setValidators(array(
-      'hoivient_id'  => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'hoivien_id'   => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'tentacpham'   => new sfValidatorPass(array('required' => false)),
       'gioithieu'    => new sfValidatorPass(array('required' => false)),
       'anhdaidien'   => new sfValidatorPass(array('required' => false)),
@@ -60,7 +60,7 @@ abstract class Basecsdl_tacphamFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'           => 'Number',
-      'hoivient_id'  => 'Number',
+      'hoivien_id'   => 'Number',
       'tentacpham'   => 'Text',
       'gioithieu'    => 'Text',
       'anhdaidien'   => 'Text',

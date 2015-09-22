@@ -16,4 +16,11 @@ class csdl_tacgiaTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('csdl_tacgia');
     }
+
+    public static function  dsTacgia(){
+        $q=csdl_tacgiaTable::getInstance()->createQuery()
+            ->select('id, hoten')
+            ->orderby('hoten asc');
+        return $q->fetchArray();
+    }
 }

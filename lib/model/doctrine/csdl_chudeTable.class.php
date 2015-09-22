@@ -16,4 +16,12 @@ class csdl_chudeTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('csdl_chude');
     }
+
+    public static function  dsChude(){
+     $q=csdl_chudeTable::getInstance()->createQuery()
+         ->select('id, tenchude')
+        ->where('trangthai=1')
+        ->orderby('tenchude asc');
+        return $q->fetchArray();
+    }
 }
