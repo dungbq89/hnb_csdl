@@ -13,9 +13,32 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
-      list:    ~
-      filter:  ~
-      form:    ~
+      fields:
+        hoten: {label: Họ tên}
+        ngaysinh: {label: Ngày sinh}
+        diachi: {label: Địa chỉ}
+        dienthoai: {label: Điện thoại}
+        email: {label: Email}
+        donvi: {label: Đơn vị}
+        gioitinh: {label: Giới tính}
+      list:
+        title: Danh sách tác giả
+        display: [hoten, ngaysinh, gioitinh, diachi, dienthoai, email, donvi]
+        object_actions:
+          _edit: ~
+          _delete: ~
+      filter:
+        display: [hoten]
+      form:
+        class: TacgiaForms
+        display: [hoten, ngaysinh, gioitinh, donvi, diachi, dienthoai, email]
+        fields:
+          hoten: {label: Họ tên *}
+          ngaysinh: {label: Ngày sinh *}
+          diachi: {label: Địa chỉ *}
+          dienthoai: {label: Điện thoại}
+          email: {label: Email}
+          donvi: {label: Đơn vị *}
+          gioitinh: {label: Giới tính *}
       edit:    ~
       new:     ~

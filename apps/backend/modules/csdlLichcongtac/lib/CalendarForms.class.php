@@ -10,14 +10,31 @@ class CalendarForm extends Basecsdl_lichcongtacForm
 {
     public function configure()
     {
+        $years = range(date('Y'), date('Y') + 3);
         unset($this['created_by'],$this['updated_by'],$this['created_at'],$this['updated_at']);
         $this->setWidgets(array(
             'id'         => new sfWidgetFormInputHidden(),
             'hoivien_id' => new sfWidgetFormInputText(),
             'tieude'     => new sfWidgetFormInputText(),
             'noidung'    => new sfWidgetFormTextarea(),
-            'start_time' => new sfWidgetFormDateTime(),
-            'end_time'   => new sfWidgetFormDateTime(),
+            'start_time' => new sfWidgetFormDateTime(array(
+                    'date' => array(
+                        'format' => '%day%/%month%/%year%',
+                        'can_be_empty' => false,
+                        'years' => array_combine($years, $years)
+                    ),
+                    'format' => '%date% &mdash; %time%',
+                    'default' => date('Y/m/d H:i', time())
+                )),
+            'end_time'   => new sfWidgetFormDateTime(array(
+                    'date' => array(
+                        'format' => '%day%/%month%/%year%',
+                        'can_be_empty' => false,
+                        'years' => array_combine($years, $years)
+                    ),
+                    'format' => '%date% &mdash; %time%',
+                    'default' => date('Y/m/d H:i', time())
+                )),
             'diadiem'    => new sfWidgetFormInputText(),
             'thanhphan'  => new sfWidgetFormTextarea(),
             'chuanbi'    => new sfWidgetFormTextarea(),

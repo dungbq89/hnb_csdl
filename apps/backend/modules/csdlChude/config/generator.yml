@@ -26,6 +26,7 @@ generator:
           _edit: ~
           _delete: ~
       filter:
+        class: ChudeFilters
         display: [tenchude]
       form:
         display: [tenchude, anhdaidien, gioithieu, thutu, trangthai]

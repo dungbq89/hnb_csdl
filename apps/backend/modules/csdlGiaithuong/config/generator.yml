@@ -13,9 +13,24 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
-      list:    ~
-      filter:  ~
-      form:    ~
-      edit:    ~
-      new:     ~
+      fields:
+        tengiaithuong: {label: Tên giải thưởng}
+        madanhmuc: {label: Danh mục}
+        namtochuc: {label: Năm tổ chức}
+        giatri: {label: Giá trị giải thưởng}
+      list:
+        title: Danh sách giải thưởng
+        display: [tengiaithuong, madanhmuc, namtochuc, giatri ]
+        object_actions:
+          _edit: ~
+          _delete: ~
+      filter:
+        class: GiaithuongFormFilter
+        display: [tengiaithuong, madanhmuc]
+      form:
+        class: GiaithuongForm
+        display: [tengiaithuong, madanhmuc, namtochuc, giatri ]
+      edit:
+        title: Chỉnh sửa thông tin giải thưởng
+      new:
+        title: Tạo mới thông tin giải thưởng

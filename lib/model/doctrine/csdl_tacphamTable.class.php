@@ -16,4 +16,13 @@ class csdl_tacphamTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('csdl_tacpham');
     }
+
+    public static function getListTacpham($limit=6){
+        return csdl_tacphamTable::getInstance()->createQuery()
+            ->select('tentacpham, gioithieu, anhdaidien, ngayxuatban, chude_id, tacgia_id')
+            ->where('status=2')
+            ->orderby('updated_at')
+            ->limit($limit)
+            ->execute();
+    }
 }

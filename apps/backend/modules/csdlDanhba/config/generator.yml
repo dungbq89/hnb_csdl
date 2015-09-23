@@ -13,9 +13,27 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
-      list:    ~
-      filter:  ~
-      form:    ~
-      edit:    ~
-      new:     ~
+      fields:
+        hoten: {label: Họ tên}
+        ngaysinh: {label: Ngày sinh}
+        gioitinh: {label: Giới tính}
+        diachi: {label: Địa chỉ}
+        dienthoai: {label: Điện thoại}
+        email: {label: Email}
+        donvi: {label: Đơn vị}
+      list:
+        title: Danh bạ
+        display: [hoten, ngaysinh, gioitinh, diachi, dienthoai, email, donvi]
+        object_actions:
+          _edit: ~
+          _delete: ~
+      filter:
+        class: DanhbaFormFilter
+        display: [hoten, donvi, dienthoai, email]
+      form:
+        class: DanhbaForm
+        display: [hoten, ngaysinh, gioitinh, diachi, dienthoai, email, donvi]
+      edit:
+        title: Chỉnh sửa thông tin liên hệ
+      new:
+        title: Thêm mới thông tin liên hệ
