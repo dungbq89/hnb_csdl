@@ -21,6 +21,8 @@ all:
         Quản lý Hội viên:
           credentials: [admin]
           dropdown:
+            Danh sách hội viên chờ duyệt:
+              route: csdl_hoivienchoduyet
             Danh sách hội viên:
               route: csdl_lylichhoivien
             Quản lý thẻ hội viên:

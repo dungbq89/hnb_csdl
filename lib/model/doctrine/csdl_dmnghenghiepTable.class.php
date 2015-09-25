@@ -16,4 +16,10 @@ class csdl_dmnghenghiepTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('csdl_dmnghenghiep');
     }
+
+    public static function getAllJob()
+    {
+        return csdl_dmnghenghiepTable::getInstance()->createQuery()
+            ->orderBy('thutu desc');
+    }
 }

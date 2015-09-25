@@ -16,4 +16,10 @@ class csdl_dantocTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('csdl_dantoc');
     }
+
+    public static function getDanToc()
+    {
+        return csdl_dantocTable::getInstance()->createQuery()
+            ->orderBy('tendantoc desc');
+    }
 }

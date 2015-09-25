@@ -7,7 +7,7 @@ generator:
     with_show:             false
     singular:              ~
     plural:                ~
-    route_prefix:          csdl_lylichhoivien
+    route_prefix:          csdl_hoivienchoduyet
     with_doctrine_route:   true
     actions_base_class:    sfActions
 
@@ -38,7 +38,7 @@ generator:
           _edit: ~
           _delete: ~
       filter:
-        display: [hodem, ten]
+        display: [ten]
       form:
         display: [ten, hodem, ngaysinh, gioitinh, diachi, maquan, matinh, ngayvaodoan, noiketnapdoan, ngayvaodang, noiketnapdang, tieusu, nghenghiep_id, dantoc_id, quoctich, donvi_id]
         class: csdlLyLichHoiVienAdminForm

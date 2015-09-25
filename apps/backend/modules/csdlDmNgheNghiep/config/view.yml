@@ -1,0 +1,11 @@
+## YAML Template.
+---
+indexSuccess:
+  metas:
+    title: Danh sách nghề nghiệp
+newSuccess:
+  metas:
+    title: Thêm mới nghề nghiệp
+editSuccess:
+  metas:
+    title: Chỉnh sửa nghề nghiệp

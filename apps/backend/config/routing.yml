@@ -1,3 +1,12 @@
+csdl_hoivienchoduyet:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                csdl_lylichhoivien
+    module:               csdlHoiVienChoDuyet
+    prefix_path:          /csdlHoiVienChoDuyet
+    column:               id
+    with_wildcard_routes: true
+
 page_thongtinhoivien:
   url: /thong-tin-hoi-vien
   param: {module: pageThongTinHoiVien, action: detail}
