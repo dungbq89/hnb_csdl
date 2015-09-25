@@ -13,9 +13,27 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
-      list:    ~
-      filter:  ~
-      form:    ~
-      edit:    ~
-      new:     ~
+      fields:
+        anhdaidien: {label: Ảnh đại diện}
+        tentailieu: {label: Tên tài liệu}
+        kyhieu: {label: Ký hiệu}
+        sotailieu: {label: Số tài liệu}
+        matailieu: {label: Mã tài liệu}
+        trichdan: {label: Trích dẫn}
+        filedownload: {label: Tệp đính kèm}
+        trangthai: {label: Trạng thái}
+      list:
+        title: Danh sách tài liệu
+        display: [anhdaidien,tentailieu, kyhieu, sotailieu , matailieu, trichdan,filedownload, trangthai]
+        object_actions:
+          _edit: ~
+          _delete: ~
+      filter:
+        class: TailieunghiepvuFormFilter
+        display: [kyhieu, tentailieu]
+      form:
+        class: TailieunghiepvuForm
+      edit:
+        title: Chỉnh sửa thông tin tài liệu
+      new:
+        title: Tạo mới thông tin tài liệu

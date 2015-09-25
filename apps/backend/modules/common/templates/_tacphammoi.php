@@ -8,17 +8,21 @@
 ?>
 <div class="box-news">
     <h3 class="title-main"><span class="label">TÁC PHẨM MỚI</span></h3>
+    <?php foreach($listTacpham as $item){
+        $path = '/uploads/' . sfConfig::get('app_document_images') . $item->getAnhdaidien();
+        ?>
     <div class="item news-item">
-        <a href="#" title="" class="news-img"><img src="img/img-news2.png" alt=""></a>
+        <a href="#" title="" class="news-img"><img src="<?php echo VtHelper::getThumbUrl($path, 187, 125, ''); ?>" alt=""></a>
         <div class="news-info">
-            <a href="" title="" class="news-title">Bia lại đua nhau ra ngoài thị trường</a> <span>(08:20 12/05/2015)</span>
+            <a href="" title="" class="news-title"><?php echo $item->getTentacpham()?></a> <span>(Ngày xuất bản: <?php echo  VtHelper::truncate($item->getNgayxuatban(), 10, '', true)?> )</span>
+            <br />
+            <a><b>Tác giả: </b></a>   <a><b>Chủ đề: </b> </a>
             <p class="news-txt">
-                Sau bia không say, thị trường lại vừa đón nhận
-                thêm sản phẩm mới làm từ tổ yến. Tuy nhiên,
-                sức tiêu thụ ...</p>
-
-            <a href="" class="readmore" title="Xem tiếp">Xem tiếp</a>
+                <?php echo  VtHelper::truncate($item->getGioithieu(), 300, '', true)?>
+            </p>
+            <a href="" class="readmore" title="Xem tiếp">Xem chi tiết</a>
         </div>
     </div>
     <div class="clear"></div>
+    <?php }  ?>
 </div>

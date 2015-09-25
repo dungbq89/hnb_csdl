@@ -24,7 +24,11 @@ generator:
       list:
         title: Danh sách tác phẩm
         display: [anhdaidien, tentacpham, tacgia_id, chude_id, ngayxuatban]
+        object_actions:
+          _edit: ~
+          _delete: ~
       filter:
+        class: TacphamFillters
         display: [tentacpham, tacgia_id, chude_id]
       form:
         class: TacphamForms

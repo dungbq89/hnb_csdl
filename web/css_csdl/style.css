@@ -268,7 +268,7 @@ color: #fff;
 }
 
 .col-main{
-    width: 660px;
+    width: 680px;
     float: left;
   /*  background: url('../img/bg--right-main.png') repeat-y top right;*/
     padding-right: 10px;
@@ -339,6 +339,7 @@ a.news-img img{
 .news-info{
     margin-left: 192px;
     padding-top: 3px;
+    line-height: 22px;
 }
 .news-info .readmore,
 .news-date{

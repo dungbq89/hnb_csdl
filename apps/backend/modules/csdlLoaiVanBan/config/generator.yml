@@ -27,6 +27,7 @@ generator:
           _edit: ~
           _delete: ~
       filter:
+        class: LoaivanbanFormFilter
         display: [tendanhmuc]
       form:
         display: [tendanhmuc, madanhmuc, anhdaidien, gioithieu, thutu, trangthai]

@@ -28,6 +28,7 @@ generator:
           _edit: ~
           _delete: ~
       filter:
+        class: CoquanbanhanhFormFilter
         display: [tendonvi]
       form:
         display: [tendonvi, madonvi, nguoidaidien, anhdaidien, gioithieu, thutu, trangthai]

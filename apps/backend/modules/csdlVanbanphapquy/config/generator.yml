@@ -13,9 +13,32 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
-      list:    ~
-      filter:  ~
-      form:    ~
-      edit:    ~
-      new:     ~
+      fields:
+        tentailieu: {label: Tên văn bản}
+        matailieu: {label: Mã văn bản}
+        kyhieu: {label: Ký hiệu}
+        sotailieu: {label: Số văn bản}
+        ngaybanhanh: {label: Ngày ban hành}
+        ngayhieuluc: {label: Ngày hiệu lực}
+        ngayhethieuluc: {label: Ngày hết hiệu lực}
+        trichdan: {label: Trích dẫn}
+        anhdaidien: {label: Ảnh đại diện}
+        filedownload: {label: Tệp đính kèm}
+        trangthai: {label: Trạng thái}
+        loaivanban_id: {label: Loại văn bản}
+      list:
+        title: Danh sách văn bản
+        display: [tentailieu,matailieu,kyhieu,sotailieu,ngaybanhanh,ngayhieuluc]
+        object_actions:
+          _edit: ~
+          _delete: ~
+      filter:
+        class: VanbanphapquyFormFilter
+        display: [tentailieu,kyhieu,loaivanban_id]
+      form:
+        class: VanbanphapquyForm
+        display: [tentailieu,trichdan,matailieu,kyhieu,sotailieu,ngaybanhanh,ngayhieuluc,loaivanban_id,anhdaidien,filedownload,trangthai]
+      edit:
+        title: Chỉnh sửa thông tin Văn bản
+      new:
+        title: Tạo mới thông tin Văn bản

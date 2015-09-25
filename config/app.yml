@@ -25,13 +25,10 @@ all:
   document: document
   member_images: member
 
-  upload_media_file: F:\code\csdl\CSDL\hnb_csdl\web\uploads
-  url_media_file: http://localhost:8888/uploads
-  url_media_default_file: http://localhost:8888/images/default-image.jpg
-  #upload_media_file: /uploads
-
+  upload_media_file: E:\Data_D\hoi-nha-bao\svn_csdl\hnb_csdl\web\uploads
   url_media_file: /uploads
-  
+  url_media_default_file: /images/default-image.jpg
+
   ckeditor:
     basePath: /js/ckeditor
   ckfinder:

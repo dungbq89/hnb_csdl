@@ -1238,3 +1238,13 @@ a {
 span.text-normal{
     text-align: center;
 }
+#csdl_tacgia_ngaysinh_day, #csdl_tacgia_ngaysinh_month, #csdl_tacgia_ngaysinh_year,
+#csdl_lichcongtac_start_time_day,#csdl_lichcongtac_start_time_month,#csdl_lichcongtac_start_time_year,
+#csdl_lichcongtac_start_time_hour,#csdl_lichcongtac_start_time_minute,#csdl_lichcongtac_end_time_month,
+#csdl_lichcongtac_end_time_day,#csdl_lichcongtac_end_time_year,#csdl_lichcongtac_end_time_hour,
+#csdl_lichcongtac_end_time_minute,#csdl_vanbanphapquy_ngaybanhanh_day,#csdl_vanbanphapquy_ngaybanhanh_month,
+#csdl_vanbanphapquy_ngaybanhanh_year,#csdl_vanbanphapquy_ngayhieuluc_day,#csdl_vanbanphapquy_ngayhieuluc_month,
+#csdl_vanbanphapquy_ngayhieuluc_year, #csdl_danhba_ngaysinh_day, #csdl_danhba_ngaysinh_month,#csdl_danhba_ngaysinh_year
+{
+ width: 70px;
+}
