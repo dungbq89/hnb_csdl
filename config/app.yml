@@ -28,7 +28,7 @@ all:
   upload_media_file: E:\Data_D\hoi-nha-bao\svn_csdl\hnb_csdl\web\uploads
   url_media_file: /uploads
   url_media_default_file: /images/default-image.jpg
-
+  domain: http://103.237.145.134:8088
   ckeditor:
     basePath: /js/ckeditor
   ckfinder:
