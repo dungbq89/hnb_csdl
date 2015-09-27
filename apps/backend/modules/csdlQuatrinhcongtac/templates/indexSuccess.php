@@ -24,7 +24,6 @@
                 </div>
             </div>
             <div class="clear"></div>
-
             <?php include_partial('csdlQuatrinhcongtac/flashes') ?>
             
             <div id="sf_admin_header">

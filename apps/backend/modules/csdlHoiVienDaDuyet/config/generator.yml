@@ -1,0 +1,48 @@
+generator:
+  class: tmcTwitterBootstrapDoctrineGenerator
+  param:
+    model_class:           csdl_lylichhoivien
+    theme:                 tmcTwitterBootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          csdl_hoiviendaduyet
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        ten: {label: Tên}
+        hodem: {label: Họ đệm}
+        ngaysinh: {label: Ngày sinh}
+        gioitinh: {label: Giới tính}
+        diachi: {label: Địa chỉ}
+        maquan: {label: Quận/huyện}
+        matinh: {label: Tỉnh/thành phố}
+        ngayvaodoan: {label: Ngày vào đoàn}
+        noiketnapdoan: {label: Nơi kết nạp đoàn}
+        ngayvaodang: {label: Ngày vào đảng}
+        noiketnapdang: {label: Nơi kết nạp đảng}
+        tieusu: {label: Tiểu sử}
+        nghenghiep_id: {label: Nghề nghiệp}
+        dantoc_id: {label: Dân tộc}
+        quoctich: {label: Quốc tịch}
+        donvi_id: {label: Đơn vị}
+
+      list:
+        title: Danh sách danh hội viên đã duyệt
+        display: [hodem, ten, ngaysinh, gioitinh, diachi, maquan, matinh]
+        object_actions:
+          _edit: ~
+          _delete: ~
+      filter:
+        display: [ten]
+      form:
+        display: [ten, hodem, ngaysinh, gioitinh, diachi, maquan, matinh, ngayvaodoan, noiketnapdoan, ngayvaodang, noiketnapdang, tieusu, nghenghiep_id, dantoc_id, quoctich, donvi_id]
+        class: csdlLyLichHoiVienAdminForm
+      edit:
+        title: Chỉnh sửa lý lịch hội viên
+      new:
+        title: Thêm mới lý lịch

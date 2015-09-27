@@ -1,0 +1,11 @@
+## YAML Template.
+---
+indexSuccess:
+  metas:
+    title: Danh sách hội viên đã duyệt
+newSuccess:
+  metas:
+    title: Thêm mới hội viên
+editSuccess:
+  metas:
+    title: Chỉnh sửa hội viên

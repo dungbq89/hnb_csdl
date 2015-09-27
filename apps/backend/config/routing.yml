@@ -1,6 +1,16 @@
 page_chitiet_tacpham:
   url: /chi-tiet-tac-pham/:id
   param: {module: pageTacpham, action: detail}
+
+csdl_hoiviendaduyet:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                csdl_lylichhoivien
+    module:               csdlHoiVienDaDuyet
+    prefix_path:          /hoi-vien-da-duyet
+    column:               id
+    with_wildcard_routes: true
+
 csdl_hoivienchoduyet:
   class: sfDoctrineRouteCollection
   options:
@@ -27,7 +37,7 @@ csdl_lylichhoivien:
   options:
     model:                csdl_lylichhoivien
     module:               csdlLyLichHoiVien
-    prefix_path:          /hoi-vien-da-duyet
+    prefix_path:          /hoi-vien
     column:               id
     with_wildcard_routes: true
 

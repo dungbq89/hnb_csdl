@@ -24,9 +24,13 @@ all:
             Danh sách hội viên chờ duyệt:
               route: csdl_hoivienchoduyet
             Danh sách hội viên đã duyệt:
+              route: csdl_hoiviendaduyet
+            Danh sách hội viên:
               route: csdl_lylichhoivien
             Quản lý thẻ hội viên:
               route: csdl_thehoivien
+            Quản lý quá trình công tác:
+              route: csdl_quatrinhcongtac
             Quản lý dân tộc:
               route: csdl_dantoc
             Quản lý danh mục nghề nghiệp:
