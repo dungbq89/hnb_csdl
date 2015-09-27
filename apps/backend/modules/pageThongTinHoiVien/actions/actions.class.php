@@ -10,17 +10,18 @@ class pageThongTinHoiVienActions extends sfActions {
         $id = $this->getUser()->getGuardUser()->getId();
         if($id){
             $user = csdl_lylichhoivienTable::getUserDetail($id)->fetchOne();
+
             if($user){
                 $this->userDetail = $user;
                 //Qua trinh cong tac
-                $quaTrinh = csdl_quatrinhcongtacTable::getQuaTrinhCongTac($id)->fetchOne();
+                $quaTrinh = csdl_quatrinhcongtacTable::getQuaTrinhCongTac($id)->execute();
                 if($quaTrinh){
-                    $this->quatrinh = $quaTrinh;
+                    $this->quatrinhs = $quaTrinh;
                 }
                 //the hoi vien
-                $thehoivien = csdl_thehoivienTable::getTheHoiVien($id)->fetchOne();
+                $thehoivien = csdl_thehoivienTable::getTheHoiVien($id)->execute();
                 if($thehoivien){
-                    $this->thehoivien = $thehoivien;
+                    $this->thehoiviens = $thehoivien;
                 }
             }
         }

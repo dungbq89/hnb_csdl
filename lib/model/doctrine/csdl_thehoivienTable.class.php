@@ -19,6 +19,6 @@ class csdl_thehoivienTable extends Doctrine_Table
     public static function getTheHoiVien($hoiVienId)
     {
         return csdl_thehoivienTable::getInstance()->createQuery()
-            ->where('hoivient_id =?',$hoiVienId);
+            ->where('hoivien_id =?',$hoiVienId);
     }
 }
