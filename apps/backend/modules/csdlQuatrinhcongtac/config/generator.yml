@@ -13,9 +13,22 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
-      list:    ~
-      filter:  ~
+      fields:
+        hoivien_id: {label: Mã hội viên}
+        donvi_id: {label: Đơn vị công tác}
+        thoigian: {label: Số tháng công tác}
+        batdau: {label: Thời gian bắt đầu}
+        ketthuc: {label: Thời gian kết thúc}
+        chucvu: {label: Chức vụ}
+        mota: {label: Mô tả}
+      list:
+        title: Danh sách quá trình công tác
+        display: [hoivien_id, donvi_id, batdau, ketthuc, chucvu]
+        object_actions:
+          _edit: ~
+          _delete: ~
+      filter:
+        display: [hoivien_id]
       form:    ~
       edit:    ~
       new:     ~

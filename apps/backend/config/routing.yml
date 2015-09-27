@@ -1,9 +1,18 @@
+csdl_hoiviendaduyet:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                csdl_lylichhoivien
+    module:               csdlHoiVienDaDuyet
+    prefix_path:          /hoi-vien-da-duyet
+    column:               id
+    with_wildcard_routes: true
+
 csdl_hoivienchoduyet:
   class: sfDoctrineRouteCollection
   options:
     model:                csdl_lylichhoivien
     module:               csdlHoiVienChoDuyet
-    prefix_path:          /csdlHoiVienChoDuyet
+    prefix_path:          /hoi-vien-cho-duyet
     column:               id
     with_wildcard_routes: true
 
