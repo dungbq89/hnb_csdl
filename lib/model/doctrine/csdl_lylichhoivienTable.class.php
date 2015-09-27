@@ -20,6 +20,7 @@ class csdl_lylichhoivienTable extends Doctrine_Table
     public static function getNewUser($limit)
     {
         return csdl_lylichhoivienTable::getInstance()->createQuery()
+            ->where('hoivien_id>0')
             ->orderBy('updated_at desc')
             ->limit($limit);
     }
@@ -30,4 +31,22 @@ class csdl_lylichhoivienTable extends Doctrine_Table
             ->where('hoivien_id =?',$hoiVienId);
     }
 
+    public static function dsHoivienForThe(){
+        return csdl_lylichhoivienTable::getInstance()->createQuery()
+            ->select('hoivien_id, hodem ,ten ')
+            ->where('hoivien_id>0')
+            ->orderBy('ten asc')
+            ->fetchArray();
+    }
+
+    public static function hotenHoivien($hoivienId){
+        $result= csdl_lylichhoivienTable::getInstance()->createQuery()
+            ->select('hodem, ten')
+            ->where('hoivien_id=?',$hoivienId)
+            ->fetchArray();
+        if(count($result)>0){
+            return $result[0]['hodem'] . ' ' .$result[0]['ten'];
+        }
+        return '';
+    }
 }

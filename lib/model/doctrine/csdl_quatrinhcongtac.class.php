@@ -12,5 +12,15 @@
  */
 class csdl_quatrinhcongtac extends Basecsdl_quatrinhcongtac
 {
+    public function setUp()
+    {
+        $this->hasMany('csdl_lylichhoivien as csdlHoivien', array(
+            'local' => 'hoivien_id',
+            'foreign' => 'hoivien_id'));
 
+        $this->hasMany('csdl_coquanbaochi as csdlCoquanbaochi', array(
+            'local' => 'donvi_id',
+            'foreign' => 'id'));
+        parent::setUp();
+    }
 }

@@ -12,5 +12,14 @@
  */
 class csdl_tacpham extends Basecsdl_tacpham
 {
-
+    public function setUp()
+    {
+        $this->hasMany('csdl_tacgia as csdlTacgia', array(
+            'local' => 'tacgia_id',
+            'foreign' => 'id'));
+        $this->hasMany('csdl_chude as csdlChude', array(
+        'local' => 'chude_id',
+        'foreign' => 'id'));
+        parent::setUp();
+    }
 }

@@ -14,7 +14,7 @@ generator:
     config:
       actions: ~
       fields:
-        hoivient_id: {label: Mã hội viên}
+        hoivien_id: {label: Hội viên}
         mathe: {label: Mã thẻ}
         anhdaidien: {label: Ảnh đại diện}
         ngaycap: {label: Ngày cấp thẻ}
@@ -24,14 +24,15 @@ generator:
         trangthai: {label: Trạng thái}
       list:
         title: Danh sách thẻ hội viên
-        display: [anhdaidien, hoivient_id, mathe, ngaycap, trangthai]
+        display: [anhdaidien, hoivien_id, mathe, ngaycap, ngayhethan,  nguoiky, ngayky, trangthai]
         object_actions:
           _edit: ~
           _delete: ~
       filter:
-        display: [hoivient_id, mathe]
+        class: ThehoivienFormFilter
+        display: [hoivien_id, mathe]
       form:
-        display: [hoivient_id, mathe, anhdaidien, ngaycap, ngayhethan, nguoiky, ngayky, trangthai]
+        display: [hoivien_id, mathe, anhdaidien, ngaycap, ngayhethan, nguoiky, ngayky, trangthai]
         class: csdlTheHoiVienAdminForm
       edit:
         title: Chỉnh sửa thẻ hội viên

@@ -123,7 +123,7 @@ class sfGuardAuthActions extends BasesfGuardAuthActions
                   $user->setUserPermission(sfGuardPermissionTable::getUserPermissionCat(sfContext::getInstance()->getUser()->getGuardUser()->getId()));
 
               }
-
+              VtHelper::writeLog($user->getGuardUser()->getId(),"Đăng nhập thành công","LOGIN","Lý lịch hội viên",date('Y-m-d H:i:s'));
               return $this->redirect('@homepage');
             //            return $this->redirect('@homepage');
           }
@@ -160,6 +160,7 @@ class sfGuardAuthActions extends BasesfGuardAuthActions
               $sf_user->setPassUpdateAt(date('Y-m-d H:i:s', strtotime('now')));
               $sf_user->setPassword($form['new_password']->getValue());
               $sf_user->save();
+                VtHelper::writeLog($user->getGuardUser()->getId(),"Thay đổi mật khẩu","CHANGE_PASSWORD","Lý lịch hội viên",date('Y-m-d H:i:s'));
               $this->getUser()->setFlash('info', $i18n->__('Bạn đã thay đổi mật khẩu thành công.'));
             }
           }
@@ -168,6 +169,7 @@ class sfGuardAuthActions extends BasesfGuardAuthActions
             if(!sfContext::getInstance()->getUser()->isSuperAdmin()){
                 $user->setUserPermission(sfGuardPermissionTable::getUserPermissionCat(sfContext::getInstance()->getUser()->getGuardUser()->getId()));
             }
+            VtHelper::writeLog($user->getGuardUser()->getId(),"Đăng nhập thành công","LOGIN","Lý lịch hội viên",date('Y-m-d H:i:s'));
           // always redirect to a URL set in app.yml
           // or to the referer
           // or to the homepage
@@ -214,6 +216,7 @@ class sfGuardAuthActions extends BasesfGuardAuthActions
                     $sf_user->setPassUpdateAt(date('Y-m-d H:i:s', time()));
                     $sf_user->setPassword($this->form->getValue('new_password'));
                     $sf_user->save();
+                    VtHelper::writeLog($this->getUser()->getGuardUser()->getId(),"Thay đổi mật khẩu","CHANGE_PASSWORD","Lý lịch hội viên",date('Y-m-d H:i:s'));
                     $this->getUser()->setFlash('info', sfContext::getInstance()->getI18N()->__('Bạn đã thay đổi mật khẩu thành công.'));
                 }
             }

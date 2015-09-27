@@ -22,4 +22,36 @@ class csdl_areaTable extends Doctrine_Table
         return csdl_areaTable::getInstance()->createQuery()
             ->where('province =?',$code);
     }
+
+    //Lay danh sach tinh thanh pho
+    public static function getCity(){
+        $query=  csdl_areaTable::getInstance()->createQuery()
+            ->where("DISTRICT = '' AND PRECINCT = '' AND STATUS = 1");
+        return $query;
+    }
+
+    public static function getProvinceByCityCode($cityCode){
+        $query=  csdl_areaTable::getInstance()->createQuery()
+            ->where("PROVINCE =? ", $cityCode)
+            ->andWhere("DISTRICT <> '' AND PRECINCT = '' AND STATUS = 1");
+        return $query;
+    }
+
+    public static function getProvinceKey(){
+        $query=  csdl_areaTable::getInstance()->createQuery()
+            ->where("DISTRICT <> '' AND PRECINCT = '' AND STATUS = 1");
+        return $query;
+    }
+
+    public static function getName($Province,$District){
+        $result= csdl_areaTable::getInstance()->createQuery()
+            ->select('NAME')
+            ->where('PROVINCE=?',$Province)
+            ->andWhere('DISTRICT=?',$District)
+            ->fetchArray();
+        if(count($result)>0){
+            return $result[0]['NAME'];
+        }
+        return '';
+    }
 }

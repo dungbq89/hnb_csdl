@@ -13,8 +13,8 @@ abstract class Basecsdl_quatrinhcongtacFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'hoivien_id' => new sfWidgetFormFilterInput(),
-      'donvi_id'   => new sfWidgetFormFilterInput(),
+      'hoivien_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('csdlHoivien'), 'add_empty' => true)),
+      'donvi_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('csdlCoquanbaochi'), 'add_empty' => true)),
       'thoigian'   => new sfWidgetFormFilterInput(),
       'batdau'     => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
       'ketthuc'    => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
@@ -27,8 +27,8 @@ abstract class Basecsdl_quatrinhcongtacFormFilter extends BaseFormFilterDoctrine
     ));
 
     $this->setValidators(array(
-      'hoivien_id' => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
-      'donvi_id'   => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'hoivien_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('csdlHoivien'), 'column' => 'id')),
+      'donvi_id'   => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('csdlCoquanbaochi'), 'column' => 'id')),
       'thoigian'   => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'batdau'     => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'ketthuc'    => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
@@ -58,8 +58,8 @@ abstract class Basecsdl_quatrinhcongtacFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'         => 'Number',
-      'hoivien_id' => 'Number',
-      'donvi_id'   => 'Number',
+      'hoivien_id' => 'ForeignKey',
+      'donvi_id'   => 'ForeignKey',
       'thoigian'   => 'Number',
       'batdau'     => 'Date',
       'ketthuc'    => 'Date',

@@ -137,11 +137,6 @@
     background: #e1f8ff;
 }
 
-#csdl_lylichhoivien_ngaysinh_month, #csdl_lylichhoivien_ngaysinh_day, #csdl_lylichhoivien_ngaysinh_year {
-    padding: 5px 10px;
-    width: 111px;
-}
-
 .commentTitle {
     font-size: 12px;
     border-bottom: 1px solid #ccc;
@@ -1244,7 +1239,17 @@ span.text-normal{
 #csdl_lichcongtac_end_time_day,#csdl_lichcongtac_end_time_year,#csdl_lichcongtac_end_time_hour,
 #csdl_lichcongtac_end_time_minute,#csdl_vanbanphapquy_ngaybanhanh_day,#csdl_vanbanphapquy_ngaybanhanh_month,
 #csdl_vanbanphapquy_ngaybanhanh_year,#csdl_vanbanphapquy_ngayhieuluc_day,#csdl_vanbanphapquy_ngayhieuluc_month,
-#csdl_vanbanphapquy_ngayhieuluc_year, #csdl_danhba_ngaysinh_day, #csdl_danhba_ngaysinh_month,#csdl_danhba_ngaysinh_year
+#csdl_vanbanphapquy_ngayhieuluc_year, #csdl_danhba_ngaysinh_day, #csdl_danhba_ngaysinh_month,#csdl_danhba_ngaysinh_year,
+#csdl_lylichhoivien_ngaysinh_month, #csdl_lylichhoivien_ngaysinh_day, #csdl_lylichhoivien_ngaysinh_year,
+#csdl_quatrinhcongtac_batdau_month, #csdl_quatrinhcongtac_batdau_day, #csdl_quatrinhcongtac_batdau_year,
+#csdl_quatrinhcongtac_ketthuc_month, #csdl_quatrinhcongtac_ketthuc_day, #csdl_quatrinhcongtac_ketthuc_year
 {
  width: 70px;
+}
+
+.detail-tacpham {
+    line-height: 22px;
+    margin-left: 10px;
+    padding-top: 3px;
+    margin-top: 35px;
 }

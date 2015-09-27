@@ -13,4 +13,17 @@ require_once dirname(__FILE__).'/../lib/csdlNhatkyGeneratorHelper.class.php';
  */
 class csdlNhatkyActions extends autoCsdlNhatkyActions
 {
+
+    protected function getPager()
+    {
+        $query = $this->buildQuery();
+        $query->orderby('ngaytao desc');
+        $pages = ceil($query->count() / $this->getMaxPerPage());
+        $pager = $this->configuration->getPager('csdl_nhatky');
+        $pager->setQuery($query);
+        $pager->setPage(($this->getPage() > $pages) ? $pages : $this->getPage());
+        $pager->init();
+
+        return $pager;
+    }
 }

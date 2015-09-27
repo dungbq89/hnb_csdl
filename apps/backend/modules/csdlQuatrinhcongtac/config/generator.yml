@@ -13,9 +13,27 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
-      list:    ~
-      filter:  ~
-      form:    ~
-      edit:    ~
-      new:     ~
+      fields:
+        hoivien_id: {label: Hội viên}
+        donvi_id: {label: Đơn vị}
+        thoigian: {label: Thời gian (tháng)}
+        batdau: {label: Bắt đầu}
+        ketthuc: {label: Kết thúc}
+        chucvu: {label: Chức vụ}
+        mota: {label: Mô tả}
+      list:
+        title: Quá trình công tác
+        display: [hoivien_id, donvi_id, thoigian, batdau, ketthuc, chucvu, mota]
+        object_actions:
+          _edit: ~
+          _delete: ~
+      filter:
+        class: QuatrinhcongtacFormFilter
+        display: [hoivien_id]
+      form:
+        class: QuatrinhcongtacForm
+        display: [hoivien_id, donvi_id, thoigian, batdau, ketthuc, chucvu, mota]
+      edit:
+        title: Chỉnh sửa thông tin
+      new:
+        title: Thêm mới thông tin

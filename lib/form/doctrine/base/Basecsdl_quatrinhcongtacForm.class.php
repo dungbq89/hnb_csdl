@@ -16,8 +16,8 @@ abstract class Basecsdl_quatrinhcongtacForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'         => new sfWidgetFormInputHidden(),
-      'hoivien_id' => new sfWidgetFormInputText(),
-      'donvi_id'   => new sfWidgetFormInputText(),
+      'hoivien_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('csdlHoivien'), 'add_empty' => true)),
+      'donvi_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('csdlCoquanbaochi'), 'add_empty' => true)),
       'thoigian'   => new sfWidgetFormInputText(),
       'batdau'     => new sfWidgetFormDateTime(),
       'ketthuc'    => new sfWidgetFormDateTime(),
@@ -31,8 +31,8 @@ abstract class Basecsdl_quatrinhcongtacForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'hoivien_id' => new sfValidatorInteger(array('required' => false)),
-      'donvi_id'   => new sfValidatorInteger(array('required' => false)),
+      'hoivien_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('csdlHoivien'), 'required' => false)),
+      'donvi_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('csdlCoquanbaochi'), 'required' => false)),
       'thoigian'   => new sfValidatorInteger(array('required' => false)),
       'batdau'     => new sfValidatorDateTime(array('required' => false)),
       'ketthuc'    => new sfValidatorDateTime(array('required' => false)),

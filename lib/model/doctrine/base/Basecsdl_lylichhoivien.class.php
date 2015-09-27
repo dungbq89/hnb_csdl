@@ -24,6 +24,9 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_lylichhoivien', 'doctrine')
  * @property integer $dantoc_id
  * @property string $quoctich
  * @property integer $donvi_id
+ * @property string $images
+ * @property string $dienthoai
+ * @property string $email
  * 
  * @method integer            getHoivienId()     Returns the current record's "hoivien_id" value
  * @method string             getTen()           Returns the current record's "ten" value
@@ -42,6 +45,9 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_lylichhoivien', 'doctrine')
  * @method integer            getDantocId()      Returns the current record's "dantoc_id" value
  * @method string             getQuoctich()      Returns the current record's "quoctich" value
  * @method integer            getDonviId()       Returns the current record's "donvi_id" value
+ * @method string             getImages()        Returns the current record's "images" value
+ * @method string             getDienthoai()     Returns the current record's "dienthoai" value
+ * @method string             getEmail()         Returns the current record's "email" value
  * @method csdl_lylichhoivien setHoivienId()     Sets the current record's "hoivien_id" value
  * @method csdl_lylichhoivien setTen()           Sets the current record's "ten" value
  * @method csdl_lylichhoivien setHodem()         Sets the current record's "hodem" value
@@ -59,6 +65,9 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_lylichhoivien', 'doctrine')
  * @method csdl_lylichhoivien setDantocId()      Sets the current record's "dantoc_id" value
  * @method csdl_lylichhoivien setQuoctich()      Sets the current record's "quoctich" value
  * @method csdl_lylichhoivien setDonviId()       Sets the current record's "donvi_id" value
+ * @method csdl_lylichhoivien setImages()        Sets the current record's "images" value
+ * @method csdl_lylichhoivien setDienthoai()     Sets the current record's "dienthoai" value
+ * @method csdl_lylichhoivien setEmail()         Sets the current record's "email" value
  * 
  * @package    Vt_Portals
  * @subpackage model
@@ -154,6 +163,21 @@ abstract class Basecsdl_lylichhoivien extends sfDoctrineRecord
              'type' => 'integer',
              'comment' => 'don vị công tác',
              'length' => 5,
+             ));
+        $this->hasColumn('images', 'string', 255, array(
+             'type' => 'string',
+             'comment' => 'hinh anh',
+             'length' => 255,
+             ));
+        $this->hasColumn('dienthoai', 'string', 255, array(
+             'type' => 'string',
+             'comment' => 'Số điện thoại',
+             'length' => 255,
+             ));
+        $this->hasColumn('email', 'string', 255, array(
+             'type' => 'string',
+             'comment' => 'Email',
+             'length' => 255,
              ));
     }
 

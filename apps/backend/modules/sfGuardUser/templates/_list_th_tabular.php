@@ -1,6 +1,6 @@
     <?php slot('sf_admin.current_header') ?>
         <th  width="3%" class="sf_admin_text sf_admin_list_th_order_no" style="text-align: center">
-            <?php echo __('Order No.', array(), 'messages') ?>
+            <?php echo __('TT', array(), 'messages') ?>
         </th>
     <?php end_slot(); ?>
 

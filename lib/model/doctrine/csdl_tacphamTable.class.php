@@ -25,4 +25,25 @@ class csdl_tacphamTable extends Doctrine_Table
             ->limit($limit)
             ->execute();
     }
+
+    public static function getListTacphamReturnArray($limit=6){
+        return csdl_tacphamTable::getInstance()->createQuery('c')
+            ->select('c.id ,c.tentacpham, c.gioithieu , c.anhdaidien, c.ngayxuatban,tg.hoten, cd.tenchude')
+            ->leftjoin('c.csdlTacgia tg')
+            ->leftjoin('c.csdlChude cd')
+            ->where('status=2')
+            //->orderby('c.updated_at desc')
+            ->limit($limit)
+            ->fetchArray();
+    }
+
+    public static function getTacphamById($id){
+        return csdl_tacphamTable::getInstance()->createQuery('c')
+            ->select('c.id ,c.tentacpham, c.gioithieu , c.anhdaidien, c.filedownload, c.ngayxuatban,tg.hoten, cd.tenchude')
+            ->leftjoin('c.csdlTacgia tg')
+            ->leftjoin('c.csdlChude cd')
+            ->where('status=2')
+            ->andWhere('c.id=?',$id)
+            ->fetchArray();
+    }
 }

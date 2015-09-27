@@ -21,6 +21,7 @@ generator:
         chude_id: {label: Chủ đề}
         ngayxuatban: {label: Ngày xuất bản}
         filedownload: {label: Tệp đính kèm}
+        status: {label: Trạng thái}
       list:
         title: Danh sách tác phẩm
         display: [anhdaidien, tentacpham, tacgia_id, chude_id, ngayxuatban]
@@ -32,7 +33,7 @@ generator:
         display: [tentacpham, tacgia_id, chude_id]
       form:
         class: TacphamForms
-        display: [tentacpham, gioithieu, tacgia_id, chude_id, anhdaidien,filedownload,ngayxuatban]
+        display: [tentacpham, gioithieu, tacgia_id, chude_id, anhdaidien,filedownload,ngayxuatban,status]
       edit:
         title: Chỉnh sửa tác phẩm
       new:

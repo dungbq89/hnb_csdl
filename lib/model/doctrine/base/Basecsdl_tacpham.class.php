@@ -15,6 +15,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_tacpham', 'doctrine');
  * @property timestamp $ngayxuatban
  * @property integer $tacgia_id
  * @property integer $chude_id
+ * @property integer $status
  * 
  * @method integer      getHoivienId()    Returns the current record's "hoivien_id" value
  * @method string       getTentacpham()   Returns the current record's "tentacpham" value
@@ -24,6 +25,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_tacpham', 'doctrine');
  * @method timestamp    getNgayxuatban()  Returns the current record's "ngayxuatban" value
  * @method integer      getTacgiaId()     Returns the current record's "tacgia_id" value
  * @method integer      getChudeId()      Returns the current record's "chude_id" value
+ * @method integer      getStatus()       Returns the current record's "status" value
  * @method csdl_tacpham setHoivienId()    Sets the current record's "hoivien_id" value
  * @method csdl_tacpham setTentacpham()   Sets the current record's "tentacpham" value
  * @method csdl_tacpham setGioithieu()    Sets the current record's "gioithieu" value
@@ -32,6 +34,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_tacpham', 'doctrine');
  * @method csdl_tacpham setNgayxuatban()  Sets the current record's "ngayxuatban" value
  * @method csdl_tacpham setTacgiaId()     Sets the current record's "tacgia_id" value
  * @method csdl_tacpham setChudeId()      Sets the current record's "chude_id" value
+ * @method csdl_tacpham setStatus()       Sets the current record's "status" value
  * 
  * @package    Vt_Portals
  * @subpackage model
@@ -81,6 +84,11 @@ abstract class Basecsdl_tacpham extends sfDoctrineRecord
         $this->hasColumn('chude_id', 'integer', 5, array(
              'type' => 'integer',
              'comment' => 'ma chu de',
+             'length' => 5,
+             ));
+        $this->hasColumn('status', 'integer', 5, array(
+             'type' => 'integer',
+             'comment' => 'Trạng thái(0: Nháp, 1: gửi duyệt, 2: Phê duyệt)',
              'length' => 5,
              ));
     }

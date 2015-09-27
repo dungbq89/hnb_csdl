@@ -22,7 +22,7 @@ generator:
         trangthai: {label: Trạng thái}
       list:
         title: Danh sách danh mục loại tài liệu
-        display: [tendanhmuc, madanhmuc, gioithieu, thutu, trangthai]
+        display: [anhdaidien,tendanhmuc, madanhmuc, gioithieu, thutu, trangthai]
         object_actions:
           _edit: ~
           _delete: ~

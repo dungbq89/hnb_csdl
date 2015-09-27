@@ -100,6 +100,14 @@ class TacphamForms extends Basecsdl_tacphamForm
         $this->validatorSchema['chude_id'] = new sfValidatorChoice(array(
             'required' => false,
             'choices' => array_keys($this->dsChude()),));
+        $status=array('0'=>'Bản nháp','1'=>'Gửi duyệt','2'=>'Phê duyệt');
+        $this->widgetSchema['status'] = new sfWidgetFormChoice(array(
+            'choices' => $status,
+            'multiple' => false,
+            'expanded' => false));
+        $this->validatorSchema['status'] = new sfValidatorChoice(array(
+            'required' => false,
+            'choices' => array_keys($status),));
 
         $this->widgetSchema->setNameFormat('csdl_tacpham[%s]');
 

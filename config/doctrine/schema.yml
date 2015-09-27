@@ -22,6 +22,9 @@ csdl_lylichhoivien:
     dantoc_id: { type: integer(5), comment: "Danh muc dan toc"}
     quoctich: { type: string(255), comment: "quoc tich" }
     donvi_id:  { type: integer(5), comment: "don vị công tác"}
+    images:  { type: string(255), comment: "hinh anh" }
+    dienthoai: { type: string(255), comment: "Số điện thoại" }
+    email: { type: string(255), comment: "Email" }
 #qua trinh cong tac
 csdl_quatrinhcongtac:
   tableName: csdl_quatrinh_congtac
@@ -42,7 +45,7 @@ csdl_thehoivien:
   actAs:
     Timestampable: ~
   columns:
-    hoivient_id: { type: integer(5), comment: "ma hoi vien"}
+    hoivien_id: { type: integer(5), comment: "ma hoi vien"}
     mathe: { type: string(25), comment: "Ma the" }
     anhdaidien:  { type: string(255), comment: "hinh anh" }
     ngaycap: { type: timestamp(25), comment: "ngay cap the hoi vien" }
@@ -65,6 +68,7 @@ csdl_tacpham:
     ngayxuatban: { type: timestamp(25), comment: "ngay xuat ban" }
     tacgia_id: { type: type: integer(5), comment: "Ma Tac gia" }
     chude_id: { type: integer(5), comment: "ma chu de"}
+    status: { type: integer(5), comment: "Trạng thái(0: Nháp, 1: gửi duyệt, 2: Phê duyệt)"}
 #Quản lý chuyên mục/ chủ đề
 csdl_chude:
   tableName: csdl_chude

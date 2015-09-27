@@ -12,8 +12,14 @@ class csdlTheHoiVienAdminForm extends Basecsdl_thehoivienForm {
     public function configure() {
         $i18n = sfContext::getInstance()->getI18N();
         unset($this['created_at'], $this['updated_at']);
-        $this->widgetSchema['hoivient_id'] = new sfWidgetFormInputText(array());
-        $this->validatorSchema['hoivient_id'] = new sfValidatorString(array('required' => true, 'trim' => true, 'max_length' => 255));
+
+        $this->widgetSchema['hoivien_id'] = new sfWidgetFormChoice(array(
+            'choices' => $this->dsHoivien(),
+            'multiple' => false,
+            'expanded' => false));
+        $this->validatorSchema['hoivien_id'] = new sfValidatorChoice(array(
+            'required' => false,
+            'choices' => array_keys($this->dsHoivien()),));
 
         $this->widgetSchema['mathe'] = new sfWidgetFormInputText(array());
         $this->validatorSchema['mathe'] = new sfValidatorString(array('required' => true, 'trim' => true, 'max_length' => 255));
@@ -55,4 +61,15 @@ class csdlTheHoiVienAdminForm extends Basecsdl_thehoivienForm {
         $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
     }
 
+    protected function dsHoivien(){
+        $arrHoivien = array(''=>'----- Chọn Hội viên -----');
+        $hoivien = csdl_lylichhoivienTable::dsHoivienForThe();
+
+        if(count($hoivien)>0){
+            foreach($hoivien as $value){
+                $arrHoivien[$value['hoivien_id']] = $value['hodem'] . ' ' .$value['ten'];
+            }
+        }
+        return $arrHoivien;
+    }
 }

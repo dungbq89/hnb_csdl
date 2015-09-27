@@ -2,7 +2,10 @@ all:
   doctrine:
     class: sfDoctrineDatabase
     param:
-      dsn: 'mysql:host=103.27.236.90;dbname=csdl'
-      username: hoinhabao
-      password: Hnb!23$
+      dsn: 'mysql:host=localhost;dbname=csdl'
+      username: root
+      password:
       attributes: { default_table_charset: utf8, default_table_collate: utf8_general_ci }
+#      dsn: 'mysql:host=103.27.236.90;dbname=csdl'
+#      username: hoinhabao
+#      password: Hnb!23$

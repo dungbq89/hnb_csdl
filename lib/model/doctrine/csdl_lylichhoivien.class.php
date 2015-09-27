@@ -12,5 +12,24 @@
  */
 class csdl_lylichhoivien extends Basecsdl_lylichhoivien
 {
+    public function setUp()
+    {
+        $this->hasMany('csdl_area as csdlProvince', array(
+            'local' => 'matinh',
+            'foreign' => 'PROVINCE'));
+        $this->hasMany('csdl_area as csdlDistrict', array(
+            'local' => 'maquan',
+            'foreign' => 'DISTRICT'));
+        $this->hasMany('csdl_dmnghenghiep as csdlNghenghiep', array(
+            'local' => 'nghenghiep_id',
+            'foreign' => 'id'));
+        $this->hasMany('csdl_dantoc as csdlDantoc', array(
+            'local' => 'dantoc_id',
+            'foreign' => 'id'));
 
+        $this->hasMany('csdl_coquanbaochi as csdlCoquanbaochi', array(
+            'local' => 'donvi_id',
+            'foreign' => 'id'));
+        parent::setUp();
+    }
 }

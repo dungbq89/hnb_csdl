@@ -38,7 +38,7 @@ class commonComponents extends sfComponents
     }
 
     public function executeTacphammoi($request) {
-        $listTacpham=csdl_tacphamTable::getListTacpham('8');
+        $listTacpham=csdl_tacphamTable::getListTacphamReturnArray('8');
          if(count($listTacpham)>0){
            $this->listTacpham=$listTacpham;
          }else{

@@ -13,4 +13,15 @@ require_once dirname(__FILE__).'/../lib/csdlTacphamGeneratorHelper.class.php';
  */
 class csdlTacphamActions extends autoCsdlTacphamActions
 {
+    protected function getPager()
+    {
+        $query = $this->buildQuery();
+        $pages = ceil($query->count() / $this->getMaxPerPage());
+        $pager = $this->configuration->getPager('csdl_tacpham');
+        $pager->setQuery($query);
+        $pager->setPage(($this->getPage() > $pages) ? $pages : $this->getPage());
+        $pager->init();
+
+        return $pager;
+    }
 }

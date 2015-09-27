@@ -14,7 +14,7 @@ class TacgiaForms extends Basecsdl_tacgiaForm
         $this->setWidgets(array(
             'id'         => new sfWidgetFormInputHidden(),
             'hoten'      => new sfWidgetFormInputText(),
-            'ngaysinh'   =>new sfWidgetFormDateTime(array(
+            'ngaysinh'   => new sfWidgetFormDateTime(array(
                     'date' => array(
                         'format' => '%day%/%month%/%year%',
                         'can_be_empty' => false,

@@ -28,7 +28,7 @@ generator:
         updated_at:         {label: Ngày cập nhật}
         last_login:         {label: Đăng nhập lần cuối}
         is_super_admin:     {label: SuperAdmin}
-        is_active:          {label: Kích hoạt}
+        is_active:          {label: Duyệt}
         password:           {label: Gán mật khẩu}
       list:
         max_per_page: 10
@@ -36,7 +36,7 @@ generator:
         display: [order_no, =username, email_address, is_active, last_login, created_at]
         fields:
           order_no:
-            label: 'Order No.'
+            label: TT
           created_at:
             is_partial: true
           last_login:

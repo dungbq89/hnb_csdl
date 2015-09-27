@@ -10,6 +10,7 @@
 class csdlLyLichHoiVienAdminForm extends Basecsdl_lylichhoivienForm {
 
     public function configure() {
+        $years = range(date('Y'), date('Y') - 75);
         $i18n = sfContext::getInstance()->getI18N();
         unset($this['created_at'], $this['updated_at'], $this['created_at'], $this['updated_at']);
 
@@ -19,8 +20,16 @@ class csdlLyLichHoiVienAdminForm extends Basecsdl_lylichhoivienForm {
         $this->widgetSchema['thutu'] = new sfWidgetFormInputText(array('default' => 0), array('size' => 5, 'maxlength' => 5));
         $this->validatorSchema['thutu'] = new sfValidatorInteger(array('required' => false, "min"=>0, 'max'=>99999, 'trim' => true),array('min'=>$i18n->__('Thứ tự phải là số nguyên dương'),'max'=>$i18n->__('Tối đa 5 ký tự'),'invalid'=> $i18n->__('Thứ tự phải là số nguyên dương')));
 
-        $this->widgetSchema['ngaysinh'] = new sfWidgetFormVnDatePicker(array(),array('readonly'=>true));
-        $this->validatorSchema['ngaysinh'] = new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d H:i:s'));
+        $this->widgetSchema['ngaysinh'] = new sfWidgetFormDateTime(array(
+            'date' => array(
+                'format' => '%day%/%month%/%year%',
+                'can_be_empty' => false,
+                'years' => array_combine($years, $years)
+            ),
+            'format' => '%date%',
+            'default' => date('Y/m/d H:i', time())
+        ));
+        $this->validatorSchema['ngaysinh'] = new sfValidatorDateTime(array('required' => true));
 
         $this->widgetSchema['ngayvaodoan'] = new sfWidgetFormVnDatePicker(array(),array('readonly'=>true));
         $this->validatorSchema['ngayvaodoan'] = new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d H:i:s'));
@@ -58,6 +67,30 @@ class csdlLyLichHoiVienAdminForm extends Basecsdl_lylichhoivienForm {
             'choices' => array_keys($this->geDanToc()),
         ));
 
+        $this->widgetSchema['donvi_id'] = new sfWidgetFormChoice(array(
+            'choices' => $this->getDonVi(),
+            'multiple' => false,
+            'expanded' => false));
+        $this->validatorSchema['donvi_id'] = new sfValidatorChoice(array(
+            'required' => false,
+            'choices' => array_keys($this->getDonVi()),));
+
+        $this->widgetSchema['matinh'] = new sfWidgetFormChoice(array(
+            'choices' => $this->getCity(),
+            'multiple' => false,
+            'expanded' => false));
+        $this->validatorSchema['matinh'] = new sfValidatorChoice(array(
+            'required' => false,
+            'choices' => array_keys($this->getCity()),));
+
+        $this->widgetSchema['maquan'] = new sfWidgetFormChoice(array(
+            'choices' => $this->getProvince(),
+            'multiple' => false,
+            'expanded' => false));
+        $this->validatorSchema['maquan'] = new sfValidatorChoice(array(
+            'required' => false,
+            'choices' => array_keys($this->getProvinceKey()),));
+
         $this->widgetSchema->setNameFormat('csdl_lylichhoivien[%s]');
 
         $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
@@ -92,4 +125,42 @@ class csdlLyLichHoiVienAdminForm extends Basecsdl_lylichhoivienForm {
         return $arr;
     }
 
+
+    protected function getDonVi(){
+        $arrJobs = array(''=>'----- Chọn đơn vị -----');
+        $jobs = csdl_coquanbaochiTable::dsCoquan()->fetchArray();
+        if(count($jobs)>0){
+            foreach($jobs as $value){
+                $arrJobs[$value['id']] = $value['tendonvi'];
+            }
+        }
+        return $arrJobs;
+    }
+
+    protected function getCity(){
+        $arrJobs = array(''=>'----- Chọn tỉnh/thành phố -----');
+        $jobs = csdl_areaTable::getCity()->fetchArray();
+        if(count($jobs)>0){
+            foreach($jobs as $value){
+                $arrJobs[$value['PROVINCE']] = $value['NAME'];
+            }
+        }
+        return $arrJobs;
+    }
+
+    protected function getProvince(){
+        $arrJobs = array(''=>'----- Chọn quận/huyện -----');
+        return $arrJobs;
+    }
+
+    protected function getProvinceKey(){
+        $arrJobs = array(''=>'----- Chọn quận/huyện -----');
+        $jobs = csdl_areaTable::getProvinceKey()->fetchArray();
+        if(count($jobs)>0){
+            foreach($jobs as $value){
+                $arrJobs[$value['DISTRICT']] = $value['NAME'];
+            }
+        }
+        return $arrJobs;
+    }
 }
