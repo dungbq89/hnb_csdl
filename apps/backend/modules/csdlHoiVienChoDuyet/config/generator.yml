@@ -30,17 +30,18 @@ generator:
         dantoc_id: {label: Dân tộc}
         quoctich: {label: Quốc tịch}
         donvi_id: {label: Đơn vị}
+        images: {label: Ảnh đại diện}
 
       list:
         title: Danh sách danh hội viên
-        display: [hodem, ten, ngaysinh, gioitinh, diachi, maquan, matinh]
+        display: [images, hodem, ten, ngaysinh, gioitinh, diachi, maquan, matinh]
         object_actions:
           _edit: ~
           _delete: ~
       filter:
         display: [ten]
       form:
-        display: [ten, hodem, ngaysinh, gioitinh, diachi, maquan, matinh, ngayvaodoan, noiketnapdoan, ngayvaodang, noiketnapdang, tieusu, nghenghiep_id, dantoc_id, quoctich, donvi_id]
+        display: [ten, hodem, images, ngaysinh, gioitinh, diachi, maquan, matinh, ngayvaodoan, noiketnapdoan, ngayvaodang, noiketnapdang, tieusu, nghenghiep_id, dantoc_id, quoctich, donvi_id]
         class: csdlLyLichHoiVienAdminForm
       edit:
         title: Chỉnh sửa lý lịch hội viên

@@ -32,6 +32,7 @@ generator:
         donvi_id: {label: Đơn vị}
         dienthoai: {label: Điện thoại}
         email: {label: Email}
+        images: {label: Ảnh đại diện}
       list:
         title: Danh sách danh hội viên
         display: [hodem, ten, ngaysinh, gioitinh, diachi, maquan, matinh]
@@ -42,7 +43,7 @@ generator:
         class: LylichhoivienDaduyetFormFilter
         display: [hodem, ten]
       form:
-        display: [ten, hodem, ngaysinh, gioitinh,  ngayvaodoan, noiketnapdoan, ngayvaodang, noiketnapdang, tieusu, nghenghiep_id,donvi_id, dantoc_id, quoctich, matinh, maquan, diachi, dienthoai, email]
+        display: [ten, hodem, ngaysinh, images, gioitinh,  ngayvaodoan, noiketnapdoan, ngayvaodang, noiketnapdang, tieusu, nghenghiep_id,donvi_id, dantoc_id, quoctich, matinh, maquan, diachi, dienthoai, email]
         class: csdlLyLichHoiVienAdminForm
       edit:
         title: Chỉnh sửa lý lịch hội viên

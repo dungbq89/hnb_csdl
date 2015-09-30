@@ -3,3 +3,5 @@
 /log
 /test
 /config/databases.yml
+/config/app.yml
+app.yml

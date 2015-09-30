@@ -13,6 +13,9 @@ class csdlTheHoiVienAdminForm extends Basecsdl_thehoivienForm {
         $i18n = sfContext::getInstance()->getI18N();
         unset($this['created_at'], $this['updated_at']);
 
+        $this->widgetSchema['name'] = new sfWidgetFormInputText(array());
+        $this->validatorSchema['name'] = new sfValidatorString(array('required' => false, 'trim' => true, 'max_length' => 255));
+
         $this->widgetSchema['hoivien_id'] = new sfWidgetFormChoice(array(
             'choices' => $this->dsHoivien(),
             'multiple' => false,

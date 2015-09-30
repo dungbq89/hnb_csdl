@@ -30,7 +30,7 @@ generator:
           _delete: ~
       filter:
         class: ThehoivienFormFilter
-        display: [hoivien_id, mathe]
+        display: [mathe]
       form:
         display: [hoivien_id, mathe, anhdaidien, ngaycap, ngayhethan, nguoiky, ngayky, trangthai]
         class: csdlTheHoiVienAdminForm

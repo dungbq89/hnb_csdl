@@ -98,7 +98,6 @@ class csdlLyLichHoiVienAdminForm extends Basecsdl_lylichhoivienForm {
             'edit_mode' => !$this->isNew(),
             'template' => '<div>%file%<br />%input%</div>',
         ));
-
         $this->validatorSchema['images'] = new sfValidatorFileViettel(
             array(
                 'max_size' => sfConfig::get('app_image_maxsize', 999999),
