@@ -34,11 +34,12 @@ generator:
 
       list:
         title: Danh sách danh hội viên
-        display: [images, hodem, ten, ngaysinh, gioitinh, diachi, maquan, matinh]
+        display: [images, hodem, ngaysinh, gioitinh, diachi]
         object_actions:
           _edit: ~
           _delete: ~
       filter:
+        class: csdlHoiVienChoDuyetFilter
         display: [ten]
       form:
         display: [ten, hodem, images, ngaysinh, gioitinh, diachi, maquan, matinh, ngayvaodoan, noiketnapdoan, ngayvaodang, noiketnapdang, tieusu, nghenghiep_id, dantoc_id, quoctich, donvi_id]

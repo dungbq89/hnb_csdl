@@ -43,3 +43,21 @@
     height: 22px;
     padding: 7px 58px 2px 10px;
 }
+.filter-hoivien{
+    float: left;
+    width: 380px;
+    overflow: hidden;
+}
+.list-filter{
+    float: left;
+    width: 800px;
+}
+.div-filter{
+    margin-top: -130px !important;
+}
+.div-filter .span2{
+    margin: 0px;
+}
+.div-filter input[type=text]{
+    width: 150px;
+}

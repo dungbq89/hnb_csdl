@@ -16,9 +16,9 @@ class csdlHoiVienChoDuyetActions extends autoCsdlHoiVienChoDuyetActions
     protected function getPager()
     {
         $query = $this->buildQuery();
+        $query->andWhere('hoivien_id IS NULL');
         $pages = ceil($query->count() / $this->getMaxPerPage());
-        $pager = $this->configuration->getPager('csdl_lylichhoivien');
-        $query->where('hoivien_id IS NULL');
+        $pager = $this->configuration->getPager('csdl_hoivienchoduyet');
         $pager->setQuery($query);
         $pager->setPage(($this->getPage() > $pages) ? $pages : $this->getPage());
         $pager->init();

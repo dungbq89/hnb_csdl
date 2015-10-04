@@ -13,17 +13,20 @@
             <div class="span<?php echo $sidebar_status ? '10' : '12'; ?>">
 
                 <div class="span12">
-                    <h1 style="display: inline"><?php echo __('Danh sách danh hội viên', array(), 'messages') ?></h1>
+                    <h2 style="display: inline; "><?php echo __('Danh sách danh hội viên chờ duyệt', array(), 'messages') ?></h2>
                 </div>
-                <div class="clear"></div>
+                <div class="filter-hoivien">
+                    <?php include_partial('csdlHoiVienChoDuyet/filters', array('form' => $filters, 'configuration' => $configuration)) ?>
+                </div>
+<!--                <div class="clear"></div>-->
 
                 <?php include_partial('csdlHoiVienChoDuyet/flashes') ?>
 
-                <div id="sf_admin_header">
-                    <?php include_partial('csdlHoiVienChoDuyet/list_header', array('pager' => $pager)) ?>
-                </div>
+<!--                <div id="sf_admin_header">-->
+<!--                    --><?php //include_partial('csdlHoiVienChoDuyet/list_header', array('pager' => $pager)) ?>
+<!--                </div>-->
 
-                <div id="sf_admin_content">
+                <div id="sf_admin_content" class="list-filter">
                     <form class="form-inline" id="list-form"
                           action="<?php echo url_for('csdl_hoivienchoduyet_collection', array('action' => 'batch')) ?>"
                           method="post">
