@@ -117,6 +117,7 @@ csdl_giaithuong:
     madanhmuc:  { type: string(25), comment: "Ma danh muc giai thuong" }
     namtochuc: { type: integer(4), comment: "Nam to chuc"}
     giatri: { type: integer(8), comment: "gia tri giai thuong"}
+    hoivien_id: { type: integer(5), comment: "ma hoi vien"}
 
 #Danh mục tỉnh/ thành phố quận/ huyện
 csdl_area:

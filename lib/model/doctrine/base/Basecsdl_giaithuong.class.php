@@ -11,15 +11,18 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_giaithuong', 'doctrine');
  * @property string $madanhmuc
  * @property integer $namtochuc
  * @property integer $giatri
+ * @property integer $hoivien_id
  * 
  * @method string          getTengiaithuong() Returns the current record's "tengiaithuong" value
  * @method string          getMadanhmuc()     Returns the current record's "madanhmuc" value
  * @method integer         getNamtochuc()     Returns the current record's "namtochuc" value
  * @method integer         getGiatri()        Returns the current record's "giatri" value
+ * @method integer         getHoivienId()     Returns the current record's "hoivien_id" value
  * @method csdl_giaithuong setTengiaithuong() Sets the current record's "tengiaithuong" value
  * @method csdl_giaithuong setMadanhmuc()     Sets the current record's "madanhmuc" value
  * @method csdl_giaithuong setNamtochuc()     Sets the current record's "namtochuc" value
  * @method csdl_giaithuong setGiatri()        Sets the current record's "giatri" value
+ * @method csdl_giaithuong setHoivienId()     Sets the current record's "hoivien_id" value
  * 
  * @package    Vt_Portals
  * @subpackage model
@@ -50,6 +53,11 @@ abstract class Basecsdl_giaithuong extends sfDoctrineRecord
              'type' => 'integer',
              'comment' => 'gia tri giai thuong',
              'length' => 8,
+             ));
+        $this->hasColumn('hoivien_id', 'integer', 5, array(
+             'type' => 'integer',
+             'comment' => 'ma hoi vien',
+             'length' => 5,
              ));
     }
 

@@ -52,6 +52,8 @@ include_component('tmcTwitterBootstrap', 'header');
                 <ul class="nav nav-tabs" role="tablist" style="background: none;">
                     <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Quá trình công tác</a></li>
                     <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Thông tin thẻ hội viên</a></li>
+                    <li role="presentation"><a href="#tacpham" aria-controls="tacpham" role="tab" data-toggle="tab">Tác phẩm</a></li>
+                    <li role="presentation"><a href="#giaithuong" aria-controls="giaithuong" role="tab" data-toggle="tab">Giải thưởng</a></li>
                 </ul>
 
                 <!-- Tab panes -->
@@ -85,6 +87,62 @@ include_component('tmcTwitterBootstrap', 'header');
                         } ?>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="profile">
+                        <?php if(isset($thehoiviens) && count($thehoiviens)){
+                            foreach($thehoiviens as $thehoivien) {
+                                ?>
+                                <table class="table bordered vanban tb-hoivien">
+                                    <tr>
+                                        <td class="td-document-detail">Mã thẻ</td>
+                                        <td><?php echo htmlspecialchars($thehoivien->mathe); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-document-detail">Ngày cấp</td>
+                                        <td><?php echo date('d/m/Y', strtotime($thehoivien->ngaycap)); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-document-detail">Ngày hết hạn</td>
+                                        <td><?php echo date('d/m/Y', strtotime($thehoivien->ngayhethan)); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-document-detail">Người ký</td>
+                                        <td><?php echo htmlspecialchars($thehoivien->nguoiky); ?></td>
+                                    </tr>
+                                </table>
+                            <?php
+                            }
+                        }else{
+                            echo "Đang cập nhật";
+                        } ?>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="tacpham">
+                        <?php if(isset($thehoiviens) && count($thehoiviens)){
+                            foreach($thehoiviens as $thehoivien) {
+                                ?>
+                                <table class="table bordered vanban tb-hoivien">
+                                    <tr>
+                                        <td class="td-document-detail">Mã thẻ</td>
+                                        <td><?php echo htmlspecialchars($thehoivien->mathe); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-document-detail">Ngày cấp</td>
+                                        <td><?php echo date('d/m/Y', strtotime($thehoivien->ngaycap)); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-document-detail">Ngày hết hạn</td>
+                                        <td><?php echo date('d/m/Y', strtotime($thehoivien->ngayhethan)); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-document-detail">Người ký</td>
+                                        <td><?php echo htmlspecialchars($thehoivien->nguoiky); ?></td>
+                                    </tr>
+                                </table>
+                            <?php
+                            }
+                        }else{
+                            echo "Đang cập nhật";
+                        } ?>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="giaithuong">
                         <?php if(isset($thehoiviens) && count($thehoiviens)){
                             foreach($thehoiviens as $thehoivien) {
                                 ?>
