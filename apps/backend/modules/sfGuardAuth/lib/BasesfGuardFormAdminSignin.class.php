@@ -27,8 +27,9 @@ class BasesfGuardFormAdminSignin extends BaseForm {
             'username' => new sfValidatorString(array(), array('required' => $i18n->__('Phải nhập tên đăng nhập'))),
             'password' => new sfValidatorString(array(), array('required' => $i18n->__('Phải nhập mật khẩu'))),
             'remember' => new sfValidatorBoolean(),
-            'captcha' => new sfValidatorCaptchaGD(array(
-                'required' => $i18n->__('Mã xác nhận không được để trống.'))),
+            'captcha' => new sfValidatorPass(),
+//            'captcha' => new sfValidatorCaptchaGD(array(
+//                'required' => $i18n->__('Mã xác nhận không được để trống.'))),
         ));
 
         if (sfConfig::get('app_sf_guard_plugin_allow_login_with_email', true)) {

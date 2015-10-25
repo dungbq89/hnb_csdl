@@ -3,6 +3,8 @@ include_partial('tmcTwitterBootstrap/assets');
 include_component('tmcTwitterBootstrap', 'header');
 ?>
 <?php if ($sf_user->isAuthenticated()): ?>
+
+<?php endif; ?>
     <div class="container">
         <div class="main">
             <div class="col-main">
@@ -16,5 +18,4 @@ include_component('tmcTwitterBootstrap', 'header');
             </div>
         </div>
     </div>
-<?php endif; ?>
 <?php include_component('tmcTwitterBootstrap', 'footer') ?>

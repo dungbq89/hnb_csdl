@@ -5,7 +5,7 @@
             ?>
             <div class="item news-item">
                 <a href="#" title=""><img src="/images/user.png" alt="" width="30px"></a>
-                <a href="#" title="" class="news-title" style="margin-left: 10px;"><?php echo htmlspecialchars($user['hodem'])." ".htmlspecialchars($user['ten']) ?></a>
+                <a href="#" title="" class="news-title" style="margin-left: 10px;"><?php echo htmlspecialchars($user['hodem']); ?></a>
                 <div class="clear"></div>
             </div>
             <?php

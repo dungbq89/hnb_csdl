@@ -65,7 +65,13 @@ class commonComponents extends sfComponents
         $this->trValue="";
         $user = sfContext::getInstance()->getUser();
         //lay du lieu thu 2
-        $result=csdl_lichcongtacTable::getCalendarByDay($user->getGuardUser()->getId(),$this->mon);
+        if ($user->isAuthenticated()){
+            $userId=$user->getGuardUser()->getId();
+        }else{
+            $userId=-1;
+        }
+
+        $result=csdl_lichcongtacTable::getCalendarByDay($userId,$this->mon);
         if(count($result)>0){
             $this->rowmon=count($result);
             $i = 1;
@@ -107,7 +113,7 @@ class commonComponents extends sfComponents
         }
 
         //lay du lieu thu 3
-        $result=csdl_lichcongtacTable::getCalendarByDay($user->getGuardUser()->getId(),$this->tue);
+        $result=csdl_lichcongtacTable::getCalendarByDay($userId,$this->tue);
         if(count($result)>0){
             $this->rowtue=count($result);
             $i = 1;
@@ -149,7 +155,7 @@ class commonComponents extends sfComponents
         }
 
         //lay du lieu thu 4
-        $result=csdl_lichcongtacTable::getCalendarByDay($user->getGuardUser()->getId(),$this->wed);
+        $result=csdl_lichcongtacTable::getCalendarByDay($userId,$this->wed);
         if(count($result)>0){
             $this->rowwed=count($result);
             $i = 1;
@@ -191,7 +197,7 @@ class commonComponents extends sfComponents
         }
 
         //lay du lieu thu 5
-        $result=csdl_lichcongtacTable::getCalendarByDay($user->getGuardUser()->getId(),$this->thu);
+        $result=csdl_lichcongtacTable::getCalendarByDay($userId,$this->thu);
         if(count($result)>0){
             $this->rowthu=count($result);
             $i = 1;
@@ -233,7 +239,7 @@ class commonComponents extends sfComponents
         }
 
         //lay du lieu thu 6
-        $result=csdl_lichcongtacTable::getCalendarByDay($user->getGuardUser()->getId(),$this->fri);
+        $result=csdl_lichcongtacTable::getCalendarByDay($userId,$this->fri);
         if(count($result)>0){
             $this->rowfri=count($result);
             $i = 1;
@@ -275,7 +281,7 @@ class commonComponents extends sfComponents
         }
 
         //lay du lieu thu 7
-        $result=csdl_lichcongtacTable::getCalendarByDay($user->getGuardUser()->getId(),$this->sat);
+        $result=csdl_lichcongtacTable::getCalendarByDay($userId,$this->sat);
         if(count($result)>0){
             $this->rowsat=count($result);
             $i = 1;
@@ -317,7 +323,7 @@ class commonComponents extends sfComponents
         }
 
         //lay du lieu thu chu nhat
-        $result=csdl_lichcongtacTable::getCalendarByDay($user->getGuardUser()->getId(),$this->sun);
+        $result=csdl_lichcongtacTable::getCalendarByDay($userId,$this->sun);
         if(count($result)>0){
             $this->rowsun=count($result);
             $i = 1;

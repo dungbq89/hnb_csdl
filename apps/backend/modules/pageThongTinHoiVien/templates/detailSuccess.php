@@ -13,7 +13,7 @@ include_component('tmcTwitterBootstrap', 'header');
                 <table class="table bordered vanban tb-hoivien">
                     <tr>
                         <td class="td-document-detail">Họ và tên</td>
-                        <td><?php echo htmlspecialchars($userDetail->hodem)." ".htmlspecialchars($userDetail->ten); ?></td>
+                        <td><?php echo htmlspecialchars($userDetail->hodem); ?></td>
                     </tr>
                     <tr>
                         <td class="td-document-detail">Giới tính</td>

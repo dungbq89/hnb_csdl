@@ -3,9 +3,15 @@
     <div style="height: 80px; background-color: #ffffff">
         <span>Logo and slogan</span>
         <p class="navbar-text pull-right">
+            <?php if ($sf_user->isAuthenticated()){ ?>
             <?php echo __('Logged in as', null, 'tmcTwitterBootstrapPlugin') ?>
             <a href="<?php echo url_for('@sf_guard_change_password') ?>"><?php echo $sf_user->getGuardUser() ?></a> |
             <a href="<?php echo url_for('@sf_guard_signout') ?>"><?php echo __('Logout', null, 'tmcTwitterBootstrapPlugin') ?></a>
+
+            <?php }else{ ?>
+                <a href="<?php echo url_for('@sf_guard_change_password') ?>">Đăng ký</a> |
+                <a href="/admin.php/guard/login">Đăng nhập</a>
+            <?php } ?>
 
         </p>
         <div class="clear"></div>
@@ -22,7 +28,7 @@
             </a>
 
             <a class="brand" href="<?php echo url_for("@homepage") ?>"><?php echo sfConfig::get('app_tmcTwitterBootstrapPlugin_dashboard_name', 'Administration') ?></a>
-            <?php if ($sf_user->isAuthenticated()): ?>
+            <?php //if ($sf_user->isAuthenticated()): ?>
             <div class="nav-collapse">
                 <ul class="nav">
                   <?php if(!is_null($menus)):?>
@@ -86,7 +92,7 @@
                 </ul>
 
             </div>
-            <?php endif ?>
+            <?php// endif ?>
         </div>
     </div>
 </div>
