@@ -14,7 +14,7 @@ class DanhbaFormFilter extends Basecsdl_danhbaFormFilter
             'ngaysinh'   => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
             'gioitinh'   => new sfWidgetFormFilterInput(),
             'diachi'     => new sfWidgetFormFilterInput(),
-            'dienthoai'  => new sfWidgetFormFilterInput(),
+            'dienthoai'  => new sfWidgetFormFilterInput(array('with_empty'=>false)),
             'email'      => new sfWidgetFormFilterInput(array('with_empty'=>false)),
             'donvi'      => new sfWidgetFormFilterInput(array('with_empty'=>false)),
 

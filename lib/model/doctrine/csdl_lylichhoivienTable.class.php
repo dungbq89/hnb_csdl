@@ -45,7 +45,7 @@ class csdl_lylichhoivienTable extends Doctrine_Table
             ->where('hoivien_id=?',$hoivienId)
             ->fetchArray();
         if(count($result)>0){
-            return $result[0]['hodem'] . ' ' .$result[0]['ten'];
+            return $result[0]['hodem'];
         }
         return '';
     }

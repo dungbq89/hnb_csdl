@@ -1,7 +1,7 @@
 <?php use_stylesheets_for_form($form) ?>
 <?php use_javascripts_for_form($form) ?>
 
-<div class="">
+<div class="row-fluid div-filter">
     <div class="span9">
 
       <div class="control-group">
@@ -25,7 +25,7 @@
                       )) ?>
                       <?php endforeach; ?>
                       
-                    <div class="span2" style="height:50px">
+                    <div class="span2" style="height:50px; margin-left: 85px">
                       <input class="btn" type="submit" value="<?php echo __('Filter', array(), 'tmcTwitterBootstrapPlugin') ?>" />
                       <?php echo link_to('<i class="icon-remove icon-black"></i> '. __('Reset filter', array(), 'tmcTwitterBootstrapPlugin'), 'csdl_loaivanban_collection', array('action' => 'filter'), array('query_string' => '_reset', 'method' => 'post', 'class' => 'btn')) ?></li>
                     </div>

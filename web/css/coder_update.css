@@ -47,6 +47,7 @@
     float: left;
     width: 380px;
     overflow: hidden;
+    background-color: #e1f8ff;
 }
 .list-filter{
     float: left;

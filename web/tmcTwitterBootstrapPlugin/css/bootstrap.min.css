@@ -4010,7 +4010,7 @@ to {
 }
 .pull-right {
   float: right;
-    margin-right: 70px;
+    /*margin-right: 70px;*/
 }
 .pull-left {
   float: left;
