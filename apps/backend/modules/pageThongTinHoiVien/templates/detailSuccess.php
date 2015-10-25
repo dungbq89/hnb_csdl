@@ -9,14 +9,9 @@ include_component('tmcTwitterBootstrap', 'header');
                 <div class="box">
                     <h3 class="title-main"><span class="label"><?php echo __('Thông tin hội viên'); ?></span></h3>
                 </div>
-                <?php if (isset($userDetail) && count($userDetail)) {
-                    $avatar =  '/uploads/' . sfConfig::get('app_member_images') . $personal->images;
-                ?>
+                <?php if (isset($userDetail) && count($userDetail)) { ?>
                     <table class="table bordered vanban tb-hoivien">
                         <tr>
-                            <td rowspan="3">
-                                <img src="<?php echo VtHelper::getThumbUrl($avatar, 92, 92, ''); ?>" alt="">
-                            </td>
                             <td class="td-document-detail">Họ và tên</td>
                             <td><?php echo htmlspecialchars($userDetail->hodem); ?></td>
                         </tr>
@@ -34,17 +29,17 @@ include_component('tmcTwitterBootstrap', 'header');
 
                         <tr>
                             <td class="td-document-detail">Địa chỉ</td>
-                            <td colspan="2"><?php echo htmlspecialchars($userDetail->diachi); ?></td>
+                            <td><?php echo htmlspecialchars($userDetail->diachi); ?></td>
                         </tr>
 
                         <tr>
                             <td class="td-document-detail">Quận/huyện</td>
-                            <td colspan="2"><?php echo htmlspecialchars($userDetail->maquan); ?></td>
+                            <td><?php echo VtHelper::truncate(csdl_areaTable::getName($userDetail->getMatinh(),$userDetail->getMaquan()), 50, '...', true); ?></td>
                         </tr>
 
                         <tr>
                             <td class="td-document-detail">Tỉnh/thành phố</td>
-                            <td colspan="2"><?php echo htmlspecialchars($userDetail->matinh); ?></td>
+                            <td><?php echo VtHelper::truncate(csdl_areaTable::getName($userDetail->getMatinh(),""), 50, '...', true); ?></td>
                         </tr>
 
                     </table>

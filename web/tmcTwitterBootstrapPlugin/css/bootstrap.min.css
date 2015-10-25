@@ -2609,7 +2609,7 @@ input[type="submit"].btn.btn-mini {
 .nav-tabs > .active > a,
 .nav-tabs > .active > a:hover {
   color: #555555;
-  background-color: #ffffff;
+  background-color: #e1f8ff;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
   cursor: default;
