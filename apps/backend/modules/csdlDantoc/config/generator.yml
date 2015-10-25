@@ -26,6 +26,7 @@ generator:
           _delete: ~
       filter:
         display: [tendantoc]
+        class: csdlDantocAdminFilter
       form:
         display: [tendantoc, madantoc, anhdaidien, gioithieu]
         class: csdlDantocAdminForm
