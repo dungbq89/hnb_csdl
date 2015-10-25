@@ -32,12 +32,12 @@ class csdl_lylichhoivienTable extends Doctrine_Table
     }
 
     public static function dsHoivienForThe(){
-        return csdl_lylichhoivienTable::getInstance()->createQuery()
-            ->select('hoivien_id, hodem ,ten ')
-            ->where('hoivien_id>0')
-            ->orderBy('ten asc')
-            ->fetchArray();
-    }
+    return csdl_lylichhoivienTable::getInstance()->createQuery()
+        ->select('hoivien_id, hodem ,ten ')
+        ->where('hoivien_id>0')
+        ->orderBy('ten asc')
+        ->fetchArray();
+}
 
     public static function hotenHoivien($hoivienId){
         $result= csdl_lylichhoivienTable::getInstance()->createQuery()
@@ -49,4 +49,7 @@ class csdl_lylichhoivienTable extends Doctrine_Table
         }
         return '';
     }
+
+    //lay danh sach hoi vien active
+
 }

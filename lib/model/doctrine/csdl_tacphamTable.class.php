@@ -46,4 +46,15 @@ class csdl_tacphamTable extends Doctrine_Table
             ->andWhere('c.id=?',$id)
             ->fetchArray();
     }
+
+    //lay danh sach tac pham heo hoi vien
+    public static function getTacphamByHoiVienId($id){
+        return csdl_tacphamTable::getInstance()->createQuery('c')
+            ->select('c.id ,c.tentacpham, c.gioithieu , c.anhdaidien, c.filedownload, c.ngayxuatban,tg.hoten, cd.tenchude')
+            ->leftjoin('c.csdlTacgia tg')
+            ->leftjoin('c.csdlChude cd')
+            ->where('status=2')
+            ->andWhere('c.hoivien_id=?',$id)
+            ->fetchArray();
+    }
 }

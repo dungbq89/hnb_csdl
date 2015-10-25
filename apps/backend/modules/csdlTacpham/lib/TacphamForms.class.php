@@ -12,14 +12,14 @@ class TacphamForms extends Basecsdl_tacphamForm
         unset($this['created_by'],$this['updated_by'],$this['created_at'],$this['updated_at'],$this['hoivien_id']);
         $this->setWidgets(array(
             'id'           => new sfWidgetFormInputHidden(),
-            'hoivien_id'  => new sfWidgetFormInputText(),
+//            'hoivien_id'  => new sfWidgetFormInputText(),
             'tentacpham'   => new sfWidgetFormInputText(),
             'gioithieu'    => new sfWidgetFormTextarea(),
         ));
 
         $this->setValidators(array(
             'id'           => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-            'hoivien_id'  => new sfValidatorInteger(array('required' => false)),
+//            'hoivien_id'  => new sfValidatorInteger(array('required' => false)),
             'tentacpham'   => new sfValidatorString(array('max_length' => 255, 'required' => false)),
             'gioithieu'    => new sfValidatorString(array('max_length' => 1000, 'required' => false)),
 
@@ -93,6 +93,14 @@ class TacphamForms extends Basecsdl_tacphamForm
             'required' => false,
             'choices' => array_keys($this->dsTacgia()),));
 
+        $this->widgetSchema['hoivien_id'] = new sfWidgetFormChoice(array(
+            'choices' => $this->dsHoiVien(),
+            'multiple' => false,
+            'expanded' => false));
+        $this->validatorSchema['hoivien_id'] = new sfValidatorChoice(array(
+            'required' => true,
+            'choices' => array_keys($this->dsHoiVien()),));
+
         $this->widgetSchema['chude_id'] = new sfWidgetFormChoice(array(
             'choices' => $this->dsChude(),
             'multiple' => false,
@@ -135,9 +143,21 @@ class TacphamForms extends Basecsdl_tacphamForm
         }
         return $arrJobs;
     }
-    protected function doBind(array $values) {
-        $user = sfContext::getInstance()->getUser();
-        $values['hoivien_id'] =$user->getGuardUser()->getId();
-        parent::doBind($values);
+
+    //lay danh sach hoi vien
+    protected function dsHoiVien(){
+        $arrHoiviens = array(''=>'----- Chọn hội viên -----');
+        $hoiviens = csdl_lylichhoivienTable::dsHoivienForThe();
+        if(count($hoiviens)>0){
+            foreach($hoiviens as $value){
+                $arrHoiviens[$value['hoivien_id']] = $value['hodem'];
+            }
+        }
+        return $arrHoiviens;
     }
+//    protected function doBind(array $values) {
+//        $user = sfContext::getInstance()->getUser();
+//        $values['hoivien_id'] =$user->getGuardUser()->getId();
+//        parent::doBind($values);
+//    }
 }

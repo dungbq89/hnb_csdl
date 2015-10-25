@@ -23,6 +23,11 @@ class pageThongTinHoiVienActions extends sfActions {
                 if($thehoivien){
                     $this->thehoiviens = $thehoivien;
                 }
+                //danh sach tac pham cua hoi vien
+                $tacpham = csdl_tacphamTable::getTacphamByHoiVienId($id);
+                if(count($tacpham)){
+                    $this->listTacpham = $tacpham;
+                }
             }
         }
         else{
