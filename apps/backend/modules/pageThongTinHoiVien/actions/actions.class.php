@@ -23,6 +23,8 @@ class pageThongTinHoiVienActions extends sfActions {
                 if($thehoivien){
                     $this->thehoiviens = $thehoivien;
                 }
+                //giai thuong
+                $this->giaithuong=csdl_giaithuongTable::getListGiaithuongByHoivien($id);
             }
         }
         else{

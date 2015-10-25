@@ -16,4 +16,13 @@ class csdl_giaithuongTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('csdl_giaithuong');
     }
+
+    public static function getListGiaithuongByHoivien($hoivien_id){
+        $q=csdl_giaithuongTable::getInstance()->createQuery()
+            ->select('*')
+            ->andWhere('hoivien_id = ?', $hoivien_id)
+            ->orderby('tengiaithuong asc');
+
+        return $q->execute();
+    }
 }

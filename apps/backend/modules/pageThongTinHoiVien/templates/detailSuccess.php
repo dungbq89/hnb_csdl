@@ -143,26 +143,27 @@ include_component('tmcTwitterBootstrap', 'header');
                         } ?>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="giaithuong">
-                        <?php if(isset($thehoiviens) && count($thehoiviens)){
-                            foreach($thehoiviens as $thehoivien) {
+                        <?php if(isset($giaithuong) && count($giaithuong)){
+                            foreach($giaithuong as $item) {
                                 ?>
                                 <table class="table bordered vanban tb-hoivien">
                                     <tr>
-                                        <td class="td-document-detail">Mã thẻ</td>
-                                        <td><?php echo htmlspecialchars($thehoivien->mathe); ?></td>
+                                        <td class="td-document-detail">Tên giải thưởng</td>
+                                        <td><?php echo htmlspecialchars($item->tengiaithuong); ?></td>
                                     </tr>
                                     <tr>
-                                        <td class="td-document-detail">Ngày cấp</td>
-                                        <td><?php echo date('d/m/Y', strtotime($thehoivien->ngaycap)); ?></td>
+                                        <td class="td-document-detail">Lĩnh vực</td>
+                                        <td><?php echo htmlspecialchars($item->madanhmuc); ?></td>
                                     </tr>
                                     <tr>
-                                        <td class="td-document-detail">Ngày hết hạn</td>
-                                        <td><?php echo date('d/m/Y', strtotime($thehoivien->ngayhethan)); ?></td>
+                                        <td class="td-document-detail">Năm tổ chức</td>
+                                        <td><?php echo htmlspecialchars($item->namtochuc); ?></td>
                                     </tr>
                                     <tr>
-                                        <td class="td-document-detail">Người ký</td>
-                                        <td><?php echo htmlspecialchars($thehoivien->nguoiky); ?></td>
+                                        <td class="td-document-detail">Giá trị</td>
+                                        <td><?php echo htmlspecialchars($item->giatri); ?></td>
                                     </tr>
+
                                 </table>
                             <?php
                             }
