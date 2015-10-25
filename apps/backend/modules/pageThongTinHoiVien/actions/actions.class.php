@@ -25,6 +25,11 @@ class pageThongTinHoiVienActions extends sfActions {
                 }
                 //giai thuong
                 $this->giaithuong=csdl_giaithuongTable::getListGiaithuongByHoivien($id);
+                //danh sach tac pham cua hoi vien
+                $tacpham = csdl_tacphamTable::getTacphamByHoiVienId($id);
+                if(count($tacpham)){
+                    $this->listTacpham = $tacpham;
+                }
             }
         }
         else{
