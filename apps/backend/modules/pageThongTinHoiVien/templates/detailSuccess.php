@@ -34,12 +34,12 @@ include_component('tmcTwitterBootstrap', 'header');
 
                         <tr>
                             <td class="td-document-detail">Quận/huyện</td>
-                            <td><?php echo htmlspecialchars($userDetail->maquan); ?></td>
+                            <td><?php echo VtHelper::truncate(csdl_areaTable::getName($userDetail->getMatinh(),$userDetail->getMaquan()), 50, '...', true); ?></td>
                         </tr>
 
                         <tr>
                             <td class="td-document-detail">Tỉnh/thành phố</td>
-                            <td><?php echo htmlspecialchars($userDetail->matinh); ?></td>
+                            <td><?php echo VtHelper::truncate(csdl_areaTable::getName($userDetail->getMatinh(),""), 50, '...', true); ?></td>
                         </tr>
 
                     </table>

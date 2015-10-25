@@ -7,8 +7,12 @@
  */
 class pageThongTinHoiVienActions extends sfActions {
     public function executeDetail(sfWebRequest $request){
-        $id = $this->getUser()->getGuardUser()->getId();
-        if($id){
+        if ($this->getUser()->isAuthenticated()){
+            $id=$this->getUser()->getGuardUser()->getId();
+        }else{
+            $id=-1;
+        }
+        if($id>0){
             $user = csdl_lylichhoivienTable::getUserDetail($id)->fetchOne();
 
             if($user){
@@ -33,7 +37,7 @@ class pageThongTinHoiVienActions extends sfActions {
             }
         }
         else{
-            return $this->redirect404();
+            return $this->redirect('@homepage');
         }
     }
 }
