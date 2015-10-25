@@ -34,7 +34,7 @@ generator:
 
       list:
         title: Danh sách danh hội viên
-        display: [images, hodem, ngaysinh, gioitinh, diachi]
+        display: [ hodem, ngaysinh, gioitinh, diachi]
         object_actions:
           _edit: ~
           _delete: ~
