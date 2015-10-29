@@ -37,9 +37,9 @@ generator:
         giaithuong_id: {label: Khen thưởng/giải thưởng}
       list:
         title: Danh sách danh hội viên
-        display: [hodem, ten, ngaysinh, gioitinh, diachi, maquan, matinh]
+        display: [images, hodem, ten, ngaysinh, gioitinh]
         object_actions:
-          _edit: ~
+          _edit: {label: Sửa}
           _delete: ~
       filter:
         class: LylichhoivienDaduyetFormFilter
