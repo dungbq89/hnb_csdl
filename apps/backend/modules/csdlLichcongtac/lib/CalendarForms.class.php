@@ -43,15 +43,15 @@ class CalendarForm extends Basecsdl_lichcongtacForm
 
         $this->setValidators(array(
             'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-            'hoivien_id' => new sfValidatorInteger(array('required' => false)),
-            'tieude'     => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-            'noidung'    => new sfValidatorString(array('max_length' => 500, 'required' => false)),
-            'start_time' => new sfValidatorDateTime(array('required' => false)),
-            'end_time'   => new sfValidatorDateTime(array('required' => false)),
-            'diadiem'    => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+            'hoivien_id' => new sfValidatorInteger(array('required' => true)),
+            'tieude'     => new sfValidatorString(array('max_length' => 255, 'required' => true)),
+            'noidung'    => new sfValidatorString(array('max_length' => 500, 'required' => true)),
+            'start_time' => new sfValidatorDateTime(array('required' => true)),
+            'end_time'   => new sfValidatorDateTime(array('required' => true)),
+            'diadiem'    => new sfValidatorString(array('max_length' => 255, 'required' => true)),
             'thanhphan'  => new sfValidatorString(array('max_length' => 500, 'required' => false)),
             'chuanbi'    => new sfValidatorString(array('max_length' => 500, 'required' => false)),
-            'chutri'     => new sfValidatorString(array('max_length' => 500, 'required' => false)),
+            'chutri'     => new sfValidatorString(array('max_length' => 500, 'required' => true)),
         ));
 
         $this->widgetSchema->setNameFormat('csdl_lichcongtac[%s]');
