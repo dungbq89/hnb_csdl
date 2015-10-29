@@ -12,5 +12,6 @@ class csdl_hocvanForm extends Basecsdl_hocvanForm
 {
   public function configure()
   {
+      unset($this['created_at'], $this['updated_at'], $this['created_at'], $this['updated_at']);
   }
 }

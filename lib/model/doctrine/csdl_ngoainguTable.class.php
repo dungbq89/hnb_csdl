@@ -16,4 +16,12 @@ class csdl_ngoainguTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('csdl_ngoaingu');
     }
+
+
+    public static function getListNgoaingu(){
+        $q=csdl_ngoainguTable::getInstance()->createQuery()
+            ->select('*')
+            ->orderby('name asc');
+        return $q->execute();
+    }
 }

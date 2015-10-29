@@ -35,7 +35,8 @@ generator:
         butdanh: {label: Bút danh}
         tacpham_id: {label: Tác phẩm}
         giaithuong_id: {label: Khen thưởng/giải thưởng}
-
+        dangvien: {label: Đảng viên}
+        thehnbht: {label: Thẻ HNB Hà Tĩnh}
       list:
         title: Danh sách danh hội viên
         display: [ hodem, ngaysinh, gioitinh, diachi]
@@ -46,7 +47,7 @@ generator:
         class: csdlHoiVienChoDuyetFilter
         display: [ten]
       form:
-        display: [ten, hodem, ngaysinh, images, gioitinh, tieusu, nghenghiep_id,donvi_id, dantoc_id, quoctich, matinh, maquan, diachi, dienthoai, email, hocvan, chinhtri, ngoaingu, butdanh]
+        display: [ten, hodem, ngaysinh, images, gioitinh, tieusu, nghenghiep_id,donvi_id, dantoc_id, quoctich, matinh, maquan, diachi, dienthoai, email, dangvien, hocvan, chinhtri, ngoaingu, butdanh,thehnbht]
         class: csdlLyLichHoiVienAdminForm
       edit:
         title: Chỉnh sửa lý lịch hội viên

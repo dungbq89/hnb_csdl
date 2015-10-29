@@ -1,0 +1,28 @@
+generator:
+  class: tmcTwitterBootstrapDoctrineGenerator
+  param:
+    model_class:           csdl_hocvan
+    theme:                 tmcTwitterBootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          csdl_hocvan
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        name: {label: Học vấn}
+      list:
+        title: Quản lý trình độ học vấn
+        display: [name]
+      filter:
+        display: [name]
+      form:
+        display: [name]
+      edit:
+        title: Chỉnh sửa tên học vấn
+      new:
+        title: Thêm mới tên học vấn

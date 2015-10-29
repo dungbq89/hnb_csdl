@@ -1,3 +1,30 @@
+csdl_chinhtri:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                csdl_chinhtri
+    module:               csdlChinhtri
+    prefix_path:          /chinh-tri
+    column:               id
+    with_wildcard_routes: true
+
+csdl_ngoaingu:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                csdl_ngoaingu
+    module:               csdlNgoaingu
+    prefix_path:          /ngoai-ngu
+    column:               id
+    with_wildcard_routes: true
+
+csdl_hocvan:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                csdl_hocvan
+    module:               csdlHocvan
+    prefix_path:          /hoc-van
+    column:               id
+    with_wildcard_routes: true
+
 page_chitiet_tacpham:
   url: /chi-tiet-tac-pham/:id
   param: {module: pageTacpham, action: detail}

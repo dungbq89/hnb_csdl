@@ -16,4 +16,12 @@ class csdl_chinhtriTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('csdl_chinhtri');
     }
+
+
+    public static function getListChinhtri(){
+        $q=csdl_chinhtriTable::getInstance()->createQuery()
+            ->select('*')
+            ->orderby('name asc');
+        return $q->execute();
+    }
 }

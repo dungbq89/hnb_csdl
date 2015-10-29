@@ -12,5 +12,6 @@ class csdl_chinhtriForm extends Basecsdl_chinhtriForm
 {
   public function configure()
   {
+      unset($this['created_at'], $this['updated_at'], $this['created_at'], $this['updated_at']);
   }
 }

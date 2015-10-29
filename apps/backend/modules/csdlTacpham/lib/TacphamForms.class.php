@@ -10,18 +10,21 @@ class TacphamForms extends Basecsdl_tacphamForm
     public function configure()
     {
         unset($this['created_by'],$this['updated_by'],$this['created_at'],$this['updated_at'],$this['hoivien_id']);
+
         $this->setWidgets(array(
             'id'           => new sfWidgetFormInputHidden(),
-//            'hoivien_id'  => new sfWidgetFormInputText(),
             'tentacpham'   => new sfWidgetFormInputText(),
             'gioithieu'    => new sfWidgetFormTextarea(),
+            'tacgia'          => new sfWidgetFormInputText(),
+            'tacphamtieubieu' => new sfWidgetFormInputCheckbox(),
         ));
 
         $this->setValidators(array(
             'id'           => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-//            'hoivien_id'  => new sfValidatorInteger(array('required' => false)),
             'tentacpham'   => new sfValidatorString(array('max_length' => 255, 'required' => false)),
             'gioithieu'    => new sfValidatorString(array('max_length' => 1000, 'required' => false)),
+            'tacgia'          => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+            'tacphamtieubieu' => new sfValidatorBoolean(array('required' => false)),
 
         ));
 
@@ -64,7 +67,8 @@ class TacphamForms extends Basecsdl_tacphamForm
                 'max_size' => sfConfig::get('app_upload_video_max_size',99999999),
                 'upload_path'=>sfConfig::get("sf_upload_dir") . '/' . sfConfig::get('app_document'),
                 'path' => sfConfig::get("sf_upload_dir") . '/' . sfConfig::get('app_document'),
-                'mime_types' => array('application/pdf',
+                'mime_types' => array('application/pdf','image/jpeg','image/jpg', 'image/png', 'image/gif',
+                    'flv' => 'video/x-flv','mp4' =>'video/mp4',
                     'application/octet-stream',
                     'application/msword',
                     'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
@@ -84,14 +88,6 @@ class TacphamForms extends Basecsdl_tacphamForm
 
         $this->widgetSchema['ngayxuatban'] = new sfWidgetFormVnDatePicker(array(),array('readonly'=>true));
         $this->validatorSchema['ngayxuatban'] = new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d H:i:s'));
-
-        $this->widgetSchema['tacgia_id'] = new sfWidgetFormChoice(array(
-            'choices' => $this->dsTacgia(),
-            'multiple' => false,
-            'expanded' => false));
-        $this->validatorSchema['tacgia_id'] = new sfValidatorChoice(array(
-            'required' => false,
-            'choices' => array_keys($this->dsTacgia()),));
 
         $this->widgetSchema['hoivien_id'] = new sfWidgetFormChoice(array(
             'choices' => $this->dsHoiVien(),

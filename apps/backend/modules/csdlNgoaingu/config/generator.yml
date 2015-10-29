@@ -1,0 +1,28 @@
+generator:
+  class: tmcTwitterBootstrapDoctrineGenerator
+  param:
+    model_class:           csdl_ngoaingu
+    theme:                 tmcTwitterBootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          csdl_ngoaingu
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        name: {label: Học vấn}
+      list:
+        title: Quản lý trình độ ngoại ngữ
+        display: [name]
+      filter:
+        display: [name]
+      form:
+        display: [name]
+      edit:
+        title: Chỉnh sửa tên ngoại ngữ
+      new:
+        title: Thêm mới tên ngoại ngữ

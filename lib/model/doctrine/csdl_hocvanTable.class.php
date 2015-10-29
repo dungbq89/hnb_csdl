@@ -16,4 +16,12 @@ class csdl_hocvanTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('csdl_hocvan');
     }
+
+
+    public static function getListHocvan(){
+        $q=csdl_hocvanTable::getInstance()->createQuery()
+            ->select('*')
+            ->orderby('name asc');
+        return $q->execute();
+    }
 }

@@ -53,6 +53,14 @@ all:
               route: csdl_giaithuong
             Danh bạ:
               route: csdl_danhba
+            Quản lý cơ quan báo chí:
+              route: csdl_coquanbaochi
+            Quản lý trình độ học vấn:
+              route: csdl_hocvan
+            Quản lý trình độ ngoại ngữ:
+              route: csdl_ngoaingu
+            Quản lý trình độ chính trị:
+              route: csdl_chinhtri
         Quản lý Văn bản:
           #credentials: [admin]
           dropdown:

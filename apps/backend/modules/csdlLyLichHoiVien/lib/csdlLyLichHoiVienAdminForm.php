@@ -114,6 +114,54 @@ class csdlLyLichHoiVienAdminForm extends Basecsdl_lylichhoivienForm {
                 'max_size' => $i18n->__('Tối đa 5MB')
             ));
 
+
+        $this->widgetSchema['hocvan'] = new  sfWidgetFormChoice(array(
+            'choices' => $this->getHocvan(),
+            'multiple' => false,
+            'expanded' => false
+        ));
+        $this->validatorSchema['hocvan'] = new sfValidatorChoice(array(
+            'required' => true,
+            'choices' => array_keys($this->getHocvan()),
+        ));
+
+
+        $this->widgetSchema['ngoaingu'] = new  sfWidgetFormChoice(array(
+            'choices' => $this->getNgoaingu(),
+            'multiple' => false,
+            'expanded' => false
+        ));
+        $this->validatorSchema['ngoaingu'] = new sfValidatorChoice(array(
+            'required' => true,
+            'choices' => array_keys($this->getNgoaingu()),
+        ));
+
+
+        $this->widgetSchema['chinhtri'] = new  sfWidgetFormChoice(array(
+            'choices' => $this->getChinhtri(),
+            'multiple' => false,
+            'expanded' => false
+        ));
+        $this->validatorSchema['chinhtri'] = new sfValidatorChoice(array(
+            'required' => true,
+            'choices' => array_keys($this->getChinhtri()),
+        ));
+
+        $arrValue= array(
+            "Đảng Viên" => "Đảng Viên",
+            "Đoàn viên" => "Đoàn viên",
+            "Chưa tham gia " => "Chưa tham gia "
+        );
+        $this->widgetSchema['dangvien'] = new  sfWidgetFormChoice(array(
+            'choices' => $arrValue,
+            'multiple' => false,
+            'expanded' => false
+        ));
+        $this->validatorSchema['dangvien'] = new sfValidatorChoice(array(
+            'required' => true,
+            'choices' => array_keys($arrValue),
+        ));
+
         $this->widgetSchema->setNameFormat('csdl_lylichhoivien[%s]');
 
         $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
@@ -198,14 +246,37 @@ class csdlLyLichHoiVienAdminForm extends Basecsdl_lylichhoivienForm {
         return $arrTacpham;
     }
 
-    protected function getGiaiThuong(){
-        $arrGiaiThuong = array(''=>'----- Chọn giải thưởng -----');
-        $giaiThuong = csdl_giaithuongTable::getListTacpham();
-        if(count($giaiThuong)>0){
-            foreach($giaiThuong as $value){
-                $arrGiaiThuong[$value->id] = $value->tentacpham;
+    protected function getHocvan(){
+        $arr = array(''=>'----- Chọn Học vấn -----');
+        $arrs = csdl_hocvanTable::getListHocvan();
+        if(count($arrs)>0){
+            foreach($arrs as $value){
+                $arr[$value->name] = $value->name;
             }
         }
-        return $arrGiaiThuong;
+        return $arr;
     }
+
+    protected function getChinhtri(){
+        $arr = array(''=>'----- Chọn Chính trị -----');
+        $arrs = csdl_chinhtriTable::getListChinhtri();
+        if(count($arrs)>0){
+            foreach($arrs as $value){
+                $arr[$value->name] = $value->name;
+            }
+        }
+        return $arr;
+    }
+
+    protected function getNgoaingu(){
+        $arr = array(''=>'----- Chọn Ngoại ngữ -----');
+        $arrs = csdl_ngoainguTable::getListNgoaingu();
+        if(count($arrs)>0){
+            foreach($arrs as $value){
+                $arr[$value->name] = $value->name;
+            }
+        }
+        return $arr;
+    }
+
 }

@@ -12,5 +12,6 @@ class csdl_ngoainguForm extends Basecsdl_ngoainguForm
 {
   public function configure()
   {
+      unset($this['created_at'], $this['updated_at'], $this['created_at'], $this['updated_at']);
   }
 }
