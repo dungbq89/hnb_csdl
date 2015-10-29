@@ -12,7 +12,7 @@ class csdlLyLichHoiVienAdminForm extends Basecsdl_lylichhoivienForm {
     public function configure() {
         $years = range(date('Y'), date('Y') - 75);
         $i18n = sfContext::getInstance()->getI18N();
-        unset($this['created_at'], $this['updated_at'], $this['created_at'], $this['updated_at']);
+        unset($this['created_at'], $this['updated_at'], $this['created_at'], $this['updated_at'], $this['hoivien_id']);
 
         $this->widgetSchema['gioithieu'] = new sfWidgetFormTextarea(array());
         $this->validatorSchema['gioithieu'] = new sfValidatorString(array('required' => false, 'trim' => true, 'max_length' => 500));
