@@ -24,6 +24,7 @@ csdl_lylichhoivien:
     hocvan: { type: string(255), comment: "Học vấn" }
     ngoaingu: { type: string(255), comment: "Ngoại ngữ" }
     chinhtri: { type: string(255), comment: "Chính trị" }
+    dangvien: { type: string(255), comment: "Đảng viên" }
     butdanh: { type: string(255), comment: "Bút danh" }
     tacpham_id: { type: integer(10), comment: "Tác phẩm tiêu biểu" }
     giaithuong_id: { type: integer(10), comment: "Giải thưởng" }
@@ -49,6 +50,7 @@ csdl_thehoivien:
   columns:
     hoivien_id: { type: integer(5), comment: "ma hoi vien"}
     mathe: { type: string(25), comment: "Ma the" }
+    sothe: { type: string(50), comment: "Ma the" }
     anhdaidien:  { type: string(255), comment: "hinh anh" }
     ngaycap: { type: timestamp(25), comment: "ngay cap the hoi vien" }
     ngayhethan: { type: timestamp(25), comment: "ngay het han cua the" }
@@ -66,9 +68,11 @@ csdl_tacpham:
     tentacpham: { type: string(255), comment: "Ten tac pham" }
     gioithieu: { type: string(1000), comment: "gioi thieu" }
     anhdaidien:  { type: string(255), comment: "hinh anh" }
+    tacphamtieubieu: { type: boolean, notnull: true, default: false, comment: "tac pham tieu bieu" }
     filedownload: { type: string(255), comment: "file download: zip, pdf, doc, docx, xls, xlsx" }
     ngayxuatban: { type: timestamp(25), comment: "ngay xuat ban" }
     tacgia_id: { type: type: integer(5), comment: "Ma Tac gia" }
+    tacgia: { type: string(255), comment: "Tên tác giả" }
     chude_id: { type: integer(5), comment: "ma chu de"}
     status: { type: integer(5), comment: "Trạng thái(0: Nháp, 1: gửi duyệt, 2: Phê duyệt)"}
 #Quản lý chuyên mục/ chủ đề
@@ -290,6 +294,30 @@ csdl_tacgia:
     dienthoai: { type: string(255), comment: "Dien thoai" }
     email: { type: string(255), comment: "Email" }
     donvi: { type: string(255), comment: "don vi cong tac" }
+#Danh mục hoc van
+csdl_hocvan:
+  tableName: csdl_hocvan
+  actAs:
+    VtBlameable: ~
+    Timestampable: ~
+  columns:
+    name: { type: string(255), comment: "ten hoc van" }
+csdl_ngoaingu:
+  tableName: csdl_ngoaingu
+  actAs:
+    VtBlameable: ~
+    Timestampable: ~
+  columns:
+    name: { type: string(255), comment: "ten ngoai ngu" }
+
+csdl_chinhtri:
+  tableName: csdl_chinhtri
+  actAs:
+    VtBlameable: ~
+    Timestampable: ~
+  columns:
+    name: { type: string(255), comment: "ten chinh tri" }
+
 AdUserSigninLock:
   columns:
     user_name: {type: string(255)}

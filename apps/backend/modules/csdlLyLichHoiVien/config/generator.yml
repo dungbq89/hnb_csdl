@@ -45,7 +45,7 @@ generator:
         class: LylichhoivienDaduyetFormFilter
         display: [hodem, ten]
       form:
-        display: [ten, hodem, ngaysinh, images, gioitinh, tieusu, nghenghiep_id,donvi_id, dantoc_id, quoctich, matinh, maquan, diachi, dienthoai, email, hocvan, chinhtri, ngoaingu, butdanh, tacpham_id]
+        display: [ten, hodem, ngaysinh, images, gioitinh, tieusu, nghenghiep_id,donvi_id, dantoc_id, quoctich, matinh, maquan, diachi, dienthoai, email, hocvan, chinhtri, ngoaingu, butdanh]
         class: csdlLyLichHoiVienAdminForm
       edit:
         title: Chỉnh sửa lý lịch hội viên

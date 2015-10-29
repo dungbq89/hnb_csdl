@@ -26,6 +26,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_lylichhoivien', 'doctrine')
  * @property string $hocvan
  * @property string $ngoaingu
  * @property string $chinhtri
+ * @property string $dangvien
  * @property string $butdanh
  * @property integer $tacpham_id
  * @property integer $giaithuong_id
@@ -49,6 +50,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_lylichhoivien', 'doctrine')
  * @method string             getHocvan()        Returns the current record's "hocvan" value
  * @method string             getNgoaingu()      Returns the current record's "ngoaingu" value
  * @method string             getChinhtri()      Returns the current record's "chinhtri" value
+ * @method string             getDangvien()      Returns the current record's "dangvien" value
  * @method string             getButdanh()       Returns the current record's "butdanh" value
  * @method integer            getTacphamId()     Returns the current record's "tacpham_id" value
  * @method integer            getGiaithuongId()  Returns the current record's "giaithuong_id" value
@@ -71,6 +73,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_lylichhoivien', 'doctrine')
  * @method csdl_lylichhoivien setHocvan()        Sets the current record's "hocvan" value
  * @method csdl_lylichhoivien setNgoaingu()      Sets the current record's "ngoaingu" value
  * @method csdl_lylichhoivien setChinhtri()      Sets the current record's "chinhtri" value
+ * @method csdl_lylichhoivien setDangvien()      Sets the current record's "dangvien" value
  * @method csdl_lylichhoivien setButdanh()       Sets the current record's "butdanh" value
  * @method csdl_lylichhoivien setTacphamId()     Sets the current record's "tacpham_id" value
  * @method csdl_lylichhoivien setGiaithuongId()  Sets the current record's "giaithuong_id" value
@@ -178,6 +181,11 @@ abstract class Basecsdl_lylichhoivien extends sfDoctrineRecord
         $this->hasColumn('chinhtri', 'string', 255, array(
              'type' => 'string',
              'comment' => 'Chính trị',
+             'length' => 255,
+             ));
+        $this->hasColumn('dangvien', 'string', 255, array(
+             'type' => 'string',
+             'comment' => 'Đảng viên',
              'length' => 255,
              ));
         $this->hasColumn('butdanh', 'string', 255, array(

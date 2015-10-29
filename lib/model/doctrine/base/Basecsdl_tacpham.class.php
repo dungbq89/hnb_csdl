@@ -11,30 +11,36 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_tacpham', 'doctrine');
  * @property string $tentacpham
  * @property string $gioithieu
  * @property string $anhdaidien
+ * @property boolean $tacphamtieubieu
  * @property string $filedownload
  * @property timestamp $ngayxuatban
  * @property integer $tacgia_id
+ * @property string $tacgia
  * @property integer $chude_id
  * @property integer $status
  * 
- * @method integer      getHoivienId()    Returns the current record's "hoivien_id" value
- * @method string       getTentacpham()   Returns the current record's "tentacpham" value
- * @method string       getGioithieu()    Returns the current record's "gioithieu" value
- * @method string       getAnhdaidien()   Returns the current record's "anhdaidien" value
- * @method string       getFiledownload() Returns the current record's "filedownload" value
- * @method timestamp    getNgayxuatban()  Returns the current record's "ngayxuatban" value
- * @method integer      getTacgiaId()     Returns the current record's "tacgia_id" value
- * @method integer      getChudeId()      Returns the current record's "chude_id" value
- * @method integer      getStatus()       Returns the current record's "status" value
- * @method csdl_tacpham setHoivienId()    Sets the current record's "hoivien_id" value
- * @method csdl_tacpham setTentacpham()   Sets the current record's "tentacpham" value
- * @method csdl_tacpham setGioithieu()    Sets the current record's "gioithieu" value
- * @method csdl_tacpham setAnhdaidien()   Sets the current record's "anhdaidien" value
- * @method csdl_tacpham setFiledownload() Sets the current record's "filedownload" value
- * @method csdl_tacpham setNgayxuatban()  Sets the current record's "ngayxuatban" value
- * @method csdl_tacpham setTacgiaId()     Sets the current record's "tacgia_id" value
- * @method csdl_tacpham setChudeId()      Sets the current record's "chude_id" value
- * @method csdl_tacpham setStatus()       Sets the current record's "status" value
+ * @method integer      getHoivienId()       Returns the current record's "hoivien_id" value
+ * @method string       getTentacpham()      Returns the current record's "tentacpham" value
+ * @method string       getGioithieu()       Returns the current record's "gioithieu" value
+ * @method string       getAnhdaidien()      Returns the current record's "anhdaidien" value
+ * @method boolean      getTacphamtieubieu() Returns the current record's "tacphamtieubieu" value
+ * @method string       getFiledownload()    Returns the current record's "filedownload" value
+ * @method timestamp    getNgayxuatban()     Returns the current record's "ngayxuatban" value
+ * @method integer      getTacgiaId()        Returns the current record's "tacgia_id" value
+ * @method string       getTacgia()          Returns the current record's "tacgia" value
+ * @method integer      getChudeId()         Returns the current record's "chude_id" value
+ * @method integer      getStatus()          Returns the current record's "status" value
+ * @method csdl_tacpham setHoivienId()       Sets the current record's "hoivien_id" value
+ * @method csdl_tacpham setTentacpham()      Sets the current record's "tentacpham" value
+ * @method csdl_tacpham setGioithieu()       Sets the current record's "gioithieu" value
+ * @method csdl_tacpham setAnhdaidien()      Sets the current record's "anhdaidien" value
+ * @method csdl_tacpham setTacphamtieubieu() Sets the current record's "tacphamtieubieu" value
+ * @method csdl_tacpham setFiledownload()    Sets the current record's "filedownload" value
+ * @method csdl_tacpham setNgayxuatban()     Sets the current record's "ngayxuatban" value
+ * @method csdl_tacpham setTacgiaId()        Sets the current record's "tacgia_id" value
+ * @method csdl_tacpham setTacgia()          Sets the current record's "tacgia" value
+ * @method csdl_tacpham setChudeId()         Sets the current record's "chude_id" value
+ * @method csdl_tacpham setStatus()          Sets the current record's "status" value
  * 
  * @package    Vt_Portals
  * @subpackage model
@@ -66,6 +72,12 @@ abstract class Basecsdl_tacpham extends sfDoctrineRecord
              'comment' => 'hinh anh',
              'length' => 255,
              ));
+        $this->hasColumn('tacphamtieubieu', 'boolean', null, array(
+             'type' => 'boolean',
+             'notnull' => true,
+             'default' => false,
+             'comment' => 'tac pham tieu bieu',
+             ));
         $this->hasColumn('filedownload', 'string', 255, array(
              'type' => 'string',
              'comment' => 'file download: zip, pdf, doc, docx, xls, xlsx',
@@ -80,6 +92,11 @@ abstract class Basecsdl_tacpham extends sfDoctrineRecord
              'type' => 'integer',
              'comment' => 'Ma Tac gia',
              'length' => 5,
+             ));
+        $this->hasColumn('tacgia', 'string', 255, array(
+             'type' => 'string',
+             'comment' => 'Tên tác giả',
+             'length' => 255,
              ));
         $this->hasColumn('chude_id', 'integer', 5, array(
              'type' => 'integer',

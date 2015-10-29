@@ -206,6 +206,6 @@ class csdlLyLichHoiVienAdminForm extends Basecsdl_lylichhoivienForm {
                 $arrGiaiThuong[$value->id] = $value->tentacpham;
             }
         }
-        return $arrTacpham;
+        return $arrGiaiThuong;
     }
 }

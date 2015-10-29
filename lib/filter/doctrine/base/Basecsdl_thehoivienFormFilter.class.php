@@ -15,6 +15,7 @@ abstract class Basecsdl_thehoivienFormFilter extends BaseFormFilterDoctrine
     $this->setWidgets(array(
       'hoivien_id' => new sfWidgetFormFilterInput(),
       'mathe'      => new sfWidgetFormFilterInput(),
+      'sothe'      => new sfWidgetFormFilterInput(),
       'anhdaidien' => new sfWidgetFormFilterInput(),
       'ngaycap'    => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
       'ngayhethan' => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
@@ -28,6 +29,7 @@ abstract class Basecsdl_thehoivienFormFilter extends BaseFormFilterDoctrine
     $this->setValidators(array(
       'hoivien_id' => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'mathe'      => new sfValidatorPass(array('required' => false)),
+      'sothe'      => new sfValidatorPass(array('required' => false)),
       'anhdaidien' => new sfValidatorPass(array('required' => false)),
       'ngaycap'    => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'ngayhethan' => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
@@ -58,6 +60,7 @@ abstract class Basecsdl_thehoivienFormFilter extends BaseFormFilterDoctrine
       'id'         => 'Number',
       'hoivien_id' => 'Number',
       'mathe'      => 'Text',
+      'sothe'      => 'Text',
       'anhdaidien' => 'Text',
       'ngaycap'    => 'Date',
       'ngayhethan' => 'Date',

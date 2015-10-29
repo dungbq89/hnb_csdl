@@ -16,8 +16,6 @@ all:
       menu:
         Trang chủ:
           route: homepage
-        Lịch công tác:
-          route: csdl_lichcongtac
         Quản lý Hội viên:
           #credentials: [admin]
           dropdown:
@@ -29,12 +27,8 @@ all:
               route: csdl_lylichhoivien
             Quản lý thẻ hội viên:
               route: csdl_thehoivien
-            Quản lý quá trình công tác:
-              route: csdl_quatrinhcongtac
-            Quản lý dân tộc:
-              route: csdl_dantoc
-            Quản lý danh mục nghề nghiệp:
-              route: csdl_dmnghenghiep
+            Lịch công tác:
+              route: csdl_lichcongtac
         Quản lý tác phẩm:
           #credentials: [admin]
           dropdown:
@@ -44,6 +38,21 @@ all:
               route: csdl_tacpham
             Quản lý Tác giả:
               route: csdl_tacgia
+
+        Quản lý các trường thông tin:
+          dropdown:
+            Quản lý quá trình công tác:
+              route: csdl_quatrinhcongtac
+            Quản lý dân tộc:
+              route: csdl_dantoc
+            Quản lý danh mục nghề nghiệp:
+              route: csdl_dmnghenghiep
+            Quản lý loại giải thưởng:
+              route: csdl_loaigiaithuong
+            Danh sách giải thưởng:
+              route: csdl_giaithuong
+            Danh bạ:
+              route: csdl_danhba
         Quản lý Văn bản:
           #credentials: [admin]
           dropdown:
@@ -60,17 +69,6 @@ all:
               route: csdl_loaitailieu
             Danh sách tài liệu nghiệp vụ:
               route: csdl_tailieunghiepvu
-        Quản lý giải thưởng:
-          #credentials: [admin]
-          dropdown:
-            Quản lý loại giải thưởng:
-              route: csdl_loaigiaithuong
-            Danh sách giải thưởng:
-              route: csdl_giaithuong
-        Danh bạ:
-          #credentials: [admin]
-          route: csdl_danhba
-
         Quản trị hệ thống:
           credentials: [admin]
           dropdown:

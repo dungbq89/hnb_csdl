@@ -602,7 +602,7 @@
     margin-left: 2.564102564%;
   }
   .row-fluid > [class*="span"]:first-child {
-    margin-left: 0;
+    margin-left: 0px;
   }
   .row-fluid > .span12 {
     width: 100%;

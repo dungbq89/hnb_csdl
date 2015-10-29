@@ -9,6 +9,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_thehoivien', 'doctrine');
  * 
  * @property integer $hoivien_id
  * @property string $mathe
+ * @property string $sothe
  * @property string $anhdaidien
  * @property timestamp $ngaycap
  * @property timestamp $ngayhethan
@@ -18,6 +19,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_thehoivien', 'doctrine');
  * 
  * @method integer         getHoivienId()  Returns the current record's "hoivien_id" value
  * @method string          getMathe()      Returns the current record's "mathe" value
+ * @method string          getSothe()      Returns the current record's "sothe" value
  * @method string          getAnhdaidien() Returns the current record's "anhdaidien" value
  * @method timestamp       getNgaycap()    Returns the current record's "ngaycap" value
  * @method timestamp       getNgayhethan() Returns the current record's "ngayhethan" value
@@ -26,6 +28,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_thehoivien', 'doctrine');
  * @method boolean         getTrangthai()  Returns the current record's "trangthai" value
  * @method csdl_thehoivien setHoivienId()  Sets the current record's "hoivien_id" value
  * @method csdl_thehoivien setMathe()      Sets the current record's "mathe" value
+ * @method csdl_thehoivien setSothe()      Sets the current record's "sothe" value
  * @method csdl_thehoivien setAnhdaidien() Sets the current record's "anhdaidien" value
  * @method csdl_thehoivien setNgaycap()    Sets the current record's "ngaycap" value
  * @method csdl_thehoivien setNgayhethan() Sets the current record's "ngayhethan" value
@@ -52,6 +55,11 @@ abstract class Basecsdl_thehoivien extends sfDoctrineRecord
              'type' => 'string',
              'comment' => 'Ma the',
              'length' => 25,
+             ));
+        $this->hasColumn('sothe', 'string', 50, array(
+             'type' => 'string',
+             'comment' => 'Ma the',
+             'length' => 50,
              ));
         $this->hasColumn('anhdaidien', 'string', 255, array(
              'type' => 'string',
