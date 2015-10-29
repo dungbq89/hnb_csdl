@@ -31,11 +31,6 @@ class csdlLyLichHoiVienAdminForm extends Basecsdl_lylichhoivienForm {
         ));
         $this->validatorSchema['ngaysinh'] = new sfValidatorDateTime(array('required' => true));
 
-        $this->widgetSchema['ngayvaodoan'] = new sfWidgetFormVnDatePicker(array(),array('readonly'=>true));
-        $this->validatorSchema['ngayvaodoan'] = new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d H:i:s'));
-
-        $this->widgetSchema['ngayvaodang'] = new sfWidgetFormVnDatePicker(array(),array('readonly'=>true));
-        $this->validatorSchema['ngayvaodang'] = new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d H:i:s'));
 
         $this->widgetSchema['gioitinh'] = new  sfWidgetFormChoice(array(
             'choices' => $this->gioiTinh(),

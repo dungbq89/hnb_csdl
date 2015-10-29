@@ -15,8 +15,6 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_lylichhoivien', 'doctrine')
  * @property string $diachi
  * @property string $maquan
  * @property string $matinh
- * @property timestamp $ngayvaodang
- * @property string $noiketnapdang
  * @property string $tieusu
  * @property integer $nghenghiep_id
  * @property integer $dantoc_id
@@ -40,8 +38,6 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_lylichhoivien', 'doctrine')
  * @method string             getDiachi()        Returns the current record's "diachi" value
  * @method string             getMaquan()        Returns the current record's "maquan" value
  * @method string             getMatinh()        Returns the current record's "matinh" value
- * @method timestamp          getNgayvaodang()   Returns the current record's "ngayvaodang" value
- * @method string             getNoiketnapdang() Returns the current record's "noiketnapdang" value
  * @method string             getTieusu()        Returns the current record's "tieusu" value
  * @method integer            getNghenghiepId()  Returns the current record's "nghenghiep_id" value
  * @method integer            getDantocId()      Returns the current record's "dantoc_id" value
@@ -64,8 +60,6 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_lylichhoivien', 'doctrine')
  * @method csdl_lylichhoivien setDiachi()        Sets the current record's "diachi" value
  * @method csdl_lylichhoivien setMaquan()        Sets the current record's "maquan" value
  * @method csdl_lylichhoivien setMatinh()        Sets the current record's "matinh" value
- * @method csdl_lylichhoivien setNgayvaodang()   Sets the current record's "ngayvaodang" value
- * @method csdl_lylichhoivien setNoiketnapdang() Sets the current record's "noiketnapdang" value
  * @method csdl_lylichhoivien setTieusu()        Sets the current record's "tieusu" value
  * @method csdl_lylichhoivien setNghenghiepId()  Sets the current record's "nghenghiep_id" value
  * @method csdl_lylichhoivien setDantocId()      Sets the current record's "dantoc_id" value
@@ -129,16 +123,6 @@ abstract class Basecsdl_lylichhoivien extends sfDoctrineRecord
         $this->hasColumn('matinh', 'string', 255, array(
              'type' => 'string',
              'comment' => 'Ma tinh/thanh pho',
-             'length' => 255,
-             ));
-        $this->hasColumn('ngayvaodang', 'timestamp', 25, array(
-             'type' => 'timestamp',
-             'comment' => 'ngay vao dang',
-             'length' => 25,
-             ));
-        $this->hasColumn('noiketnapdang', 'string', 255, array(
-             'type' => 'string',
-             'comment' => 'nơi kết nạp đảng',
              'length' => 255,
              ));
         $this->hasColumn('tieusu', 'string', 1000, array(

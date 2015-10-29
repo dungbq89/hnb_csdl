@@ -13,8 +13,6 @@ csdl_lylichhoivien:
     diachi: { type: string(255), comment: "dịa chỉ" }
     maquan: { type: string(25), comment: "Ma quan/huyen" }
     matinh: { type: string(255), comment: "Ma tinh/thanh pho" }
-    ngayvaodang: { type: timestamp(25), comment: "ngay vao dang" }
-    noiketnapdang: { type: string(255), comment: "nơi kết nạp đảng" }
     tieusu: { type: string(1000), comment: "Tiểu sử" }
     nghenghiep_id: { type: integer(5), comment: "Danh muc nghe nghiep"}
     dantoc_id: { type: integer(5), comment: "Danh muc dan toc"}
