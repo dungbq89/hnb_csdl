@@ -41,11 +41,11 @@ class QuatrinhcongtacForm extends Basecsdl_quatrinhcongtacForm
         $this->setValidators(array(
             'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
 
-            'thoigian'   => new sfValidatorInteger(array('required' => false)),
+            'thoigian'   => new sfValidatorInteger(array('required' => true)),
             'batdau'     => new sfValidatorDateTime(array('required' => true)),
             'ketthuc'    => new sfValidatorDateTime(array('required' => true)),
-            'chucvu'     => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-            'mota'       => new sfValidatorString(array('max_length' => 500, 'required' => false)),
+            'chucvu'     => new sfValidatorString(array('max_length' => 255, 'required' => true)),
+            'mota'       => new sfValidatorString(array('max_length' => 500, 'required' => true)),
 
         ));
 

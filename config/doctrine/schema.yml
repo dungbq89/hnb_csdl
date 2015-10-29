@@ -28,6 +28,7 @@ csdl_lylichhoivien:
     butdanh: { type: string(255), comment: "Bút danh" }
     tacpham_id: { type: integer(10), comment: "Tác phẩm tiêu biểu" }
     giaithuong_id: { type: integer(10), comment: "Giải thưởng" }
+    thehnbht: { type: sring(255), comment: "Thẻ hội nhà báo hà tĩnh" }
 #qua trinh cong tac
 csdl_quatrinhcongtac:
   tableName: csdl_quatrinh_congtac

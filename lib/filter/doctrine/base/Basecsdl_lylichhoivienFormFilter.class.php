@@ -36,6 +36,7 @@ abstract class Basecsdl_lylichhoivienFormFilter extends BaseFormFilterDoctrine
       'butdanh'       => new sfWidgetFormFilterInput(),
       'tacpham_id'    => new sfWidgetFormFilterInput(),
       'giaithuong_id' => new sfWidgetFormFilterInput(),
+      'thehnbht'      => new sfWidgetFormFilterInput(),
       'created_at'    => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'updated_at'    => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
     ));
@@ -64,6 +65,7 @@ abstract class Basecsdl_lylichhoivienFormFilter extends BaseFormFilterDoctrine
       'butdanh'       => new sfValidatorPass(array('required' => false)),
       'tacpham_id'    => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'giaithuong_id' => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'thehnbht'      => new sfValidatorPass(array('required' => false)),
       'created_at'    => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'updated_at'    => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
     ));
@@ -109,6 +111,7 @@ abstract class Basecsdl_lylichhoivienFormFilter extends BaseFormFilterDoctrine
       'butdanh'       => 'Text',
       'tacpham_id'    => 'Number',
       'giaithuong_id' => 'Number',
+      'thehnbht'      => 'Text',
       'created_at'    => 'Date',
       'updated_at'    => 'Date',
     );

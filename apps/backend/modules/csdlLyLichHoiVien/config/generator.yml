@@ -34,18 +34,19 @@ generator:
         ngoaingu: {label: Ngoại ngữ}
         butdanh: {label: Bút danh}
         tacpham_id: {label: Tác phẩm}
+        thehnbht: {label: Thẻ HNB Hà Tĩnh}
         giaithuong_id: {label: Khen thưởng/giải thưởng}
       list:
         title: Danh sách danh hội viên
-        display: [hodem, ten, ngaysinh, gioitinh, diachi, maquan, matinh]
+        display: [images, hodem, ten, ngaysinh, gioitinh]
         object_actions:
-          _edit: ~
+          _edit: {label: Sửa}
           _delete: ~
       filter:
         class: LylichhoivienDaduyetFormFilter
         display: [hodem, ten]
       form:
-        display: [ten, hodem, ngaysinh, images, gioitinh, tieusu, nghenghiep_id,donvi_id, dantoc_id, quoctich, matinh, maquan, diachi, dienthoai, email, hocvan, chinhtri, ngoaingu, butdanh]
+        display: [ten, hodem, ngaysinh, images, gioitinh, tieusu, nghenghiep_id,donvi_id, dantoc_id, quoctich, matinh, maquan, diachi, dienthoai, email, hocvan, chinhtri, ngoaingu, butdanh, tacpham_id, thehnbht]
         class: csdlLyLichHoiVienAdminForm
       edit:
         title: Chỉnh sửa lý lịch hội viên
