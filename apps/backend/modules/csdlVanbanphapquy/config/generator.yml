@@ -34,7 +34,7 @@ generator:
           _delete: ~
       filter:
         class: VanbanphapquyFormFilter
-        display: [tentailieu,kyhieu,loaivanban_id]
+        display: [tentailieu,kyhieu]
       form:
         class: VanbanphapquyForm
         display: [tentailieu,trichdan,matailieu,kyhieu,sotailieu,ngaybanhanh,ngayhieuluc,loaivanban_id,anhdaidien,filedownload,trangthai]

@@ -48,7 +48,6 @@ class VanbanphapquyForm extends Basecsdl_vanbanphapquyForm
             'anhdaidien'     => new sfWidgetFormInputText(),
             'filedownload'   => new sfWidgetFormInputText(),
             'trangthai'      => new sfWidgetFormInputCheckbox(),
-            'loaivanban_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('loai_vbpq'), 'add_empty' => true)),
 
         ));
 
@@ -65,12 +64,33 @@ class VanbanphapquyForm extends Basecsdl_vanbanphapquyForm
             'anhdaidien'     => new sfValidatorString(array('max_length' => 255, 'required' => false)),
             'filedownload'   => new sfValidatorString(array('max_length' => 255, 'required' => false)),
             'trangthai'      => new sfValidatorBoolean(array('required' => false)),
-            'loaivanban_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('loai_vbpq'), 'required' => false)),
 
+        ));
+
+
+        $this->widgetSchema['loaivanban_id'] = new  sfWidgetFormChoice(array(
+            'choices' => $this->getLoaiVanBan(),
+            'multiple' => false,
+            'expanded' => false
+        ));
+        $this->validatorSchema['loaivanban_id'] = new sfValidatorChoice(array(
+            'required' => true,
+            'choices' => array_keys($this->getLoaiVanBan()),
         ));
 
         $this->widgetSchema->setNameFormat('csdl_vanbanphapquy[%s]');
 
         $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
+    }
+
+    protected function getLoaiVanBan(){
+        $arrJobs = array(''=>'----- Chọn loại văn bản -----');
+        $jobs = csdl_loaivanbanTable::getLoaiVanBan()->fetchArray();
+        if(count($jobs)>0){
+            foreach($jobs as $value){
+                $arrJobs[$value['id']] = $value['tendanhmuc'];
+            }
+        }
+        return $arrJobs;
     }
 }

@@ -16,4 +16,9 @@ class csdl_loaivanbanTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('csdl_loaivanban');
     }
+    public static function getLoaiVanBan(){
+        $query =  csdl_loaivanbanTable::getInstance()->createQuery()
+            ->orderBy('tendanhmuc');
+        return $query;
+    }
 }
