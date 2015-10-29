@@ -1,6 +1,6 @@
 
-<div class="navbar navbar-fixed-top">
-    <div style="height: 80px; background-color: #ffffff">
+<div class="navbar navbar-fixed-top" style="background-color: #ffffff;">
+    <div style="height: 80px; background-color: #ffffff; margin-left: 180px; margin-right: 180px;">
         <span>Logo and slogan</span>
         <p class="navbar-text pull-right">
             <?php if ($sf_user->isAuthenticated()){ ?>
@@ -27,7 +27,7 @@
                 <span class="icon-bar"></span>
             </a>
 
-            <a class="brand" href="<?php echo url_for("@homepage") ?>"><?php echo sfConfig::get('app_tmcTwitterBootstrapPlugin_dashboard_name', 'Administration') ?></a>
+            <a class="brand" href="<?php echo url_for("@homepage") ?>"></a>
             <?php //if ($sf_user->isAuthenticated()): ?>
             <div class="nav-collapse">
                 <ul class="nav">

@@ -15,21 +15,19 @@
                 <div class="span12">
                     <h1 style="display: inline"><?php echo __('Danh sách danh hội viên đã duyệt', array(), 'messages') ?></h1>
                 </div>
-                <div class="">
-                    <div class="span9">
-                        <?php include_partial('csdlLyLichHoiVien/filters', array('form' => $filters, 'configuration' => $configuration)) ?>
-                    </div>
+                <div class="filter-hoivien">
+                    <?php include_partial('csdlLyLichHoiVien/filters', array('form' => $filters, 'configuration' => $configuration)) ?>
 
                 </div>
-                <div class="clear"></div>
+<!--                <div class="clear"></div>-->
 
                 <?php include_partial('csdlLyLichHoiVien/flashes') ?>
 
-                <div id="sf_admin_header">
-                    <?php include_partial('csdlLyLichHoiVien/list_header', array('pager' => $pager)) ?>
-                </div>
+<!--                <div id="sf_admin_header">-->
+<!--                    --><?php //include_partial('csdlLyLichHoiVien/list_header', array('pager' => $pager)) ?>
+<!--                </div>-->
 
-                <div id="sf_admin_content">
+                <div id="sf_admin_content" class="list-filter">
                     <form class="form-inline" id="list-form"
                           action="<?php echo url_for('csdl_lylichhoivien_collection', array('action' => 'batch')) ?>"
                           method="post">

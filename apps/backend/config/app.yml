@@ -23,8 +23,10 @@ all:
           dropdown:
             Thông tin hội viên:
               route: page_thongtinhoivien
-            Danh sách hội viên chờ duyệt:
+            Hội viên chờ duyệt:
               route: csdl_hoivienchoduyet
+            Hội viên đã duyệt:
+              route: csdl_lylichhoivien
             Quản lý thẻ hội viên:
               route: csdl_thehoivien
             Quản lý quá trình công tác:
