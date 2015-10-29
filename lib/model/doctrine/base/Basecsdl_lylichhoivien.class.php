@@ -29,6 +29,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_lylichhoivien', 'doctrine')
  * @property string $butdanh
  * @property integer $tacpham_id
  * @property integer $giaithuong_id
+ * @property sring $thehnbht
  * 
  * @method integer            getHoivienId()     Returns the current record's "hoivien_id" value
  * @method string             getTen()           Returns the current record's "ten" value
@@ -52,6 +53,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_lylichhoivien', 'doctrine')
  * @method string             getButdanh()       Returns the current record's "butdanh" value
  * @method integer            getTacphamId()     Returns the current record's "tacpham_id" value
  * @method integer            getGiaithuongId()  Returns the current record's "giaithuong_id" value
+ * @method sring              getThehnbht()      Returns the current record's "thehnbht" value
  * @method csdl_lylichhoivien setHoivienId()     Sets the current record's "hoivien_id" value
  * @method csdl_lylichhoivien setTen()           Sets the current record's "ten" value
  * @method csdl_lylichhoivien setHodem()         Sets the current record's "hodem" value
@@ -74,6 +76,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_lylichhoivien', 'doctrine')
  * @method csdl_lylichhoivien setButdanh()       Sets the current record's "butdanh" value
  * @method csdl_lylichhoivien setTacphamId()     Sets the current record's "tacpham_id" value
  * @method csdl_lylichhoivien setGiaithuongId()  Sets the current record's "giaithuong_id" value
+ * @method csdl_lylichhoivien setThehnbht()      Sets the current record's "thehnbht" value
  * 
  * @package    Vt_Portals
  * @subpackage model
@@ -194,6 +197,11 @@ abstract class Basecsdl_lylichhoivien extends sfDoctrineRecord
              'type' => 'integer',
              'comment' => 'Giải thưởng',
              'length' => 10,
+             ));
+        $this->hasColumn('thehnbht', 'sring', 255, array(
+             'type' => 'sring',
+             'comment' => 'Thẻ hội nhà báo hà tĩnh',
+             'length' => 255,
              ));
     }
 

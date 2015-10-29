@@ -38,6 +38,7 @@ abstract class Basecsdl_lylichhoivienForm extends BaseFormDoctrine
       'butdanh'       => new sfWidgetFormInputText(),
       'tacpham_id'    => new sfWidgetFormInputText(),
       'giaithuong_id' => new sfWidgetFormInputText(),
+      'thehnbht'      => new sfWidgetFormInputText(),
       'created_at'    => new sfWidgetFormDateTime(),
       'updated_at'    => new sfWidgetFormDateTime(),
     ));
@@ -66,6 +67,7 @@ abstract class Basecsdl_lylichhoivienForm extends BaseFormDoctrine
       'butdanh'       => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'tacpham_id'    => new sfValidatorInteger(array('required' => false)),
       'giaithuong_id' => new sfValidatorInteger(array('required' => false)),
+      'thehnbht'      => new sfValidatorPass(array('required' => false)),
       'created_at'    => new sfValidatorDateTime(),
       'updated_at'    => new sfValidatorDateTime(),
     ));
