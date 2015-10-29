@@ -21,8 +21,6 @@ generator:
         diachi: {label: Địa chỉ}
         maquan: {label: Quận/huyện}
         matinh: {label: Tỉnh/thành phố}
-        ngayvaodoan: {label: Ngày vào đoàn}
-        noiketnapdoan: {label: Nơi kết nạp đoàn}
         ngayvaodang: {label: Ngày vào đảng}
         noiketnapdang: {label: Nơi kết nạp đảng}
         tieusu: {label: Tiểu sử}
@@ -42,7 +40,7 @@ generator:
         class: csdlHoiVienChoDuyetFilter
         display: [ten]
       form:
-        display: [ten, hodem, images, ngaysinh, gioitinh, diachi, maquan, matinh, ngayvaodoan, noiketnapdoan, ngayvaodang, noiketnapdang, tieusu, nghenghiep_id, dantoc_id, quoctich, donvi_id]
+        display: [ten, hodem, images, ngaysinh, gioitinh, diachi, maquan, matinh, ngayvaodang, noiketnapdang, tieusu, nghenghiep_id, dantoc_id, quoctich, donvi_id]
         class: csdlLyLichHoiVienAdminForm
       edit:
         title: Chỉnh sửa lý lịch hội viên

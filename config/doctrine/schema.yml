@@ -13,11 +13,9 @@ csdl_lylichhoivien:
     diachi: { type: string(255), comment: "dịa chỉ" }
     maquan: { type: string(25), comment: "Ma quan/huyen" }
     matinh: { type: string(255), comment: "Ma tinh/thanh pho" }
-    ngayvaodoan: { type: timestamp(25), comment: "ngay vao doan" }
-    noiketnapdoan: { type: string(255), comment: "nơi kết nạp đoàn" }
     ngayvaodang: { type: timestamp(25), comment: "ngay vao dang" }
     noiketnapdang: { type: string(255), comment: "nơi kết nạp đảng" }
-    tieusu: { type: string(1000), comment: "nơi kết nạp đảng" }
+    tieusu: { type: string(1000), comment: "Tiểu sử" }
     nghenghiep_id: { type: integer(5), comment: "Danh muc nghe nghiep"}
     dantoc_id: { type: integer(5), comment: "Danh muc dan toc"}
     quoctich: { type: string(255), comment: "quoc tich" }
@@ -25,6 +23,12 @@ csdl_lylichhoivien:
     images:  { type: string(255), comment: "hinh anh" }
     dienthoai: { type: string(255), comment: "Số điện thoại" }
     email: { type: string(255), comment: "Email" }
+    hocvan: { type: string(255), comment: "Học vấn" }
+    ngoaingu: { type: string(255), comment: "Ngoại ngữ" }
+    chinhtri: { type: string(255), comment: "Chính trị" }
+    butdanh: { type: string(255), comment: "Bút danh" }
+    tacpham_id: { type: integer(10), comment: "Tác phẩm tiêu biểu" }
+    giaithuong_id: { type: integer(10), comment: "Giải thưởng" }
 #qua trinh cong tac
 csdl_quatrinhcongtac:
   tableName: csdl_quatrinh_congtac

@@ -75,6 +75,14 @@ class csdlLyLichHoiVienAdminForm extends Basecsdl_lylichhoivienForm {
             'required' => false,
             'choices' => array_keys($this->getDonVi()),));
 
+        $this->widgetSchema['tacpham_id'] = new sfWidgetFormChoice(array(
+            'choices' => $this->getTacPham(),
+            'multiple' => false,
+            'expanded' => false));
+        $this->validatorSchema['tacpham_id'] = new sfValidatorChoice(array(
+            'required' => false,
+            'choices' => array_keys($this->getTacPham()),));
+
         $this->widgetSchema['matinh'] = new sfWidgetFormChoice(array(
             'choices' => $this->getCity(),
             'multiple' => false,
@@ -182,5 +190,27 @@ class csdlLyLichHoiVienAdminForm extends Basecsdl_lylichhoivienForm {
             }
         }
         return $arrJobs;
+    }
+
+    protected function getTacPham(){
+        $arrTacpham = array(''=>'----- Chọn tác phẩm -----');
+        $tacPhams = csdl_tacphamTable::getListTacpham();
+        if(count($tacPhams)>0){
+            foreach($tacPhams as $value){
+                $arrTacpham[$value->id] = $value->tentacpham;
+            }
+        }
+        return $arrTacpham;
+    }
+
+    protected function getGiaiThuong(){
+        $arrGiaiThuong = array(''=>'----- Chọn giải thưởng -----');
+        $giaiThuong = csdl_giaithuongTable::getListTacpham();
+        if(count($giaiThuong)>0){
+            foreach($giaiThuong as $value){
+                $arrGiaiThuong[$value->id] = $value->tentacpham;
+            }
+        }
+        return $arrTacpham;
     }
 }

@@ -21,8 +21,6 @@ generator:
         diachi: {label: Địa chỉ}
         maquan: {label: Quận/huyện}
         matinh: {label: Tỉnh/thành phố}
-        ngayvaodoan: {label: Ngày vào đoàn}
-        noiketnapdoan: {label: Nơi kết nạp đoàn}
         ngayvaodang: {label: Ngày vào đảng}
         noiketnapdang: {label: Nơi kết nạp đảng}
         tieusu: {label: Tiểu sử}
@@ -33,6 +31,12 @@ generator:
         dienthoai: {label: Điện thoại}
         email: {label: Email}
         images: {label: Ảnh đại diện}
+        hocvan: {label: Học vấn}
+        chinhtri: {label: Chính trị}
+        ngoaingu: {label: Ngoại ngữ}
+        butdanh: {label: Bút danh}
+        tacpham_id: {label: Tác phẩm}
+        giaithuong_id: {label: Khen thưởng/giải thưởng}
       list:
         title: Danh sách danh hội viên
         display: [hodem, ten, ngaysinh, gioitinh, diachi, maquan, matinh]
@@ -43,7 +47,7 @@ generator:
         class: LylichhoivienDaduyetFormFilter
         display: [hodem, ten]
       form:
-        display: [ten, hodem, ngaysinh, images, gioitinh,  ngayvaodoan, noiketnapdoan, ngayvaodang, noiketnapdang, tieusu, nghenghiep_id,donvi_id, dantoc_id, quoctich, matinh, maquan, diachi, dienthoai, email]
+        display: [ten, hodem, ngaysinh, images, gioitinh, ngayvaodang, noiketnapdang, tieusu, nghenghiep_id,donvi_id, dantoc_id, quoctich, matinh, maquan, diachi, dienthoai, email, hocvan, chinhtri, ngoaingu, butdanh, tacpham_id]
         class: csdlLyLichHoiVienAdminForm
       edit:
         title: Chỉnh sửa lý lịch hội viên
