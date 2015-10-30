@@ -24,15 +24,15 @@ generator:
         trangthai: {label: Trạng thái}
       list:
         title: Danh sách tài liệu
-        display: [anhdaidien,tentailieu, kyhieu, sotailieu , matailieu, trichdan,filedownload, trangthai]
+        display: [tentailieu, kyhieu, sotailieu , matailieu, trichdan, trangthai]
         object_actions:
-          _edit: ~
+          _edit: {label: Sửa}
           _delete: ~
       filter:
-        class: TailieunghiepvuFormFilter
+#        class: TailieunghiepvuFilters
         display: [kyhieu, tentailieu]
       form:
-        class: TailieunghiepvuForm
+        class: csdl_tailieunghiepvuForm
       edit:
         title: Chỉnh sửa thông tin tài liệu
       new:

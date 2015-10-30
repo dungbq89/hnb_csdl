@@ -1,7 +1,9 @@
 
 <div class="navbar navbar-fixed-top" style="background-color: #ffffff;">
     <div style="height: 80px; background-color: #ffffff; margin-left: 180px; margin-right: 180px;">
-        <span>Logo and slogan</span>
+        <a href="<?php echo url_for('@homepage'); ?>" class="logo">
+            <img src="../../../img/img-logo.png" class=""/>
+        </a>
         <p class="navbar-text pull-right">
             <?php if ($sf_user->isAuthenticated()){ ?>
             <?php echo __('Logged in as', null, 'tmcTwitterBootstrapPlugin') ?>
@@ -15,9 +17,9 @@
 
         </p>
         <div class="clear"></div>
-        <div class="navbar-text pull-right">
-            <input type="text" name="keyword" style="width: 180px;" />
-        </div>
+<!--        <div class="navbar-text pull-right">-->
+<!--            <input type="text" name="keyword" style="width: 180px;" />-->
+<!--        </div>-->
     </div>
     <div class="navbar-inner">
         <div class="container-fluid">

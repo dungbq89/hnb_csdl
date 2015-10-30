@@ -99,7 +99,7 @@ csdl_tailieunghiepvu:
   class: sfDoctrineRouteCollection
   options:
     model:                csdl_tailieunghiepvu
-    module:               csdlTailieunghiepvu
+    module:               csdlTaiLieuNghiepVu
     prefix_path:          /tai-lieu-nghiep-vu
     column:               id
     with_wildcard_routes: true
@@ -256,6 +256,10 @@ sf_guard_permission:
 vtp_search_ajax_loadarticle:
   url:   /ajax/LoadArticle
   param: { module: ajax, action: loadArticle }
+
+get_province:
+  url: /get-province
+  param: {module: ajax, action: loadProvince}
 
 # default rules
 homepage:

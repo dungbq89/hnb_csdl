@@ -17,7 +17,7 @@
         <p align="center">
             <i ><span >(Tuần từ ngày <strong><?php echo $mon ?></strong>
             đến ngày <strong><?php echo $sun ?></strong>)</span></i></p>
-    <table width="100%" cellspacing="0" cellpadding="0" class="bordered" border="1" style="BORDER-COLLAPSE: collapse; border-color: #ccc;">
+    <table width="100%" cellspacing="0" cellpadding="3" class="bordered" border="1" style="BORDER-COLLAPSE: collapse; border-color: #ccc;">
         <tbody>
         <tr class="header">
             <td>Ngày</td>

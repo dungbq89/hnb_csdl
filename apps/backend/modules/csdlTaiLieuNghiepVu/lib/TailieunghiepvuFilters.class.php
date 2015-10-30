@@ -5,7 +5,7 @@
  * Date: 9/24/15
  * Time: 12:13 AM
  */
-class TailieunghiepvuFormFilter extends Basecsdl_tailieunghiepvuFormFilter
+class TailieunghiepvuFilters extends Basecsdl_tailieunghiepvuFormFilter
 {
     public function configure()
     {

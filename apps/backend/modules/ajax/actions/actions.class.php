@@ -65,54 +65,7 @@ class ajaxActions extends sfActions{
             return $this->renderText('404');
         }
     }
-    
-    // upload nhieu file trong photo album
-    public function executeAjaxUploadImageFiles(sfWebRequest $request) {
-        $i18n = $this->getContext()->getI18N();
-        //-- disable debug
-        sfConfig::set('sf_web_debug', false);
 
-        if ($this->getUser()->isAuthenticated()) {
-            if (!$request->isXmlHttpRequest()) {
-
-                $token = $request->getParameter('token', 0);
-
-                // Set the upload directory
-                $uploadDir = sfConfig::get("app_url_media_images", "/medias/app");
-                if (!is_dir($uploadDir))
-                    mkdir($uploadDir, 0777, true);
-                // Set the allowed file extensions
-                $fileTypes = array('jpg', 'jpeg', 'gif', 'png'); // Allowed file extensions
-                $fileMimeTypes = array('application/octet-stream', 'image/jpeg', 'image/pjpeg', 'image/png', 'image/x-png', 'image/gif', '');
-
-                if (!empty($_FILES)) {
-
-                    $maxFileSize = 10048576;
-                    if ($_FILES['Filedata']['size'] > $maxFileSize) {
-                        return $this->renderText(json_encode(array('errCode' => 5, 'message' => 'Max Size ' . $maxFileSize . "(B)")));
-                    }
-
-                    $tempFile = $_FILES['Filedata']['tmp_name'];
-                    // Validate the filetype
-                    $fileParts = pathinfo($_FILES['Filedata']['name']);
-                    if (in_array(strtolower($fileParts['extension']), $fileTypes) && in_array($_FILES['Filedata']['type'], $fileMimeTypes)) {
-                        $fileNameUnique = uniqid() . "." . $fileParts['extension'];
-                        try {
-                            
-                        } catch (Exception $e) {
-                            sfContext::getInstance()->getLogger()->log("[CP CMS] Upload move file/create thumb Exception:" . $e->getMessage());
-                            return $this->renderText(json_encode(array('errCode' => 999, 'message' => 'unknown')));
-                        }
-                    } else {
-                        // The file type wasn't allowed
-                        return $this->renderText(json_encode(array('errCode' => 2, 'message' => $i18n->__('File upload không đúng định đạng'))));
-                    }
-                }
-                return $this->renderText(json_encode(array('errCode' => 3, 'message' => $i18n->__('Truy cập không hợp lệ'))));
-            } else
-                return $this->renderText(json_encode(array('errCode' => 3, 'message' => $i18n->__('Truy cập không hợp lệ'))));
-        }
-    }
 
     
     public function executeAjaxLoadCategoryNews(sfWebRequest $request) {
@@ -142,6 +95,21 @@ class ajaxActions extends sfActions{
             }
         }
         return $this->renderText(json_encode($arrResult));
+    }
+
+
+    public function executeLoadProvince(sfWebRequest $request) {
+        $id = $request->getParameter('id');
+        $strProvince = "<option selected='selected' value=''>----- Chọn quận/huyện -----</option>";
+        if($id){
+            $provinces = csdl_areaTable::getProvinceByCityCode($id)->fetchArray();
+            if(count($provinces)>0){
+                foreach($provinces as $value){
+                    $strProvince .= "<option value=".$value['DISTRICT'].">".$value['NAME']."</option>";
+                }
+            }
+        }
+        return $this->renderText(json_encode($strProvince));
     }
 }
 
