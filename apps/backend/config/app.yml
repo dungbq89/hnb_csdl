@@ -36,8 +36,8 @@ all:
               route: csdl_chude
             Quản lý Tác phẩm:
               route: csdl_tacpham
-            Quản lý Tác giả:
-              route: csdl_tacgia
+#            Quản lý Tác giả:
+#              route: csdl_tacgia
 
         Quản lý các trường thông tin:
           dropdown:

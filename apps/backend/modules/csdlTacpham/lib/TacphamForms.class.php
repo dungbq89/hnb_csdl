@@ -42,7 +42,8 @@ class TacphamForms extends Basecsdl_tacphamForm
                 'max_size' => sfConfig::get('app_image_maxsize', 999999),
                 'mime_types' => array('image/jpeg','image/jpg', 'image/png', 'image/gif'),
                 'path' => sfConfig::get("sf_upload_dir") . '/' . sfConfig::get('app_document_images'),
-                'required' => $this->isNew(),
+                'required' => false,
+//                'required' => $this->isNew(),
             ),
             array(
                 'mime_types' =>('Dữ liệu không hợp lệ hoặc định dạng không đúng.'),
@@ -63,7 +64,7 @@ class TacphamForms extends Basecsdl_tacphamForm
             )
         ));
         $this->validatorSchema['filedownload'] = new sfValidatorFileViettel(
-            array('required' => $this->isNew(),
+            array('required' => false,
                 'max_size' => sfConfig::get('app_upload_video_max_size',99999999),
                 'upload_path'=>sfConfig::get("sf_upload_dir") . '/' . sfConfig::get('app_document'),
                 'path' => sfConfig::get("sf_upload_dir") . '/' . sfConfig::get('app_document'),

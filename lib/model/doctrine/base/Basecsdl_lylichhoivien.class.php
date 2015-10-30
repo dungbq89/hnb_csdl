@@ -31,6 +31,8 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_lylichhoivien', 'doctrine')
  * @property integer $tacpham_id
  * @property integer $giaithuong_id
  * @property sring $thehnbht
+ * @property sring $cqcongtac
+ * @property sring $chucvu
  * 
  * @method integer            getHoivienId()     Returns the current record's "hoivien_id" value
  * @method string             getTen()           Returns the current record's "ten" value
@@ -56,6 +58,8 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_lylichhoivien', 'doctrine')
  * @method integer            getTacphamId()     Returns the current record's "tacpham_id" value
  * @method integer            getGiaithuongId()  Returns the current record's "giaithuong_id" value
  * @method sring              getThehnbht()      Returns the current record's "thehnbht" value
+ * @method sring              getCqcongtac()     Returns the current record's "cqcongtac" value
+ * @method sring              getChucvu()        Returns the current record's "chucvu" value
  * @method csdl_lylichhoivien setHoivienId()     Sets the current record's "hoivien_id" value
  * @method csdl_lylichhoivien setTen()           Sets the current record's "ten" value
  * @method csdl_lylichhoivien setHodem()         Sets the current record's "hodem" value
@@ -80,6 +84,8 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_lylichhoivien', 'doctrine')
  * @method csdl_lylichhoivien setTacphamId()     Sets the current record's "tacpham_id" value
  * @method csdl_lylichhoivien setGiaithuongId()  Sets the current record's "giaithuong_id" value
  * @method csdl_lylichhoivien setThehnbht()      Sets the current record's "thehnbht" value
+ * @method csdl_lylichhoivien setCqcongtac()     Sets the current record's "cqcongtac" value
+ * @method csdl_lylichhoivien setChucvu()        Sets the current record's "chucvu" value
  * 
  * @package    Vt_Portals
  * @subpackage model
@@ -209,6 +215,16 @@ abstract class Basecsdl_lylichhoivien extends sfDoctrineRecord
         $this->hasColumn('thehnbht', 'sring', 255, array(
              'type' => 'sring',
              'comment' => 'Thẻ hội nhà báo hà tĩnh',
+             'length' => 255,
+             ));
+        $this->hasColumn('cqcongtac', 'sring', 255, array(
+             'type' => 'sring',
+             'comment' => 'Cơ quan công tác',
+             'length' => 255,
+             ));
+        $this->hasColumn('chucvu', 'sring', 255, array(
+             'type' => 'sring',
+             'comment' => 'Chức vụ hiện tại',
              'length' => 255,
              ));
     }
