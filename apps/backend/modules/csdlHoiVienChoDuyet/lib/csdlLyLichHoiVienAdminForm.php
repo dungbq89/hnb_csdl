@@ -190,7 +190,7 @@ class csdlLyLichHoiVienAdminForm extends Basecsdl_lylichhoivienForm {
 
 
     protected function getDonVi(){
-        $arrJobs = array(''=>'----- Chọn đơn vị -----');
+        $arrJobs = array(''=>'----- Chọn chi hội -----');
         $jobs = csdl_coquanbaochiTable::dsCoquan()->fetchArray();
         if(count($jobs)>0){
             foreach($jobs as $value){

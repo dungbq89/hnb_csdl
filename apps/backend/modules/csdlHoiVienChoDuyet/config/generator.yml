@@ -18,14 +18,14 @@ generator:
         hodem: {label: Họ đệm}
         ngaysinh: {label: Ngày sinh}
         gioitinh: {label: Giới tính}
-        diachi: {label: Địa chỉ}
+        diachi: {label: Quê quán}
         maquan: {label: Quận/huyện}
         matinh: {label: Tỉnh/thành phố}
         tieusu: {label: Tiểu sử}
         nghenghiep_id: {label: Nghề nghiệp}
         dantoc_id: {label: Dân tộc}
         quoctich: {label: Quốc tịch}
-        donvi_id: {label: Đơn vị}
+        donvi_id: {label: Chi hội}
         dienthoai: {label: Điện thoại}
         email: {label: Email}
         images: {label: Ảnh đại diện}
