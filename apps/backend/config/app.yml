@@ -17,7 +17,7 @@ all:
         Trang chủ:
           route: homepage
         Quản lý Hội viên:
-          credentials: [[admin,lanhdao]]
+          credentials: [[admin,lanhdao,canbo,hoivien]]
           dropdown:
             Thông tin hội viên:
               route: page_thongtinhoivien
@@ -34,7 +34,7 @@ all:
               credentials: [[admin,lanhdao,canbo]]
               route: csdl_lichcongtac
         Quản lý tác phẩm:
-          credentials: [[admin,lanhdao]]
+          credentials: [[admin,lanhdao,canbo]]
           dropdown:
             Quản lý Chủ đề:
               route: csdl_chude
