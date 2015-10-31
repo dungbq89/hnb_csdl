@@ -15,26 +15,27 @@ class QuatrinhcongtacForm extends Basecsdl_quatrinhcongtacForm
             'id'         => new sfWidgetFormInputHidden(),
 
             'thoigian'   => new sfWidgetFormInputText(),
-            'batdau'     => new sfWidgetFormDateTime(array(
-                    'date' => array(
-                        'format' => '%day%/%month%/%year%',
-                        'can_be_empty' => false,
-                        'years' => array_combine($years, $years)
-                    ),
-                    'format' => '%date%',
-                    'default' => date('Y/m/d H:i', time())
-                )),
-            'ketthuc'    => new sfWidgetFormDateTime(array(
-                    'date' => array(
-                        'format' => '%day%/%month%/%year%',
-                        'can_be_empty' => false,
-                        'years' => array_combine($years, $years)
-                    ),
-                    'format' => '%date%',
-                    'default' => date('Y/m/d H:i', time())
-                )),
+//            'batdau'     => new sfWidgetFormDateTime(array(
+//                    'date' => array(
+//                        'format' => '%day%/%month%/%year%',
+//                        'can_be_empty' => false,
+//                        'years' => array_combine($years, $years)
+//                    ),
+//                    'format' => '%date%',
+//                    'default' => date('Y/m/d H:i', time())
+//                )),
+//            'ketthuc'    => new sfWidgetFormDateTime(array(
+//                    'date' => array(
+//                        'format' => '%day%/%month%/%year%',
+//                        'can_be_empty' => false,
+//                        'years' => array_combine($years, $years)
+//                    ),
+//                    'format' => '%date%',
+//                    'default' => date('Y/m/d H:i', time())
+//                )),
             'chucvu'     => new sfWidgetFormInputText(),
             'mota'       => new sfWidgetFormTextarea(),
+            'noicongtac' => new sfWidgetFormInputText(),
 
         ));
 
@@ -42,10 +43,11 @@ class QuatrinhcongtacForm extends Basecsdl_quatrinhcongtacForm
             'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
 
             'thoigian'   => new sfValidatorInteger(array('required' => true)),
-            'batdau'     => new sfValidatorDateTime(array('required' => true)),
-            'ketthuc'    => new sfValidatorDateTime(array('required' => true)),
+//            'batdau'     => new sfValidatorDateTime(array('required' => true)),
+//            'ketthuc'    => new sfValidatorDateTime(array('required' => true)),
             'chucvu'     => new sfValidatorString(array('max_length' => 255, 'required' => true)),
             'mota'       => new sfValidatorString(array('max_length' => 500, 'required' => true)),
+            'noicongtac' => new sfValidatorString(array('max_length' => 255, 'required' => false)),
 
         ));
 
