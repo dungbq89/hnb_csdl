@@ -16,4 +16,11 @@ class csdl_loaigiaithuongTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('csdl_loaigiaithuong');
     }
+
+    public static function getListLoaigiaithuong(){
+        $q=csdl_loaigiaithuongTable::getInstance()->createQuery()
+            ->select('*')
+            ->orderby('tendanhmuc asc');
+        return $q->execute();
+    }
 }

@@ -14,6 +14,7 @@ generator:
     config:
       actions: ~
       fields:
+        hoivien_id: {label: Hội viên}
         tengiaithuong: {label: Tên giải thưởng}
         madanhmuc: {label: Danh mục}
         namtochuc: {label: Năm tổ chức}
@@ -29,7 +30,7 @@ generator:
         display: [tengiaithuong, madanhmuc]
       form:
         class: GiaithuongForm
-        display: [tengiaithuong, madanhmuc, namtochuc, giatri ]
+        display: [hoivien_id,madanhmuc,tengiaithuong,  namtochuc, giatri ]
       edit:
         title: Chỉnh sửa thông tin giải thưởng
       new:
