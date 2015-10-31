@@ -12,7 +12,6 @@ class csdl_tailieunghiepvuForm extends Basecsdl_tailieunghiepvuForm
 {
   public function configure()
   {
-      die('12');
       unset($this['created_by'],$this['updated_by'],$this['created_at'],$this['updated_at'],$this['hoivien_id']);
   }
 }
