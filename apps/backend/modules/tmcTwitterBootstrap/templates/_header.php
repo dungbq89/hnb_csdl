@@ -16,6 +16,9 @@
             <?php } ?>
 
         </p>
+        <p class="home-hoinhabao" style="margin-bottom: 10px; text-align: right; position: relative;">
+            <a style="position: absolute; top: -25px; right: 0px; padding: 3px 5px; background: #0788d9; border-radius: 3px; color: #fff;" href="http://hoinhabaohatinh.vn/" target="_blank">Trang chủ HNB</a>
+        </p>
         <div class="clear"></div>
 <!--        <div class="navbar-text pull-right">-->
 <!--            <input type="text" name="keyword" style="width: 180px;" />-->
