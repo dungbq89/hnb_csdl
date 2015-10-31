@@ -49,13 +49,14 @@ class sfGuardUserCustomAdminForm extends PluginsfGuardUserForm
 
 //    $this->setValidator('email_address', new sfValidatorEmail(array('required' => true, 'max_length' => 100, 'trim' => true)));
         //loilv4 thay doi validator email
-        $this->validatorSchema['email_address'] = new sfValidatorRegex(array(
-            'pattern' => '/^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$/',
-            'required' => false,
-            'max_length' => 255,
-            'trim' => true
-        ),
-            array('max_length' => $i18n->__('Không nhập quá 255 ký tự')));
+        $this->validatorSchema['email_address'] = new sfValidatorPass();
+//        $this->validatorSchema['email_address'] = new sfValidatorRegex(array(
+//            'pattern' => '/^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$/',
+//            'required' => false,
+//            'max_length' => 255,
+//            'trim' => true
+//        ),
+//            array('max_length' => $i18n->__('Không nhập quá 255 ký tự')));
         $this->validatorSchema['password'] = new sfValidatorString(array('required' => ($this->isNew()) ? true : false, 'max_length' => 30));
         $this->validatorSchema['password'] = new sfValidatorRegex(
             array('pattern' => '/^.*(?=.{8,})(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[a-zA-Z]).*$/', 'required' => ($this->isNew()) ? true : false, 'max_length' => 30),
@@ -90,8 +91,8 @@ class sfGuardUserCustomAdminForm extends PluginsfGuardUserForm
         if($user->hasAttribute('lylichid')){
             $hoivien = $user->getAttribute('lylichid');
             if($hoivien){
-                $this->setDefault('first_name',$hoivien->hodem);
-                $this->setDefault('last_name',$hoivien->ten);
+                $this->setDefault('last_name',$hoivien->hodem);
+//                $this->setDefault('last_name',$hoivien->hodem);
             }
 
         }
@@ -134,8 +135,13 @@ class sfGuardUserCustomAdminForm extends PluginsfGuardUserForm
         if (!$this->isNew()) {
             $values['username'] = $this->getObject()->getUsername();
         }
-        $values['first_name'] = trim($values['first_name']);
         $values['last_name'] = trim($values['last_name']);
+
+        $name = trim($values['last_name']);
+        $parts = explode(" ", $name);
+        $lastname = array_pop($parts);
+        $values['first_name'] = trim($lastname);
+
         $values['phone'] = trim($values['phone']);
         $values['email_address'] = trim($values['email_address']);
         parent::doBind($values);

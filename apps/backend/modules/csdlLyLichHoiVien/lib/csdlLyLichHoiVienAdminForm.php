@@ -278,5 +278,11 @@ class csdlLyLichHoiVienAdminForm extends Basecsdl_lylichhoivienForm {
         }
         return $arr;
     }
-
+    protected function doBind(array $values) {
+        $name = trim($values['hodem']);
+        $parts = explode(" ", $name);
+        $lastname = array_pop($parts);
+        $values['ten'] = $lastname;
+        parent::doBind($values);
+    }
 }

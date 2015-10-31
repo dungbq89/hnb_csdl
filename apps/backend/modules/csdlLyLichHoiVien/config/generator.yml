@@ -15,7 +15,7 @@ generator:
       actions: ~
       fields:
         ten: {label: Tên}
-        hodem: {label: Họ đệm}
+        hodem: {label: Họ và tên}
         ngaysinh: {label: Ngày sinh}
         gioitinh: {label: Giới tính}
         diachi: {label: Quê quán}
@@ -41,7 +41,7 @@ generator:
         chucvu: {label: Chức vụ hiện tại}
       list:
         title: Danh sách danh hội viên
-        display: [images, hodem, ten, ngaysinh, gioitinh]
+        display: [images, hodem, ngaysinh, gioitinh]
         object_actions:
           _edit: {label: Sửa}
           _delete: ~
@@ -49,7 +49,7 @@ generator:
 #        class: LylichhoivienDaduyetFormFilter
         display: [hodem, ten]
       form:
-        display: [ten, hodem, ngaysinh, images, gioitinh, tieusu, nghenghiep_id,donvi_id, dantoc_id, quoctich, matinh, maquan, diachi, dienthoai, email,dangvien, hocvan, chinhtri, ngoaingu, butdanh, thehnbht, , cqcongtac, chucvu]
+        display: [hodem, ngaysinh, images, gioitinh, tieusu, nghenghiep_id,donvi_id, dantoc_id, quoctich, matinh, maquan, diachi, dienthoai, email,dangvien, hocvan, chinhtri, ngoaingu, butdanh, thehnbht, , cqcongtac, chucvu]
         class: csdlLyLichHoiVienAdminForm
       edit:
         title: Chỉnh sửa lý lịch hội viên

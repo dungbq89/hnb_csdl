@@ -58,12 +58,12 @@ generator:
           is_active: {label: Trạng thái kích hoạt}
       form:
         class: sfGuardUserCustomAdminForm
-        display: [first_name,last_name,username,password, email_address,phone,permission, is_active]
+        display: [last_name,username,password, email_address,phone,permission, is_active]
       edit:
         title: Chỉnh sửa người dùng
         fields:
           first_name: {label: Tên *}
-          last_name: {label: Họ đệm *}
+          last_name: {label: Họ và tên *}
           username:           {label: Tên đăng nhập *}
           password:           {label: Gán mật khẩu}
           email_address:      {label: Địa chỉ Email}
@@ -82,7 +82,7 @@ generator:
           _save_and_add: {label: Lưu và thêm mới}
         fields:
           first_name: {label: Tên *}
-          last_name: {label: Họ đệm *}
+          last_name: {label: Họ và tên *}
           username:           {label: Tên đăng nhập *}
           password:           {label: Gán mật khẩu *}
           email_address:      {label: Địa chỉ Email }
