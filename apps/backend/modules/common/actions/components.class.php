@@ -65,12 +65,12 @@ class commonComponents extends sfComponents
         $this->trValue="";
         $user = sfContext::getInstance()->getUser();
         //lay du lieu thu 2
-        if ($user->isAuthenticated()){
-            $userId=$user->getGuardUser()->getId();
-        }else{
-            $userId=-1;
-        }
-
+//        if ($user->isAuthenticated()){
+//            $userId=$user->getGuardUser()->getId();
+//        }else{
+//
+//        }
+        $userId=-1;
         $result=csdl_lichcongtacTable::getCalendarByDay($userId,$this->mon);
         if(count($result)>0){
             $this->rowmon=count($result);

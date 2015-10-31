@@ -46,6 +46,7 @@ csdl_quatrinhcongtac:
     ketthuc: { type: timestamp(25), comment: "thoi gian ket thuc" }
     chucvu: { type: string(255), comment: "Chức vụ" }
     mota: { type: string(500), comment: "Mô tả công việc" }
+    noicongtac: { type: string(255), comment: "Nơi công tác" }
 #Quản lý thẻ hội viên
 csdl_thehoivien:
   tableName: csdl_the_hoivien

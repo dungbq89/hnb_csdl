@@ -20,10 +20,11 @@ generator:
         batdau: {label: Bắt đầu}
         ketthuc: {label: Kết thúc}
         chucvu: {label: Chức vụ}
-        mota: {label: Mô tả}
+        mota: {label: Mô tả công việc}
+        noicongtac: {label: Đơn vị công tác}
       list:
         title: Quá trình công tác
-        display: [hoivien_id, donvi_id, thoigian, batdau, ketthuc, chucvu, mota]
+        display: [hoivien_id, donvi_id, thoigian, noicongtac, chucvu, mota]
         object_actions:
           _edit: ~
           _delete: ~
@@ -32,7 +33,7 @@ generator:
         display: [hoivien_id]
       form:
         class: QuatrinhcongtacForm
-        display: [hoivien_id, donvi_id, thoigian, batdau, ketthuc, chucvu, mota]
+        display: [hoivien_id, donvi_id, thoigian, noicongtac, chucvu, mota]
       edit:
         title: Chỉnh sửa thông tin
       new:

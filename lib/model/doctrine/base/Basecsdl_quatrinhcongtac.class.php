@@ -14,6 +14,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_quatrinhcongtac', 'doctrine
  * @property timestamp $ketthuc
  * @property string $chucvu
  * @property string $mota
+ * @property string $noicongtac
  * 
  * @method integer              getHoivienId()  Returns the current record's "hoivien_id" value
  * @method integer              getDonviId()    Returns the current record's "donvi_id" value
@@ -22,6 +23,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_quatrinhcongtac', 'doctrine
  * @method timestamp            getKetthuc()    Returns the current record's "ketthuc" value
  * @method string               getChucvu()     Returns the current record's "chucvu" value
  * @method string               getMota()       Returns the current record's "mota" value
+ * @method string               getNoicongtac() Returns the current record's "noicongtac" value
  * @method csdl_quatrinhcongtac setHoivienId()  Sets the current record's "hoivien_id" value
  * @method csdl_quatrinhcongtac setDonviId()    Sets the current record's "donvi_id" value
  * @method csdl_quatrinhcongtac setThoigian()   Sets the current record's "thoigian" value
@@ -29,6 +31,7 @@ Doctrine_Manager::getInstance()->bindComponent('csdl_quatrinhcongtac', 'doctrine
  * @method csdl_quatrinhcongtac setKetthuc()    Sets the current record's "ketthuc" value
  * @method csdl_quatrinhcongtac setChucvu()     Sets the current record's "chucvu" value
  * @method csdl_quatrinhcongtac setMota()       Sets the current record's "mota" value
+ * @method csdl_quatrinhcongtac setNoicongtac() Sets the current record's "noicongtac" value
  * 
  * @package    Vt_Portals
  * @subpackage model
@@ -74,6 +77,11 @@ abstract class Basecsdl_quatrinhcongtac extends sfDoctrineRecord
              'type' => 'string',
              'comment' => 'Mô tả công việc',
              'length' => 500,
+             ));
+        $this->hasColumn('noicongtac', 'string', 255, array(
+             'type' => 'string',
+             'comment' => 'Nơi công tác',
+             'length' => 255,
              ));
     }
 

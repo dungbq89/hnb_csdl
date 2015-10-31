@@ -36,8 +36,8 @@
 
                         <div>
                             <?php include_partial('csdlLyLichHoiVien/list_batch_actions', array('helper' => $helper)) ?>
-                            <div
-                                class="well pull-left margin-right"><?php include_partial('csdlLyLichHoiVien/list_actions', array('helper' => $helper)) ?></div>
+<!--                            <div-->
+<!--                                class="well pull-left margin-right">--><?php //include_partial('csdlLyLichHoiVien/list_actions', array('helper' => $helper)) ?><!--</div>-->
                         </div>
                     </form>
 

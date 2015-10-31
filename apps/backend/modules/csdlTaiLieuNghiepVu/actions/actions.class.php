@@ -1,7 +1,7 @@
 <?php
 
-require_once dirname(__FILE__).'/../lib/csdlTailieunghiepvuGeneratorConfiguration.class.php';
-require_once dirname(__FILE__).'/../lib/csdlTailieunghiepvuGeneratorHelper.class.php';
+require_once dirname(__FILE__) . '/../lib/csdlTailieunghiepvuGeneratorConfiguration.class.php';
+require_once dirname(__FILE__) . '/../lib/csdlTailieunghiepvuGeneratorHelper.class.php';
 
 /**
  * csdlTailieunghiepvu actions.
