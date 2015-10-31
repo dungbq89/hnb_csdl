@@ -17,20 +17,24 @@ all:
         Trang chủ:
           route: homepage
         Quản lý Hội viên:
-          #credentials: [admin]
+          credentials: [[admin,lanhdao]]
           dropdown:
             Thông tin hội viên:
               route: page_thongtinhoivien
             Hội viên chờ duyệt:
+              credentials: [[admin,lanhdao]]
               route: csdl_hoivienchoduyet
             Hội viên đã duyệt:
+              credentials: [[admin,lanhdao]]
               route: csdl_lylichhoivien
             Quản lý thẻ hội viên:
+              credentials: [[admin,lanhdao]]
               route: csdl_thehoivien
             Lịch công tác:
+              credentials: [[admin,lanhdao,canbo]]
               route: csdl_lichcongtac
         Quản lý tác phẩm:
-          #credentials: [admin]
+          credentials: [[admin,lanhdao]]
           dropdown:
             Quản lý Chủ đề:
               route: csdl_chude
@@ -40,6 +44,7 @@ all:
 #              route: csdl_tacgia
 
         Quản lý các trường thông tin:
+          credentials: [[admin,lanhdao]]
           dropdown:
             Quản lý quá trình công tác:
               route: csdl_quatrinhcongtac
@@ -62,7 +67,7 @@ all:
             Quản lý trình độ chính trị:
               route: csdl_chinhtri
         Quản lý Văn bản:
-          #credentials: [admin]
+          credentials: [[admin,lanhdao]]
           dropdown:
             Quản lý loại văn bản:
               route: csdl_loaivanban
@@ -71,7 +76,7 @@ all:
             Danh sách văn bản:
               route: csdl_vanbanphapquy
         Quản lý tài liệu:
-          #credentials: [admin]
+          credentials: [[admin,lanhdao]]
           dropdown:
             Quản lý loại tài liệu:
               route: csdl_loaitailieu
