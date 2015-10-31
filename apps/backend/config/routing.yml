@@ -39,8 +39,8 @@ csdl_hoivienchoduyet:
     with_wildcard_routes: true
 
 page_thongtinhoivien:
-  url: /thong-tin-hoi-vien
-  param: {module: pageThongTinHoiVien, action: detail}
+  url: /thong-tin-hoi-vien/:id
+  param: {module: pageThongTinHoiVien, action: detail, id: ''}
 
 page_document_detail:
   url: /chi-tiet-van-ban/:id
