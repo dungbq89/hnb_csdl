@@ -30,7 +30,7 @@ generator:
         display: [tengiaithuong, madanhmuc]
       form:
         class: GiaithuongForm
-        display: [hoivien_id,tengiaithuong, madanhmuc, namtochuc, giatri ]
+        display: [hoivien_id,madanhmuc,tengiaithuong,  namtochuc, giatri ]
       edit:
         title: Chỉnh sửa thông tin giải thưởng
       new:

@@ -51,7 +51,7 @@ class sfGuardUserCustomAdminForm extends PluginsfGuardUserForm
         //loilv4 thay doi validator email
         $this->validatorSchema['email_address'] = new sfValidatorRegex(array(
             'pattern' => '/^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$/',
-            'required' => true,
+            'required' => false,
             'max_length' => 255,
             'trim' => true
         ),
