@@ -10,7 +10,7 @@ class GiaithuongForm extends Basecsdl_giaithuongForm
 {
     public function configure()
     {
-        unset($this['created_by'],$this['updated_by'],$this['created_at'],$this['updated_at'],$this['hoivien_id']);
+        unset($this['created_by'],$this['updated_by'],$this['created_at'],$this['updated_at']);
         $this->setWidgets(array(
             'id'            => new sfWidgetFormInputHidden(),
             'tengiaithuong' => new sfWidgetFormInputText(),
@@ -28,9 +28,47 @@ class GiaithuongForm extends Basecsdl_giaithuongForm
             'giatri'        => new sfValidatorInteger(array('required' => true)),
 
         ));
+        $this->widgetSchema['hoivien_id'] = new sfWidgetFormChoice(array(
+            'choices' => $this->dsHoiVien(),
+            'multiple' => false,
+            'expanded' => false));
+        $this->validatorSchema['hoivien_id'] = new sfValidatorChoice(array(
+            'required' => true,
+            'choices' => array_keys($this->dsHoiVien()),));
+
+        $this->widgetSchema['madanhmuc'] = new sfWidgetFormChoice(array(
+            'choices' => $this->dsDanhmuc(),
+            'multiple' => false,
+            'expanded' => false));
+        $this->validatorSchema['madanhmuc'] = new sfValidatorChoice(array(
+            'required' => true,
+            'choices' => array_keys($this->dsDanhmuc()),));
 
         $this->widgetSchema->setNameFormat('csdl_giaithuong[%s]');
 
         $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
+    }
+
+    //lay danh sach hoi vien
+    protected function dsHoiVien(){
+        $arrHoiviens = array(''=>'----- Chọn hội viên -----');
+        $hoiviens = csdl_lylichhoivienTable::dsHoivienForThe();
+        if(count($hoiviens)>0){
+            foreach($hoiviens as $value){
+                $arrHoiviens[$value['hoivien_id']] = $value['hodem'];
+            }
+        }
+        return $arrHoiviens;
+    }
+
+    protected function dsDanhmuc(){
+        $arrHoiviens = array(''=>'----- Chọn Loại giải thưởng -----');
+        $hoiviens = csdl_loaigiaithuongTable::getListLoaigiaithuong();
+        if(count($hoiviens)>0){
+            foreach($hoiviens as $value){
+                $arrHoiviens[$value['madanhmuc']] = $value['tendanhmuc'];
+            }
+        }
+        return $arrHoiviens;
     }
 }
