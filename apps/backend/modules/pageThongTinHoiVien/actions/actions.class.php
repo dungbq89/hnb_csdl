@@ -8,13 +8,19 @@
 class pageThongTinHoiVienActions extends sfActions {
     public function executeDetail(sfWebRequest $request){
         if ($this->getUser()->isAuthenticated()){
-            $id=$this->getUser()->getGuardUser()->getId();
+            $idHoivien = $request->getParameter('id');
+            if($idHoivien){
+                $id = $idHoivien;
+            }
+            else{
+                $id=$this->getUser()->getGuardUser()->getId();
+            }
+
         }else{
             $id=-1;
         }
         if($id>0){
             $user = csdl_lylichhoivienTable::getUserDetail($id)->fetchOne();
-
             if($user){
                 $this->userDetail = $user;
                 //Qua trinh cong tac
