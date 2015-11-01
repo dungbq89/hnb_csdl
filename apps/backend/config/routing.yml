@@ -1,3 +1,7 @@
+personnal:
+  url: /danh-ba-hoi-vien
+  param: {module: pagePersonal, action: index}
+
 csdl_chinhtri:
   class: sfDoctrineRouteCollection
   options:
