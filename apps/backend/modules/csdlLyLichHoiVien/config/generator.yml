@@ -46,8 +46,8 @@ generator:
           _edit: {label: Sửa}
           _delete: ~
       filter:
-#        class: LylichhoivienDaduyetFormFilter
-        display: [hodem, ten]
+        class: LylichhoivienDaduyetFormFilter
+        display: [hodem]
       form:
         display: [hodem, ngaysinh, images, gioitinh, tieusu, nghenghiep_id,donvi_id, dantoc_id, quoctich, matinh, maquan, diachi, dienthoai, email,dangvien, hocvan, chinhtri, ngoaingu, butdanh, thehnbht, , cqcongtac, chucvu]
         class: csdlLyLichHoiVienAdminForm

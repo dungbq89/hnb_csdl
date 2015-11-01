@@ -12,5 +12,12 @@ class csdl_ngoainguFormFilter extends Basecsdl_ngoainguFormFilter
 {
   public function configure()
   {
+      $this->setWidgets(array(
+          'name'       => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      ));
+
+      $this->setValidators(array(
+          'name'       => new sfValidatorPass(array('required' => false)),
+      ));
   }
 }

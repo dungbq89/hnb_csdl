@@ -12,5 +12,16 @@ class csdl_chinhtriFormFilter extends Basecsdl_chinhtriFormFilter
 {
   public function configure()
   {
+      $this->setWidgets(array(
+          'name'       => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      ));
+
+      $this->setValidators(array(
+          'name'       => new sfValidatorPass(array('required' => false)),
+      ));
+
+      $this->widgetSchema->setNameFormat('csdl_chinhtri_filters[%s]');
+
+      $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
   }
 }

@@ -29,7 +29,7 @@ generator:
           _edit: {label: Sửa}
           _delete: ~
       filter:
-#        class: TailieunghiepvuFilters
+        class: TailieunghiepvuFilters
         display: [kyhieu, tentailieu]
       form:
         class: csdl_tailieunghiepvuForm
