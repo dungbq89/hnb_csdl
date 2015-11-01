@@ -12,5 +12,12 @@ class csdl_hocvanFormFilter extends Basecsdl_hocvanFormFilter
 {
   public function configure()
   {
+      $this->setWidgets(array(
+          'name'       => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      ));
+
+      $this->setValidators(array(
+          'name'       => new sfValidatorPass(array('required' => false)),
+      ));
   }
 }

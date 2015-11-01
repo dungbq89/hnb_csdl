@@ -18,6 +18,9 @@ generator:
       list:
         title: Quản lý trình độ học vấn
         display: [name]
+        object_actions:
+          _edit: ~
+          _delete: ~
       filter:
         display: [name]
       form:
