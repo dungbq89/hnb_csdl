@@ -76,7 +76,7 @@ class QuatrinhcongtacForm extends Basecsdl_quatrinhcongtacForm
 
         if(count($hoivien)>0){
             foreach($hoivien as $value){
-                $arrHoivien[$value['hoivien_id']] = $value['hodem'] . ' ' .$value['ten'];
+                $arrHoivien[$value['hoivien_id']] = $value['hodem'] ;
             }
         }
         return $arrHoivien;

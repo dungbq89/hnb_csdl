@@ -34,7 +34,7 @@ class csdl_tacphamTable extends Doctrine_Table
             ->leftjoin('c.csdlTacgia tg')
             ->leftjoin('c.csdlChude cd')
             ->where('status=2')
-            //->orderby('c.updated_at desc')
+            ->orderby('c.updated_at desc')
             ->limit($limit)
             ->fetchArray();
     }

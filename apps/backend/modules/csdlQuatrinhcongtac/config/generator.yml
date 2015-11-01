@@ -16,7 +16,7 @@ generator:
       fields:
         hoivien_id: {label: Hội viên}
         donvi_id: {label: Đơn vị}
-        thoigian: {label: Thời gian (tháng)}
+        thoigian: {label: Khoảng thời gian}
         batdau: {label: Bắt đầu}
         ketthuc: {label: Kết thúc}
         chucvu: {label: Chức vụ}
