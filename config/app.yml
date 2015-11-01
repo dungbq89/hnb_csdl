@@ -25,6 +25,15 @@ all:
   document: document
   member_images: member
 
+  image_default:
+    image_default: '/img/image_default.png'
+    image_hot: '/img/image_hot.png'
+    image_92_55: '/img/image_92_55.jpg'
+    image_75_70: '/img/image_75_70.png'
+    image_150_100: '/img/image_150_100.png'
+    imge_user: '/img/no-avatar.png'
+    user_90_120: '/img/user_90_120.png'
+
   upload_media_file: E:\Data_D\hoi-nha-bao\svn_csdl\hnb_csdl\web\uploads
   url_media_file: /uploads
   url_media_default_file: /images/default-image.jpg

@@ -30,6 +30,11 @@ class csdl_lylichhoivien extends Basecsdl_lylichhoivien
         $this->hasMany('csdl_coquanbaochi as csdlCoquanbaochi', array(
             'local' => 'donvi_id',
             'foreign' => 'id'));
+
+        $this->hasOne('sfGuardUser as Groups', array(
+            'local' => 'hoivien_id',
+            'foreign' => 'id'));
+
         parent::setUp();
     }
 }

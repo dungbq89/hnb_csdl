@@ -52,4 +52,45 @@ class csdl_lylichhoivienTable extends Doctrine_Table
 
     //lay danh sach hoi vien active
 
+    //frontend
+    public static function getListPerson($full_name, $phone_number,$email,$limit)
+    {
+        $query = csdl_lylichhoivienTable::getInstance()->createQuery('s')
+            ->select('s.*, c.phone as phone, c.email_address as email_address')
+            ->innerJoin('s.Groups c')
+//            ->where('s.id = c.hoivien_id')
+            ->orderBy('s.ten asc')
+            ->limit($limit);
+
+        if($full_name!=""){
+//            $query->andWhere("CONCAT(s.hodem, s.ten) LIKE ?", array("%" . trim($full_name) . "%"));
+            $query->andWhere("s.hodem LIKE ?", array("%" . trim($full_name) . "%"));
+        }
+        if($phone_number!=""){
+            $query->andWhere('c.phone LIKE ?',"%" . trim($phone_number). "%");
+        }
+        if($email!=""){
+            $query->andWhere('c.email_address LIKE ?',"%" . trim($email). "%");
+        }
+        return $query;
+    }
+
+    public static function getPersonById($id){
+        $query = csdl_lylichhoivienTable::getInstance()->createQuery('s')
+            ->select('s.ten, s.hodem, c.phone as phone, c.email_address as email_address, s.diachi, s.images')
+            ->innerJoin('s.Groups c')
+            ->where('s.id=?',$id);
+        return $query;
+    }
+
+    public static function getAllListPerson($limit)
+    {
+        $query = csdl_lylichhoivienTable::getInstance()->createQuery('s')
+            ->select('s.ten, s.hodem, c.phone as phone, c.email_address as email_address, s.diachi, s.images')
+            ->innerJoin('s.Groups c')
+            ->orderBy('s.ten asc')
+            ->limit($limit);
+        return $query;
+    }
+
 }

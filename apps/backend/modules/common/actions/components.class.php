@@ -365,4 +365,8 @@ class commonComponents extends sfComponents
         }
     }
 
+    public function executePagging($request) {
+
+    }
+
 }

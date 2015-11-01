@@ -16,6 +16,8 @@ all:
       menu:
         Trang chủ:
           route: homepage
+        Danh sách hội viên:
+          route: personnal
         Quản lý Hội viên:
           credentials: [[admin,lanhdao,canbo,hoivien]]
           dropdown:
