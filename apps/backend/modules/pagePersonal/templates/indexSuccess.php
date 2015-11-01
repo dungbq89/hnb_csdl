@@ -66,10 +66,10 @@ include_component('tmcTwitterBootstrap', 'header');
                             $path = '/uploads/member'. $personal->images;
                             ?>
                             <div class="list-news">
-                                <a href="<?php echo url_for2('page_thongtinhoivien',array('id'=>$personal->id)) ?>" title="" class="news-img" style="width: 90px;"><img style="width: 90px; height: 120px;" src="<?php echo VtHelper::getThumbUrl($path, 90, 120, 'user_90_120') ?>" alt=""></a>
+                                <a href="<?php echo url_for2('page_thongtinhoivien',array('id'=>$personal->hoivien_id)) ?>" title="" class="news-img" style="width: 90px;"><img style="width: 90px; height: 120px;" src="<?php echo VtHelper::getThumbUrl($path, 90, 120, 'user_90_120') ?>" alt=""></a>
 
                                 <div class="info-hoivien">
-                                    <a href="<?php echo url_for2('page_thongtinhoivien',array('id'=>$personal->id)) ?>" title="" class="news-title"  style="margin-bottom: 5px; color: #3398cc;">
+                                    <a href="<?php echo url_for2('page_thongtinhoivien',array('id'=>$personal->hoivien_id)) ?>" title="" class="news-title"  style="margin-bottom: 5px; color: #3398cc;">
                                         <?php echo $personal->hodem; ?>
                                     </a>
 
@@ -87,7 +87,7 @@ include_component('tmcTwitterBootstrap', 'header');
                                 <span><b>Giới tính: </b><?php if($personal->gioitinh=='1') echo 'Nam'; else echo 'Nữ';?>
                                     </p>
                                     <p class="news-txt-hoivien">
-                                        <span><b>Ngày sinh: </b><?php if($personal->ngaysinh) echo VtHelper::getFormatDate($personal->ngaysinh); ?></span>&nbsp;&nbsp;&nbsp;
+                                        <span><b>Ngày sinh: </b><?php if($personal->ngaysinh) echo date_format(date_create($personal->ngaysinh), 'd/m/Y'); ?></span>&nbsp;&nbsp;&nbsp;
                                     </p>
                                     <p class="news-txt-hoivien">
                                         <span><b>Số điện thoại: </b><?php echo $personal->phone; ?></span>&nbsp;&nbsp;&nbsp;
