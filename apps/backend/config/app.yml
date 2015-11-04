@@ -16,8 +16,16 @@ all:
       menu:
         Trang chủ:
           route: homepage
-        Danh sách hội viên:
-          route: personnal
+        Tra cứu thông tin:
+          dropdown:
+            Tra cứu hội viên:
+              route: personnal
+            Tra cứu tác phẩm:
+              route: personnal
+            Tra cứu văn bản:
+              route: personnal
+            Tra cứu tài liệu nghiệp vụ:
+              route: personnal
         Quản lý Hội viên:
           credentials: [[admin,lanhdao,canbo,hoivien]]
           dropdown:
