@@ -33,6 +33,7 @@ all:
     image_150_100: '/img/image_150_100.png'
     imge_user: '/img/no-avatar.png'
     user_90_120: '/img/user_90_120.png'
+    tacpham_186_125: '/img/tacpham_186_125.jpg'
 
   upload_media_file: E:\Data_D\hoi-nha-bao\svn_csdl\hnb_csdl\web\uploads
   url_media_file: /uploads

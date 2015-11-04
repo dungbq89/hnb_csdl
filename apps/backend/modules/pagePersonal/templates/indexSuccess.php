@@ -4,6 +4,15 @@
         padding-top: 8px;
         font-weight: bold;
     }
+    .slice-list{
+        border-bottom: 1px solid #0788d9;
+        margin: 20px 0;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+        padding-bottom: 7px;
+        color: #3398cc;
+    }
 </style>
 
 <?php
@@ -52,14 +61,14 @@ include_component('tmcTwitterBootstrap', 'header');
                             </div>
                             <div class="box-btn">
 
-                                <button name="" type="submit" class="btn">Tra cứu</button>
-                                <button name="" type="reset" class="btn">Hủy bỏ</button>
+                                <button name="" type="submit" class="btn" style="background: #4c94b6;">Tra cứu</button>
+<!--                                <button name="" type="reset" class="btn">Hủy bỏ</button>-->
                             </div>
 
                         </form>
                     </div>
 
-
+                    <h3 class="slice-list">Danh sách hội viên Hội nhà báo Hà Tĩnh</h3>
                     <?php
                     if (isset($listPersonal) && count($listPersonal)):
                         foreach ($listPersonal as $personal):
@@ -79,19 +88,15 @@ include_component('tmcTwitterBootstrap', 'header');
                                         $donvi = csdl_coquanbaochiTable::tenDonvi($personal->donvi_id);
                                         echo $donvi;
                                         ?>
-                                        &nbsp;&nbsp;&nbsp;
-                                        <span><b>Chức vụ: </b><?php echo $personal->chucvu; ?></span>
                                     </p>
                                     <p class="news-txt-hoivien">
                                         <span><b>Địa chỉ: </b><?php echo $personal->diachi; ?></span>&nbsp;&nbsp;&nbsp;
-                                <span><b>Giới tính: </b><?php if($personal->gioitinh=='1') echo 'Nam'; else echo 'Nữ';?>
                                     </p>
                                     <p class="news-txt-hoivien">
                                         <span><b>Ngày sinh: </b><?php if($personal->ngaysinh) echo date_format(date_create($personal->ngaysinh), 'd/m/Y'); ?></span>&nbsp;&nbsp;&nbsp;
                                     </p>
                                     <p class="news-txt-hoivien">
                                         <span><b>Số điện thoại: </b><?php echo $personal->phone; ?></span>&nbsp;&nbsp;&nbsp;
-                                        <span><b>Bút danh: </b><?php echo $personal->butdanh; ?></span>&nbsp;&nbsp;&nbsp;
                                 <span><b>Email: </b><?php echo $personal->email; ?>
                                     </p>
 
