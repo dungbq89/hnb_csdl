@@ -11,43 +11,71 @@ include_component('tmcTwitterBootstrap', 'header');
                 </div>
                 <?php if (isset($userDetail) && count($userDetail)) {
                     $path = '/uploads/' . sfConfig::get('app_member_images') . $userDetail->images;
-
+                    $personal = $userDetail;
                 ?>
-                    <table class="table bordered vanban tb-hoivien">
+                    <img style="margin: 10px;" src="<?php echo VtHelper::getThumbUrl($path, 90, 120, 'user_90_120') ?>" alt="">
+                    <table class="table bordered" style="float: right; width: 800px;">
                         <tr>
-                            <td rowspan="3">
-                                <img src="<?php echo VtHelper::getThumbUrl($path, 187, 125, ''); ?>" alt="">
-                            </td>
-                            <td class="td-document-detail">Họ và tên</td>
-                            <td><?php echo htmlspecialchars($userDetail->hodem); ?></td>
+
+                            <td style="width: 150px;">Họ và tên</td>
+                            <td><?php echo $personal->hodem; ?></td>
                         </tr>
-                        <tr>
-                            <td class="td-document-detail">Giới tính</td>
+                        <tr >
+                            <td >Giới tính</td>
                             <td>
-                                <?php if ($userDetail->gioitinh == 1) echo "Nam"; else echo "Nữ"; ?>
+                                <?php if($personal->gioitinh==1) echo "Nam"; else echo "Nữ"; ?>
                             </td>
                         </tr>
 
                         <tr>
-                            <td class="td-document-detail">Ngày sinh</td>
-                            <td><?php echo date('d/m/Y', strtotime($userDetail->ngaysinh)); ?></td>
+                            <td>Ngày sinh</td>
+                            <td><?php echo date('d/m/Y',strtotime($personal->ngaysinh)); ?></td>
                         </tr>
 
                         <tr>
-                            <td class="td-document-detail">Địa chỉ</td>
-                            <td colspan="2"><?php echo htmlspecialchars($userDetail->diachi); ?></td>
+                            <td>Số điện thoại</td>
+                            <td colspan="2"><?php echo $personal->dienthoai; ?></td>
                         </tr>
-
                         <tr>
-                            <td class="td-document-detail">Quận/huyện</td>
-                            <td colspan="2"><?php echo VtHelper::truncate(csdl_areaTable::getName($userDetail->getMatinh(),$userDetail->getMaquan()), 50, '...', true); ?></td>
+                            <td>Email</td>
+                            <td colspan="2"><?php echo $personal->email; ?></td>
                         </tr>
-
                         <tr>
-                            <td class="td-document-detail">Tỉnh/thành phố</td>
-                            <td colspan="2"><?php echo VtHelper::truncate(csdl_areaTable::getName($userDetail->getMatinh(),""), 50, '...', true); ?></td>
+                            <td>Thẻ HNB Hà Tĩnh</td>
+                            <td colspan="2"><?php echo $personal->thehnbht; ?></td>
                         </tr>
-
+                        <tr>
+                            <td>Địa chỉ</td>
+                            <td colspan="2"><?php echo $personal->diachi; ?></td>
+                        </tr>
+                        <tr>
+                            <td>Chức vụ</td>
+                            <td colspan="2"><?php echo $personal->chucvu; ?></td>
+                        </tr>
+                        <tr>
+                            <td>Cơ quan công tác</td>
+                            <td colspan="2"><?php echo $personal->cqcongtac; ?></td>
+                        </tr>
+                        <tr>
+                            <td>Bút danh</td>
+                            <td colspan="2"><?php echo $personal->butdanh; ?></td>
+                        </tr>
+                        <tr>
+                            <td>Học vấn</td>
+                            <td colspan="2"><?php echo $personal->hocvan; ?></td>
+                        </tr>
+                        <tr>
+                            <td>Ngoại ngữ</td>
+                            <td colspan="2"><?php echo $personal->ngoaingu; ?></td>
+                        </tr>
+                        <tr>
+                            <td>Chính trị</td>
+                            <td colspan="2"><?php echo $personal->chinhtri; ?></td>
+                        </tr>
+                        <tr>
+                            <td>Đảng viên</td>
+                            <td colspan="2"><?php echo $personal->dangvien; ?></td>
+                        </tr>
                     </table>
                 <?php } ?>
             </div>

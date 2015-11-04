@@ -36,9 +36,9 @@ include_component('tmcTwitterBootstrap', 'header');
                         <span class="txt-artice-intro">
                             <?php echo $tacpham[0]['gioithieu']?>
                         </span>
-                        <div class="detail-tacpham">
-                            <iframe src="http://docs.google.com/gview?url=<?php echo sfConfig::get('app_domain') .$newLink; ?>&embedded=true" width="650" height="600" style="border: none;"></iframe>
-                        </div>
+<!--                        <div class="detail-tacpham">-->
+<!--                            <iframe src="http://docs.google.com/gview?url=--><?php //echo sfConfig::get('app_domain') .$newLink; ?><!--&embedded=true" width="650" height="600" style="border: none;"></iframe>-->
+<!--                        </div>-->
                     </div>
 
 
